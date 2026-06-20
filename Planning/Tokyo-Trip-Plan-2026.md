@@ -12,6 +12,8 @@
 | **Shibuya / 渋谷** | Shibuya Sky / 渋谷スカイ | Observation deck |
 | **Shibuya / 渋谷** | Shibuya Crossing / 渋谷スクランブル交差点 | Iconic intersection |
 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | Fashion and street food |
+| **Harajuku / 原宿** | Takeshita Street / 竹下通り / My Pig Cafe / 豚カフェ | Fashion and street food |
+| **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | Shinto Shrine |
 
 ---
 
