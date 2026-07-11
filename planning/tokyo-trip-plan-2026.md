@@ -35,6 +35,7 @@
 ### 🗺️ Sightseeing & Activity Plan
 | Area | Spot | Category | Description |
 | :--- | :--- | :--- | :--- |
+| **Tsukiji / 築地** | Tsukiji Outer Market / 築地場外市場 | **SEAFOOD STREET FOOD** | A bustling historic market filled with fresh seafood, sushi, and local street food snacks. |
 | **Ginza / 銀座** | Ginza Six / ギンザ シックス | **LUXURY SHOPPING COMPLEX** | A high-end shopping destination featuring world-class luxury brands. |
 | **Ginza / 銀座** | Ginza Mitsukoshi / 銀座三越 | **HISTORIC DEPARTMENT STORE** | A prestigious department store representing Tokyo's rich retail history. |
 | **Ginza / 銀座** | Ginza Street / 銀座通り | **HIGH-CLASS FASHION STREET** | A sophisticated avenue famous for luxury shopping and weekend pedestrian hours. |
