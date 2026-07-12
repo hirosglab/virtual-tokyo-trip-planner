@@ -47,3 +47,4 @@
 | **Tokyo / 東京** | Tokyo Imperial Palace / 皇居 | **IMPERIAL HERITAGE SITE** | The main residence of the Emperor, featuring beautiful gardens and ruins. |
 | **Tokyo / 新橋** | Shinbashi Guard Underpass Alley / 新橋ガード下 | **SALARYMAN NIGHTLIFE** | A lively retro alley where local workers gather for food and drinks. |
 | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | **DIGITAL ART MUSEUM** | An immersive world of light and art without boundaries. |
+| **Azabu / 麻布** | Dahi Okume / だし尾粂 | **TRADISIONAL SELECTFOOD STORE** | Dried food grocery shop. Custome made Dashi Pack |
