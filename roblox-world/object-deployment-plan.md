@@ -20,17 +20,23 @@
 | **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | **YOUTH CULTURE HUB** | A bustling pedestrian street filled with shops, music, and youth fashion. |
 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
-| **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | **ANIME & MANGA MECCA** | The flagship store and ultimate destination for anime and manga lovers. |
 | **Tsukiji / 築地** | Tsukiji Outer Market / 築地場外市場 | **SEAFOOD STREET FOOD** | A bustling historic market filled with fresh seafood, sushi, and local street food snacks. |
 | **Ginza / 銀座** | Ginza Street / 銀座通り | **HIGH-CLASS FASHION STREET** | A sophisticated avenue famous for luxury shopping and weekend pedestrian hours. |
 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
 | **Asakusa / 浅草** | Nakamise-Dori Street / 仲見世通り | **TRADITIONAL MARKET STREET** | A historic approach lined with traditional snacks and souvenirs. |
 | **Asakusa / 浅草** | Sumida River / 隅田川 | **SCENIC RIVERSIDE VIEW** | A beautiful waterfront area perfect for river cruises and skyline views. |
 | **Tokyo / 東京** | Tokyo Central Station / 東京駅 | **HISTORIC BRICK HUB** | A stunning red-brick station building blending history and modern transport. |
-| **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | **POP CULTURE STREET** | A basement street packed with official shops for anime, games, and mascots. |
 | **Tokyo / 東京** | Tokyo Imperial Palace / 皇居 | **IMPERIAL HERITAGE SITE** | The main residence of the Emperor, featuring beautiful gardens and ruins. |
-| **Tokyo / 新橋** | Shinbashi Guard Underpass Alley / 新橋ガード下 | **SALARYMAN NIGHTLIFE** | A lively retro alley where local workers gather for food and drinks. |
-| **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | **DIGITAL ART MUSEUM** | An immersive world of light and art without boundaries. |
+| **Tokyo / 新橋** | Shinbashi Guard Underpass Alley / 新橋ガード下 | **SALARYMAN NIGHTLIFE** | A lively retro alley where local workers gather for food and drinks.|
+
+### 🛍️ Specific Spot & Shop Boards
+| Status | Location Area | Shop & Facility / 施設・店舗名 | Category / カテゴリー | Description / 説明文 |
+| :---: | :--- | :--- | :--- | :--- |
+| **Proposed** | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | **ANIME & MANGA MECCA** | The flagship store and ultimate destination for anime and manga lovers. |
+| **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | **DIGITAL ART MUSEUM** | An immersive world of light and art without boundaries. |
+| **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | **SELECT FOOD STORE** | Dried food grocery shop. Custom-made Dashi Pack experience. |
+| **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | **ANIMAL CAFE** | A unique, heartwarming cafe where you can interact with micro-pigs. |
+| **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | **POP CULTURE STREET** | A basement street packed with official shops for anime, games, and mascots. |
 
 ## 3D Environment Objects
 
