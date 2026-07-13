@@ -11,17 +11,17 @@ The board is constructed using three layered thin Block Parts to create a museum
 ```text
 InformationBoard (Model)
 │
-├── 🔲 Border (Base Part)
-│    └── 🧱 Frame (Sub Part) 
-│         └── 🖼️ Display_Surface (UI Canvas Part)
-│              └── 📄 SurfaceGui (CanvasSize: 1024 x 768)
-│                   ├── 📁 Left_Frame (UI Frame for Text)
-│                   │    ├── 🔤 Area Badge (TextLabel)
-│                   │    ├── 🔤 Spot Name (TextLabel)
-│                   │    ├── 🔤 Category (TextLabel)
-│                   │    └── 🔤 Description (TextLabel)
-│                   └── 📁 Right_Frame (UI Frame for Media)
-│                        └── 🖼️ Image / VideoFrame (ImageLabel/VideoFrame)
+├── 🔲 Border (Base Part)             --> Size: 12.0, 9.0, 0.4
+│   └── 🧱 Frame (Sub Part)           --> Size: 11.6, 8.6, 0.3
+│        └── 🖼️ Display_Surface       --> Size: 11.2, 8.2, 0.1
+│             └── 📄 SurfaceGui (CanvasSize: 1024 x 768)
+│                  ├── 📁 Left_Frame (UI Frame for Text - 512 x 768)
+│                  │    ├── 🔤 Area Badge (TextLabel)
+│                  │    ├── 🔤 Spot Name (TextLabel)
+│                  │    ├── 🔤 Category (TextLabel)
+│                  │    └── 🔤 Description (TextLabel)
+│                  └── 📁 Right_Frame (UI Frame for Media - 512 x 768)
+│                       └── 🖼️ Image / VideoFrame (ImageLabel/VideoFrame)
 ```
 ### 🎨 Color & Material Setup (色の組み合わせ案)
 
@@ -35,6 +35,25 @@ InformationBoard (Model)
 ---
 
 ### 📐 UI Layout Architecture (2フレーム構成)
+
+```text
+==================================================================
+|                       SurfaceGui (1024 x 768)                  |
+|======================================= layout =================|
+|        📁 Left_Frame (512 x 768)      |   📁 Right_Frame (512x768)  |
+|                                       |                            |
+|  [🔤 Area Badge (TextSize: 28)]      |   ┌────────────────────┐   |
+|                                       |   │                    │   |
+|  🔤 Spot Name                         |   │ 🖼️ Image           │   |
+|    (TextSize: 48)                     |   │   (Aspect Ratio)   │   |
+|                                       |   │                    │   |
+|  [🔤 Category (TextSize: 32)]        |   │ ・中央配置         │   |
+|                                       |   │ ・Fit表示          │   |
+|  🔤 Description                       |   │                    │   |
+|    (TextSize: 24 / Wrapped)           |   └────────────────────┘   |
+|                                       |                            |
+==================================================================
+```
 
 `SurfaceGui`（解像度: `1024 x 768`）の内部を左右50%ずつに分割し、情報の整理とビジュアルの訴求を両立させます。
 
