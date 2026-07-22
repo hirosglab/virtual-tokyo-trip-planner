@@ -39,6 +39,8 @@
 | **Ginza / 銀座** | Ginza Six / ギンザ シックス | **LUXURY SHOPPING COMPLEX** | A high-end shopping destination featuring world-class luxury brands. |
 | **Ginza / 銀座** | Ginza Mitsukoshi / 銀座三越 | **HISTORIC DEPARTMENT STORE** | A prestigious department store representing Tokyo's rich retail history. |
 | **Ginza / 銀座** | Ginza Street / 銀座通り | **HIGH-CLASS FASHION STREET** | A sophisticated avenue famous for luxury shopping and weekend pedestrian hours. |
+| **Akihabara / 秋葉原** | Akihabara Electric Town / 秋葉原電気街 | **OTAKU & TECH CAPITAL** | The global hub for anime, manga, retro video games, and electronics. |
+| **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | **POP CULTURE LANDMARK** | An iconic 10-story complex packed with figures, collectibles, and anime merchandise. |
 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
 | **Asakusa / 浅草** | Nakamise-Dori Street / 仲見世通り | **TRADITIONAL MARKET STREET** | A historic approach lined with traditional snacks and souvenirs. |
 | **Asakusa / 浅草** | Sumida River / 隅田川 | **SCENIC RIVERSIDE VIEW** | A beautiful waterfront area perfect for river cruises and skyline views. |
