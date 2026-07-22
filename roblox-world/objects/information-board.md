@@ -13,7 +13,7 @@ The board is constructed using three layered thin Block Parts to create a museum
     ├── 🔲 Border (Base Part)             --> Size: 12.0, 9.0, 0.4
     │   └── 🧱 Frame (Sub Part)           --> Size: 10.0, 8.0, 0.3
     │        └── 🖼️ Display_Surface       --> Size: 9.0, 7.0, 0.1
-    │             └── 📄 SurfaceGui (CanvasSize: 1024 x 768)
+    │             └── 📄 SurfaceGui (SizingMode: FixedSize / CanvasSize: 1024 x 768)
     │                  ├── 📁 Left_Frame (UI Frame for Text - 512 x 768)
     │                  │    ├── 🔤 Area Badge (TextLabel)
     │                  │    ├── 🔤 Spot Name (TextLabel)
@@ -22,18 +22,21 @@ The board is constructed using three layered thin Block Parts to create a museum
     │                  └── 📁 Right_Frame (UI Frame for Media - 512 x 768)
     │                       └── 🖼️ Image / VideoFrame (ImageLabel/VideoFrame)
 
-### 🎨 Color & Material Setup (色の組み合わせ案)
+> 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
+> `SizingMode` のプロパティを `PixelsPerStud` から `FixedSize` に変更することで、`CanvasSize` プロパティの入力が可能になり、任意の解像度（例: 1024 x 768）を正確に指定
 
-| Object / 対象 | Material / マテリアル | Color (RGB) / カラー | Visual Effect / 見え方のイメージ |
+### 🎨 Color & Material Setup
+
+| Object | Material | Color (RGB) | Visual Effect |
 | :--- | :--- | :--- | :--- |
 | **Border (外枠)** | `SmoothPlastic` | `[25, 25, 25]` | Black |
-| **Frame (内枠)** | `SmoothPlastic` <br>*(or `Neon` for glow)* | `[16, 44, 87]` | Blue |
-| **Display_Surface (表示面)** | `SmoothPlastic` | `[15, 15, 20]` | Dark Navy |
+| **Frame (内枠)** | `SmoothPlastic`  | `[16, 44, 87]` | Earth Blue |
+| **Display_Surface (表示面)** | `SmoothPlastic` | `[0, 0, 127]` | Navy Blue |
 | **UI Texts (文字情報)** | `--` | `[255, 255, 255]` | White |
 
 ---
 
-## 📐 UI Layout Architecture (2フレーム構成)
+## 📐 UI Layout Architecture (2 Frames)
 
     ==================================================================
     |                        SurfaceGui (1024 x 768)                  |
@@ -43,9 +46,9 @@ The board is constructed using three layered thin Block Parts to create a museum
     |  [🔤 Area Badge (TextSize: 40)]      |   ┌────────────────────┐   |
     |                                       |   │                    │   |
     |  🔤 Spot Name                         |   │ 🖼️ Image           │   |
-    |    (TextSize: 48)                     |   │   (Aspect Ratio)   │   |
+    |    (TextSize: 48)                     |   │   (Full Fill / Fit)│   |
     |                                       |   │                    │   |
-    |  [🔤 Category (TextSize: 40)]        |   │ ・中央配置         │   |
+    |  [🔤 Category (TextSize: 40)]        |   │ ・フレーム全体配置  │   |
     |                                       |   │ ・Fit表示          │   |
     |  🔤 Description                       |   │                    │   |
     |    (TextSize: 40 / Wrapped)           |   └────────────────────┘   |
@@ -56,15 +59,20 @@ The board is constructed using three layered thin Block Parts to create a museum
 
 ---
 
-## 📁 Left_Frame (左側50%領域：文字情報)
+## 📁 Left_Frame (Left 50% Zone: Text & Details)
 
-### 💡 全テキスト共通のプロパティ設定（おすすめ）
+### ⚙️ Frame Properties
+*   **Size**: `{0.5, 0}, {1, 0}` （横幅ピッタリ50%、縦幅100%）
+*   **Position**: `{0, 0}, {0, 0}` （左上に配置）
+*   **BackgroundTransparency**: `1` （背景を透明にして後ろの表示面パーツの色を透過）
+
+### 💡 Shared Text Properties
 *   **BackgroundTransparency**: `1` （背景を透明に）
 *   **TextColor3**: `[255, 255, 255]` （文字色を白に）
-*   **TextXAlignment**: `Left` （左揃えに。Spot NameやDescriptionで綺麗に揃います）
+*   **TextXAlignment**: `Left` （左揃えに。Spot NameやDescriptionで綺麗に揃える）
 
 ### ① 🔤 Area Badge (TextLabel)
-*   **役割**: エリア名の表示
+*   **Purpose**: Display Area Name
 *   **Text**: `Shinjuku / 新宿`
 *   **Font**: `Roboto Condensed` (Bold)
 *   **TextSize**: `40`
@@ -72,7 +80,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Position**: `{0.05, 0}, {0.05, 0}` （少し内側に余白を持たせて配置）
 
 ### ② 🔤 Spot Name (TextLabel)
-*   **役割**: 観光地名を大きく強調
+*   **Purpose**: Prominently Display Location Name
 *   **Text**: `Kabuki-cho / 歌舞伎町`
 *   **Font**: `Montserrat` (Bold)
 *   **TextSize**: `48`
@@ -80,21 +88,21 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Position**: `{0.05, 0}, {0.18, 0}`
 
 ### ③ 🔤 Category (TextLabel)
-*   **役割**: カテゴリーの表示
+*   **Purpose**: Display Category
 *   **Text**: `NIGHTLIFE DISTRICT`
 *   **Font**: `Highway Gothic` (Bold)
-*   **TextColor3**: `[0, 170, 255]` （青・シアン系のアクセントカラーにすると引き締まります！）
+*   **TextColor3**: `[0, 170, 255]` （青・シアン系のアクセントカラー）
 *   **TextSize**: `40`
 *   **Size**: `{0.9, 0}, {0.1, 0}`
 *   **Position**: `{0.05, 0}, {0.35, 0}`
 
 ### ④ 🔤 Description (TextLabel)
-*   **役割**: 読みやすい解説文
+*   **Purpose**: Display Readable Description Text
 *   **Text**: `Explore Tokyo's most famous nightlife and entertainment district.`
 *   **Font**: `Source Sans Pro` (Bold)
 *   **TextSize**: `40`
-*   **TextWrapped**: `true` （⚠️ 超重要：これを true にしないと、枠外に文字がはみ出して見えなくなってしまいます）
-*   **TextYAlignment**: `Top` （上揃え。解説が長くなっても上から綺麗に読めるようになります）
+*   **TextWrapped**: `true` （⚠️ ここを true にしないと、枠外に文字がはみ出して見えなくなってしまう）
+*   **TextYAlignment**: `Top` （上揃え。解説が長くなっても上から綺麗に読める）
 *   **Size**: `{0.9, 0}, {0.45, 0}`
 *   **Position**: `{0.05, 0}, {0.48, 0}`
 
@@ -102,6 +110,16 @@ The board is constructed using three layered thin Block Parts to create a museum
 
 ## 📁 Right_Frame (右側50%領域：メディア)
 
+### ⚙️ Frame Properties
+*   **Size**: `{0.5, 0}, {1, 0}` （横幅ピッタリ50%、縦幅100%）
+*   **Position**: `{0.5, 0}, {0, 0}` （右半分にぴったりズレて配置）
+*   **BackgroundTransparency**: `1` （背景を透明に設定）
+
 ### 🖼️ Image / VideoFrame (ImageLabel/VideoFrame)
-*   **役割**: ビジュアルによる観光地の訴求
-*   **詳細**: 現地のイメージ写真、または自身で撮影した臨場感のあるビデオ（思い出横丁の景観など）をアスペクト比を維持して中央配置（`ScaleType` = `Fit` 推奨）。
+*   **Purpose**: Visual Promotion of the Attraction
+*   **Image Source**: `Unsplash`
+*   **Properties**:
+    *   **Size**: `{1, 0}, {1, 0}` （Right_Frame枠全体いっぱいに拡大表示）
+    *   **Position**: `{0, 0}, {0, 0}` （左上ピッタリに配置）
+    *   **BackgroundTransparency**: `1`
+    *   **ScaleType**: `Fit` （⚠️ 元画像が縦長・横長どちらでもアスペクト比を保ったまま枠内に収める）
