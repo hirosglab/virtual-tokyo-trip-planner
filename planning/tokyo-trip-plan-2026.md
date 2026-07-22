@@ -13,12 +13,14 @@
 | **Shinjuku / 新宿** | Cross Shinjuku Vision 3D Cat / クロス新宿ビジョン 3D巨大猫 | **3D DIGITAL ART** | A viral, hyper-realistic 3D giant cat on a massive LED screen. |
 | **Shinjuku / 新宿** | Omoide-Yokocho Memory Lane / 思い出横丁 | **RETRO IZAKAYA ALLEY** | A nostalgic alley packed with cozy yakitori and izakaya stalls. |
 | **Shinjuku / 新宿** | Shinjuku Golden Gai / 新宿ゴールデン街 | **DEEP BAR HOPPING** | A historic area with over 200 tiny, unique micro-bars. |
-| **Shibuya / 渋谷** | Shibuya Sky / 渋谷スカイ | **SKY OBSERVATION DECK** | A stunning open-air observation deck with 360-degree city views. |
-| **Shibuya / 渋谷** | Shibuya Crossing / 渋谷スクランブル交差点 | **WORLD'S CROSSING** | The world's busiest intersection and a symbol of modern Tokyo. |
-| **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | **YOUTH CULTURE HUB** | A bustling pedestrian street filled with shops, music, and youth fashion. |
 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | **Harajuku / 原宿** | Takeshita Street / My Pig Cafe / 豚カフェ | **ANIMAL CAFE EXPERIENCE** | A unique, heartwarming cafe where you can interact with micro-pigs. |
 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
+| **Omotesando / 表参道** | Omotesando Avenue / 表参道 | **FASHION & ARCHITECTURE** | A sophisticated tree-lined avenue lined with flagship luxury stores and stunning modern architecture. |
+| **Omotesando / 表参道** | Omotesando Hills / 表参道ヒルズ | **URBAN SHOPPING MALL** | A sleek shopping complex featuring high-end fashion, art, and dining. |
+| **Shibuya / 渋谷** | Shibuya Sky / 渋谷スカイ | **SKY OBSERVATION DECK** | A stunning open-air observation deck with 360-degree city views. |
+| **Shibuya / 渋谷** | Shibuya Crossing / 渋谷スクランブル交差点 | **WORLD'S CROSSING** | The world's busiest intersection and a symbol of modern Tokyo. |
+| **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | **YOUTH CULTURE HUB** | A bustling pedestrian street filled with shops, music, and youth fashion. |
 | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | **ANIME & MANGA MECCA** | The flagship store and ultimate destination for anime and manga lovers. |
 
 ---
@@ -48,6 +50,7 @@
 | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | **POP CULTURE STREET** | A basement street packed with official shops for anime, games, and mascots. |
 | **Tokyo / 東京** | Tokyo Imperial Palace / 皇居 | **IMPERIAL HERITAGE SITE** | The main residence of the Emperor, featuring beautiful gardens and ruins. |
 | **Tokyo / 新橋** | Shinbashi Guard Underpass Alley / 新橋ガード下 | **SALARYMAN NIGHTLIFE** | A lively retro alley where local workers gather for food and drinks. |
+| **Azabu / 麻布** | Azabu / 麻布 | **INTERNATIONAL & LUXURY ZONE** | An exclusive, sophisticated neighborhood blending historic charm, global embassies, and modern architecture. |
+| **Azabu / 麻布** | Azabudai Hills / 麻布台ヒルズ | **MODERN URBAN COMPLEX** | A futuristic modern urban complex blending lush green spaces, luxury dining, and architecture. |
 | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | **DIGITAL ART MUSEUM** | An immersive world of light and art without boundaries. |
 | **Azabu / 麻布** | Dahi Okume / だし尾粂 | **TRADISIONAL SELECTFOOD STORE** | Dried food grocery shop. Custome made Dashi Pack |
-| **Azabu / 麻布** | Azabudai Hills / 麻布台ヒルズ | **MODERN URBAN COMPLEX** | A futuristic modern urban complex blending lush green spaces, luxury dining, and architecture. |
