@@ -12,7 +12,7 @@
 | **Shinjuku / 新宿** | Kabuki-cho Godzilla Head / ゴジラヘッド | **ICONIC LANDMARK** | A life-sized Godzilla roaring over the Shinjuku skyline. |
 | **Shinjuku / 新宿** | Cross Shinjuku Vision 3D Cat / クロス新宿ビジョン 3D巨大猫 | **3D DIGITAL ART** | A viral, hyper-realistic 3D giant cat on a massive LED screen. |
 | **Shinjuku / 新宿** | Omoide-Yokocho Memory Lane / 思い出横丁 | **MODERN SKYSCRAPER HUB** | A nostalgic alley packed with cozy yakitori and izakaya stalls. |
-| **Shinjuku / 新宿** | Skyscraper District / 新宿高層ビル群 | **DEEP BAR HOPPING** | A towering business and architectural center representing Tokyo's modern metropolis. |
+| **Shinjuku / 新宿** | Skyscraper District / 新宿高層ビル群 | **MODERN SKYSCRAPER HUB** | A towering business and architectural center representing Tokyo's modern metropolis. |
 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | **Harajuku / 原宿** | Takeshita Street / My Pig Cafe / 豚カフェ | **ANIMAL CAFE EXPERIENCE** | A unique, heartwarming cafe where you can interact with micro-pigs. |
 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
