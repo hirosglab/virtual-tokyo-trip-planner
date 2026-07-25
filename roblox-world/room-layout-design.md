@@ -1,3 +1,17 @@
+---
+title: "Roblox Room Layout & Spatial Design Spec"
+type: "specification"
+status: "approved"
+tags:
+  - roblox-architecture
+  - spatial-design
+  - level-design
+links:
+  - "./object-deployment-plan.md"
+  - "./information-board.md"
+description: "Robloxワールド空間全体（円形ルーム構造、スポーン地点、エリア分割、ライティング等）のレイアウト設計書"
+---
+
 # Roblox Room Layout & Spatial Design Spec
 
 ## 🏛️ Architecture & Layout
