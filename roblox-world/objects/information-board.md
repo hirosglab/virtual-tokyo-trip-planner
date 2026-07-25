@@ -1,3 +1,16 @@
+---
+title: "Roblox Information Board Hardware & UI Specification"
+type: "specification"
+status: "approved"
+tags:
+  - roblox-ui
+  - 3d-hardware-spec
+  - surface-gui
+links:
+  - "./object-deployment-plan.md"
+description: "Roblox内の観光案内板（Information Board）の3Dパーツ構造、色・材質、およびSurfaceGuiのレイアウト設計書"
+---
+
 # Roblox Information Board Hardware & UI Specification
 
 This document defines the 3D Parts hierarchy, materials, colors, and UI layout for the custom Information Boards used across the virtual tour zones.
