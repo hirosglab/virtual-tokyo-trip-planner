@@ -1,3 +1,18 @@
+---
+title: "Roblox Object Deployment Plan"
+type: "deployment-plan"
+status: "in-progress"
+tags:
+  - roblox-deployment
+  - object-mapping
+  - progress-tracking
+links:
+  - "../../planning/tokyo-trip-plan-2026.md"
+  - "./information-board.md"
+  - "./room-layout-design.md"
+description: "旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置するプラン"
+---
+
 # Roblox Object Deployment Plan
 
 ## Custom Information Boards
