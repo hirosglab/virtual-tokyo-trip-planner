@@ -1,3 +1,16 @@
+---
+title: "Tokyo Trip Plan 2026"
+type: "plan"
+status: "draft"
+tags:
+  - travel-plan
+  - tokyo-2026
+  - base-specification
+links:
+  - "../roblox-world/objects/object-deployment-plan.md"
+description: "2026年の東京旅行計画（第1回・第2回）の基本日程、宿泊先、飲食店、観光スポット一覧"
+---
+
 # ✈️ Tokyo Trip Plan 2026
 
 ## 🗓️ 1st Trip: Nov 01 - Nov 02
