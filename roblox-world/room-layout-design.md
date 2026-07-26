@@ -16,7 +16,7 @@ description: "Robloxワールド空間全体（円形ルーム構造、スポー
 # Roblox Room Layout & Spatial Design Spec
 
 ## 📐 Room Layout Diagram
-![Roblox Room Layout Diagram](./assets/room-layout-diagram.png)
+![Roblox Room Layout Diagram](./assets/room-layout-diagram.svg)
 *※ 設計図の元データ・編集は Google Draw 参照*
 
 ---
