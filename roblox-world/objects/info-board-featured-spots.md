@@ -1,17 +1,19 @@
 ---
-title: "Roblox Information Board Hardware & UI Specification"
-type: "specification"
+title: "Roblox Information Board Spec - Featured Sightseeing Spots"
+type: "specification-info-board-featured"
 status: "approved"
 tags:
   - roblox-ui
   - 3d-hardware-spec
   - surface-gui
+  - info-board
+  - featured-sightseeing-spots
 links:
   - "./object-deployment-plan.md"
-description: "Roblox内の観光案内板（Information Board）の3Dパーツ構造、色・材質、およびSurfaceGuiのレイアウト設計書"
+description: "主要観光スポット（Featured Sightseeing Spots）専用案内板の3Dパーツ構造、色・材質、およびSurfaceGuiレイアウト設計書"
 ---
 
-# Roblox Information Board Hardware & UI Specification
+# Roblox Information Board Hardware & UI Spec (Featured Sightseeing Spots)
 
 This document defines the 3D Parts hierarchy, materials, colors, and UI layout for the custom Information Boards used across the virtual tour zones.
 
