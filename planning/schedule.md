@@ -9,9 +9,9 @@ tags:
   - progress-tracking
 links:
   - "./tokyo-trip-plan-2026.md"
-  - "../roblox-world/objects/object-deployment-plan.md"
+  - "../roblox-world/object-deployment-plan.md"
   - "../roblox-world/objects/info-board-featured-spots.md"
-  - "../roblox-world/objects/room-layout-design.md"
+  - "../roblox-world/room-layout-design.md"
 description: "プレゼンテーションのマイルストーン（8月末、9月末、10月中頃）に応じたRobloxオブジェクトおよび機能の開発スケジュール"
 ---
 
