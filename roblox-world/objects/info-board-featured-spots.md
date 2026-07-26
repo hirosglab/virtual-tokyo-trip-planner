@@ -9,7 +9,7 @@ tags:
   - info-board
   - featured-sightseeing-spots
 links:
-  - "./object-deployment-plan.md"
+  - "../object-deployment-plan.md"
 description: "主要観光スポット（Featured Sightseeing Spots）専用案内板の3Dパーツ構造、色・材質、およびSurfaceGuiレイアウト設計書"
 ---
 
