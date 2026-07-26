@@ -9,7 +9,7 @@ tags:
 links:
   - "./object-deployment-plan.md"
   - "./information-board.md"
-  - "./assets/room-layout-diagram.svg"
+  - "/assets/room-layout-diagram.svg"
 description: "Robloxワールド空間全体（円形ルーム構造、スポーン地点、放射状ゾーン分割、ボード配置）のレイアウト設計書"
 ---
 
