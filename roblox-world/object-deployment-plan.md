@@ -8,7 +8,7 @@ tags:
   - progress-tracking
 links:
   - "../../planning/tokyo-trip-plan-2026.md"
-  - "./information-board.md"
+  - "./info-board-featured-spots.md"
   - "./room-layout-design.md"
 description: "旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置するプラン"
 ---
