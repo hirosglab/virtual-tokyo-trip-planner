@@ -29,7 +29,7 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Shinjuku / 新宿** | Kabuki-cho / 歌舞伎町 | **NIGHTLIFE DISTRICT** | Explore Tokyo's most famous nightlife and entertainment district. |
 | 2 | **Shinjuku / 新宿** | Omoide-Yokocho Memory Lane / 思い出横丁 | **RETRO IZAKAYA ALLEY** | A nostalgic alley packed with cozy yakitori and izakaya stalls. |
-| 3 | **Shinjuku / 新宿** | Skyscraper District / 新宿高層ビル群 | **MODERN SKYSCRAPER HUB** | A towering business and architectural center representing Tokyo's modern metropolis. |
+| 3 | **Shinjuku / 新宿** | Shinjuku Station East Exit Area / 新宿駅東口エリア | **VIBRANT RETAIL HUB** | A bustling shopping and entertainment district packed with endless shops and department stores. |
 | 4 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | 5 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
 | 6 | **Omotesando / 表参道** | Omotesando Avenue / 表参道 | **FASHION & ARCHITECTURE** | A sophisticated tree-lined avenue lined with flagship luxury stores and stunning modern architecture. |
