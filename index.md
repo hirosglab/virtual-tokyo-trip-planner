@@ -29,7 +29,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     ├─ README.md
     ├─ index.md (本ファイル)
     ├─ planning/
-    │  ├─ schedule.md
+    │  ├─ presentation-schedule.md
     │  └─ tokyo-trip-plan-2026.md
     └─ roblox-world/
        ├─ assets/
@@ -56,10 +56,10 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 
 ### 2. 旅行計画 (`planning/`)
 
-* **schedule.md** (`./planning/schedule.md`)
-  * **役割**: 東京旅行全体のスケジュールおよび日程調整用ドキュメント。
-* **tokyo-trip-plan-2026.md** (`./planning/tokyo-trip-plan-2026.md`)
+* **presentation-schedule.md** (`./planning/schedule.md`)
   * **役割**: プレゼンテーションのマイルストーン（8月末、9月末、10月中頃）に応じたRobloxオブジェクトおよび機能の開発スケジュール。
+* **tokyo-trip-plan-2026.md** (`./planning/tokyo-trip-plan-2026.md`)
+  * **役割**: 2026年の東京旅行計画（第1回・第2回）の基本日程、宿泊先、飲食店、観光スポット一覧。
 
 ---
 
