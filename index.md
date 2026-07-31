@@ -8,7 +8,7 @@ tags:
   - documentation
 links:
   - "./README.md"
-  - "./planning/schedule.md"
+  - "./planning/presentation-schedule.md"
   - "./planning/tokyo-trip-plan-2026.md"
   - "./roblox-world/object-deployment-plan.md"
   - "./roblox-world/room-layout-design.md"
