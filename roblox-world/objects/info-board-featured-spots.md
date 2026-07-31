@@ -132,7 +132,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 
 ### 🖼️ Image / VideoFrame (ImageLabel/VideoFrame)
 *   **Purpose**: Visual Promotion of the Attraction
-*   **Image Source**: `Unsplash`
+*   **Image Source**: `Unsplash` `Pixabay`
 *   **Properties**:
     *   **Size**: `{1, 0}, {1, 0}` （Right_Frame枠全体いっぱいに拡大表示）
     *   **Position**: `{0, 0}, {0, 0}` （左上ピッタリに配置）
