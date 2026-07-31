@@ -13,6 +13,7 @@ links:
   - "./roblox-world/object-deployment-plan.md"
   - "./roblox-world/room-layout-design.md"
   - "./roblox-world/objects/info-board-featured-spots.md"
+  - "./roblox-world/objects/workspace-hierarchy.md"
 description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメント構造・相対パス・各ファイルの役割を網羅したメインインデックス"
 ---
 
@@ -36,6 +37,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
        │  └─ room-layout-diagram.svg
        ├─ objects/
        │  └─ info-board-featured-spots.md
+       │  └─ workspace-hierarchy.md
        ├─ object-deployment-plan.md
        └─ room-layout-design.md
 
