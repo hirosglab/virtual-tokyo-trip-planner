@@ -9,6 +9,7 @@ tags:
 links:
   - "./README.md"
   - "./planning/presentation-schedule.md"
+  - "./planning/milestone-1-progress.md"
   - "./planning/tokyo-trip-plan-2026.md"
   - "./roblox-world/object-deployment-plan.md"
   - "./roblox-world/room-layout-design.md"
@@ -31,6 +32,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     ├─ planning/
     │  ├─ presentation-schedule.md
     │  └─ tokyo-trip-plan-2026.md
+    │  └─ milestone-1-progress.md
     └─ roblox-world/
        ├─ assets/
        │  ├─ .gitkeep
@@ -58,6 +60,8 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 
 * **presentation-schedule.md** (`./planning/schedule.md`)
   * **役割**: プレゼンテーションのマイルストーン（8月末、9月末、10月中頃）に応じたRobloxオブジェクトおよび機能の開発スケジュール。
+* **milestone-1-progress.md** (`./planning/milestone-1-progress.md`)
+  * **役割**: Milestone 1（8月末の第一回プレゼンテーション）に向けた進捗管理票。
 * **tokyo-trip-plan-2026.md** (`./planning/tokyo-trip-plan-2026.md`)
   * **役割**: 2026年の東京旅行計画（第1回・第2回）の基本日程、宿泊先、飲食店、観光スポット一覧。
 
