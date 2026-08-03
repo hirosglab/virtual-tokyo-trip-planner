@@ -69,7 +69,14 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | **Minato / 港区** | Tokyo Tower / 東京タワー | Miniaturized iconic red tower |
 
 ### Small Prop & Detail Objects
-* **Sushi / 寿司** (Food prop for tables or decorations)
+* **Fatty Tuna Sushi / 寿司（トロ）** (Food prop for tables or decorations)
+* **Salmon Sushi / 寿司（サーモン）** (Food prop for tables or decorations)
+* **Yakitori / 焼き鳥** (Food prop for tables or decorations)
+* **Sake Bottle & Cup / 日本酒（お銚子・お猪口）** (Food & drink prop for tables or decorations)
+* **Yakiniku / 焼肉** (Food prop for tables or decorations)
+* **Shopping Bag / ショッピングバッグ** (Detail prop for shops or decorations)
 * **Harajuku Crepe / 原宿クレープ** (Street food item model)
+* **Japanese Paper Lantern / 提灯（ちょうちん）** (Decorative lighting & street prop)
 * **Kabuki-cho Godzilla Head / ゴジラヘッド** *(Bonus/Optional feature if time permits)*
 * **Cross Shinjuku Vision 3D Cat / クロス新宿ビジョン 3D巨大猫** *(Bonus/Optional feature if time permits)*
+* **Hachiko Statue / ハチ公像** *(Bonus/Optional feature if time permits)*
