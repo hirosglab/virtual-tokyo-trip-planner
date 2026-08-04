@@ -46,9 +46,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_01_Kabukicho` | Shinjuku / 新宿 | Kabuki-cho / 歌舞伎町 |
 | [x] | `InfoBoard_02_OmoideYokocho` | Shinjuku / 新宿 | Omoide-Yokocho Memory Lane / 思い出横丁 |
 | [x] | `InfoBoard_03_ShinjukuEastExit` | Shinjuku / 新宿 | Shinjuku Station East Exit Area / 新宿駅東口エリア |
-| [ ] | `InfoBoard_04_TakeshitaStreet` | Harajuku / 原宿 | Takeshita Street / 竹下通り |
-| [ ] | `InfoBoard_05_MeijiJingu` | Harajuku / 原宿 | Meiji Jingu / 明治神宮 |
-| [ ] | `InfoBoard_06_OmotesandoAvenue` | Omotesando / 表参道 | Omotesando Avenue / 表参道 |
+| [x] | `InfoBoard_04_TakeshitaStreet` | Harajuku / 原宿 | Takeshita Street / 竹下通り |
+| [x] | `InfoBoard_05_MeijiJingu` | Harajuku / 原宿 | Meiji Jingu / 明治神宮 |
+| [x] | `InfoBoard_06_OmotesandoAvenue` | Omotesando / 表参道 | Omotesando Avenue / 表参道 |
 | [ ] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
 | [ ] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
 | [ ] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
