@@ -49,9 +49,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_04_TakeshitaStreet` | Harajuku / 原宿 | Takeshita Street / 竹下通り |
 | [x] | `InfoBoard_05_MeijiJingu` | Harajuku / 原宿 | Meiji Jingu / 明治神宮 |
 | [x] | `InfoBoard_06_OmotesandoAvenue` | Omotesando / 表参道 | Omotesando Avenue / 表参道 |
-| [ ] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
+| [x] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
 | [ ] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
-| [ ] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
+| [x] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
 | [ ] | `InfoBoard_10_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
 | [ ] | `InfoBoard_11_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
 | [ ] | `InfoBoard_12_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
