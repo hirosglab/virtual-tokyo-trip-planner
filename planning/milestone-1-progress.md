@@ -79,6 +79,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | Status | Board Type | Target Name | Notes |
 | :---: | :--- | :--- | :--- |
 | [ ] | Accommodations | Apa Hotel Shinjuku / アパホテル新宿 | 宿泊先案内ボード |
+| [ ] | Accommodations | Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京 |宿泊先案内ボード |
 | [ ] | Restaurants | Teppanyaki 10 / 鉄板焼き10 | 飲食スポット案内ボード |
 | [ ] | Restaurants | Tokyo Yakiniku Heijoen / 東京焼肉平城苑 | 飲食スポット案内ボード |
 
