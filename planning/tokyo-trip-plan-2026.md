@@ -42,7 +42,7 @@ description: "2026年の東京旅行計画（第1回・第2回）の基本日程
 ## 🗓️ 2nd Trip: Nov 11 - Nov 14
 
 ### 🏨 Accommodation
-* *To be decided*
+* **Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京**
 
 ### 🍽️ Restaurant Plan
 * [ ] Teppanyaki 10 / 鉄板焼き10
