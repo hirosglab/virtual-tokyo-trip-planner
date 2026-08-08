@@ -19,6 +19,7 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 
 ### Accommodations
 * **Apa Hotel Shinjuku / アパホテル新宿**
+* **Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京**
 
 ### Restaurants
 * [ ] Teppanyaki 10 / 鉄板焼き10
