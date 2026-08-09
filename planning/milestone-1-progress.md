@@ -19,7 +19,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 # 🎯 Milestone 1 (8月末) 進捗管理票
 
-本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッ[...] 
+本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッカーです。
 
 ---
 
@@ -27,10 +27,10 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 | カテゴリー | タスク総数 | 完了 | 未着手 | 進捗率 |
 | :--- | :---: | :---: | :---: | :---: |
-| **Information Boards** | 27 | 6 | 21 | 22% |
+| **Information Boards** | 27 | 13 | 14 | 48% |
 | **World Environment** | 2 | 0 | 2 | 0% |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
-| **合計** | **33** | **6** | **27** | **18%** |
+| **合計** | **33** | **13** | **20** | **39%** |
 
 ---
 
@@ -49,13 +49,13 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_04_TakeshitaStreet` | Harajuku / 原宿 | Takeshita Street / 竹下通り |
 | [x] | `InfoBoard_05_MeijiJingu` | Harajuku / 原宿 | Meiji Jingu / 明治神宮 |
 | [x] | `InfoBoard_06_OmotesandoAvenue` | Omotesando / 表参道 | Omotesando Avenue / 表参道 |
-| [ ] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
-| [ ] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
-| [ ] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
-| [ ] | `InfoBoard_10_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
-| [ ] | `InfoBoard_11_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
-| [ ] | `InfoBoard_12_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
-| [ ] | `InfoBoard_13_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
+| [x] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
+| [x] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
+| [x] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
+| [x] | `InfoBoard_10_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
+| [x] | `InfoBoard_11_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
+| [x] | `InfoBoard_12_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
+| [x] | `InfoBoard_13_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
 | [ ] | `InfoBoard_14_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
 | [ ] | `InfoBoard_15_TokyoStation` | Tokyo / 東京 | Tokyo Central Station / 東京駅 |
 | [ ] | `InfoBoard_16_ImperialPalace` | Tokyo / 東京 | Tokyo Imperial Palace / 皇居 |
