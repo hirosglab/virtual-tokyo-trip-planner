@@ -33,14 +33,14 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | 3 | **Shinjuku / 新宿** | Shinjuku Station East Exit Area / 新宿駅東口エリア | **VIBRANT RETAIL HUB** | A bustling shopping and entertainment district packed with endless shops and department stores. |
 | 4 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | 5 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
-| 6 | **Omotesando / 表参道** | Omotesando Avenue / 表参道 | **FASHION & ARCHITECTURE** | A sophisticated tree-lined avenue lined with flagship luxury stores and stunning modern architecture. |
+| 6 | **Harajuku / 原宿** | Omotesando Avenue / 表参道 | **FASHION & ARCHITECTURE** | A sophisticated tree-lined avenue lined with flagship luxury stores and stunning modern architecture. |
 | 7 | **Shibuya / 渋谷** | Shibuya Sky / 渋谷スカイ | **SKY OBSERVATION DECK** | A stunning open-air observation deck with 360-degree city views. |
 | 8 | **Shibuya / 渋谷** | Shibuya Crossing / 渋谷スクランブル交差点 | **WORLD'S CROSSING** | The world's busiest intersection and a symbol of modern Tokyo. |
 | 9 | **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | **YOUTH CULTURE HUB** | A bustling pedestrian street filled with shops, music, and youth fashion. |
 | 10 | **Tsukiji / 築地** | Tsukiji Outer Market / 築地場外市場 | **SEAFOOD STREET FOOD** | A bustling historic market filled with fresh seafood, sushi, and local street food snacks. |
 | 11 | **Ginza / 銀座** | Ginza Street / 銀座通り | **HIGH-CLASS FASHION STREET** | A sophisticated avenue famous for luxury shopping and weekend pedestrian hours. |
 | 12 | **Akihabara / 秋葉原** | Akihabara Electric Town / 秋葉原電気街 | **OTAKU & TECH CAPITAL** | The global hub for anime, manga, retro video games, and electronics. |
-| 13 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
+| 13 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 浅草寺雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
 | 14 | **Asakusa / 浅草** | Sumida River / 隅田川 | **SCENIC RIVERSIDE VIEW** | A beautiful waterfront area perfect for river cruises and skyline views. |
 | 15 | **Tokyo / 東京** | Tokyo Central Station / 東京駅 | **HISTORIC BRICK HUB** | A stunning red-brick station building blending history and modern transport. |
 | 16 | **Tokyo / 東京** | Tokyo Imperial Palace / 皇居 | **IMPERIAL HERITAGE SITE** | The main residence of the Emperor, featuring beautiful gardens and ruins. |
