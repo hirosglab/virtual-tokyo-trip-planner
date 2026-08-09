@@ -49,13 +49,13 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_04_TakeshitaStreet` | Harajuku / 原宿 | Takeshita Street / 竹下通り |
 | [x] | `InfoBoard_05_MeijiJingu` | Harajuku / 原宿 | Meiji Jingu / 明治神宮 |
 | [x] | `InfoBoard_06_OmotesandoAvenue` | Omotesando / 表参道 | Omotesando Avenue / 表参道 |
-| [x] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
-| [x] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
-| [x] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
-| [x] | `InfoBoard_10_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
-| [x] | `InfoBoard_11_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
-| [x] | `InfoBoard_12_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
-| [x] | `InfoBoard_13_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
+| [ ] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
+| [ ] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
+| [ ] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
+| [ ] | `InfoBoard_10_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
+| [ ] | `InfoBoard_11_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
+| [ ] | `InfoBoard_12_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
+| [ ] | `InfoBoard_13_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
 | [ ] | `InfoBoard_14_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
 | [ ] | `InfoBoard_15_TokyoStation` | Tokyo / 東京 | Tokyo Central Station / 東京駅 |
 | [ ] | `InfoBoard_16_ImperialPalace` | Tokyo / 東京 | Tokyo Imperial Palace / 皇居 |
@@ -79,7 +79,6 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | Status | Board Type | Target Name | Notes |
 | :---: | :--- | :--- | :--- |
 | [ ] | Accommodations | Apa Hotel Shinjuku / アパホテル新宿 | 宿泊先案内ボード |
-| [ ] | Accommodations | Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京 |宿泊先案内ボード |
 | [ ] | Restaurants | Teppanyaki 10 / 鉄板焼き10 | 飲食スポット案内ボード |
 | [ ] | Restaurants | Tokyo Yakiniku Heijoen / 東京焼肉平城苑 | 飲食スポット案内ボード |
 
