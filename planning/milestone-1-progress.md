@@ -52,15 +52,15 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_07_ShibuyaSky` | Shibuya / 渋谷 | Shibuya Sky / 渋谷スカイ |
 | [x] | `InfoBoard_08_ShibuyaCrossing` | Shibuya / 渋谷 | Shibuya Crossing / 渋谷スクランブル交差点 |
 | [x] | `InfoBoard_09_ShibuyaCenterGai` | Shibuya / 渋谷 | Shibuya Center-Gai / 渋谷センター街 |
-| [ ] | `InfoBoard_10_TokyoStation` | Tokyo / 東京 | Tokyo Central Station / 東京駅 |
-| [ ] | `InfoBoard_11_ImperialPalace` | Tokyo / 東京 | Tokyo Imperial Palace / 皇居 |
-| [ ] | `InfoBoard_12_ShinbashiUnderpass` | Tokyo / 新橋 | Shinbashi Guard Underpass Alley / 新橋ガード下 |
+| [x] | `InfoBoard_10_TokyoStation` | Tokyo / 東京 | Tokyo Central Station / 東京駅 |
+| [x] | `InfoBoard_11_ImperialPalace` | Tokyo / 東京 | Tokyo Imperial Palace / 皇居 |
+| [x] | `InfoBoard_12_ShinbashiUnderpass` | Tokyo / 新橋 | Shinbashi Guard Underpass Alley / 新橋ガード下 |
 | [x] | `InfoBoard_13_TsukijiOuterMarket` | Tsukiji / 築地 | Tsukiji Outer Market / 築地場外市場 |
 | [x] | `InfoBoard_14_GinzaStreet` | Ginza / 銀座 | Ginza Street / 銀座通り |
 | [x] | `InfoBoard_15_AkihabaraElectricTown` | Akihabara / 秋葉原 | Akihabara Electric Town / 秋葉原電気街 |
-| [ ] | `InfoBoard_16_AzabuArea` | Azabu / 麻布 | Azabu / 麻布 |
+| [x] | `InfoBoard_16_AzabuArea` | Azabu / 麻布 | Azabu / 麻布 |
 | [x] | `InfoBoard_17_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
-| [ ] | `InfoBoard_18_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
+| [x] | `InfoBoard_18_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
 
 #### 1.2 Specific Spot & Shop Boards (全6箇所)
 * **フォルダ**: `Workspace.Specific_Shop_Boards`
