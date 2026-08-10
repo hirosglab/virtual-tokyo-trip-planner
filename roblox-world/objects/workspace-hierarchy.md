@@ -28,15 +28,15 @@ Workspace
 │   ├── 📄 InfoBoard_07_ShibuyaSky
 │   ├── 📄 InfoBoard_08_ShibuyaCrossing
 │   ├── 📄 InfoBoard_09_ShibuyaCenterGai
-│   ├── 📄 InfoBoard_10_TsukijiOuterMarket
-│   ├── 📄 InfoBoard_11_GinzaStreet
-│   ├── 📄 InfoBoard_12_AkihabaraElectricTown
-│   ├── 📄 InfoBoard_13_Sensoji
-│   ├── 📄 InfoBoard_14_SumidaRiver
-│   ├── 📄 InfoBoard_15_TokyoStation
-│   ├── 📄 InfoBoard_16_ImperialPalace
-│   ├── 📄 InfoBoard_17_ShinbashiUnderpass
-│   └── 📄 InfoBoard_18_AzabuArea
+│   ├── 📄 InfoBoard_10_TokyoStation
+│   ├── 📄 InfoBoard_11_ImperialPalace
+│   ├── 📄 InfoBoard_12_ShinbashiUnderpass
+│   ├── 📄 InfoBoard_13_TsukijiOuterMarket
+│   ├── 📄 InfoBoard_14_GinzaStreet
+│   ├── 📄 InfoBoard_15_AkihabaraElectricTown
+│   ├── 📄 InfoBoard_16_ImperialPalace_AzabuArea
+│   ├── 📄 InfoBoard_17_ShinbashiUnderpass_Sensoji
+│   └── 📄 InfoBoard_18_SumidaRiver
 │
 ├── 📁 Specific_Shop_Boards
 │   ├── 📄 ShopBoard_01_AnimateIkebukuro
