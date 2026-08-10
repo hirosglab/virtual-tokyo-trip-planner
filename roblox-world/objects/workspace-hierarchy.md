@@ -34,8 +34,8 @@ Workspace
 │   ├── 📄 InfoBoard_13_TsukijiOuterMarket
 │   ├── 📄 InfoBoard_14_GinzaStreet
 │   ├── 📄 InfoBoard_15_AkihabaraElectricTown
-│   ├── 📄 InfoBoard_16_ImperialPalace_AzabuArea
-│   ├── 📄 InfoBoard_17_ShinbashiUnderpass_Sensoji
+│   ├── 📄 InfoBoard_16_AzabuArea
+│   ├── 📄 InfoBoard_17_Sensoji
 │   └── 📄 InfoBoard_18_SumidaRiver
 │
 ├── 📁 Specific_Shop_Boards
