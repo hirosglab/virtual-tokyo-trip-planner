@@ -16,7 +16,9 @@ description: "2026年の東京旅行計画（第1回・第2回）の基本日程
 ## 🗓️ 1st Trip: Nov 01 - Nov 02
 
 ### 🏨 Accommodation
-* **Apa Hotel Shinjuku / アパホテル新宿**
+|Area | Hotel | Description | Facilities |
+| :--- | :--- | :--- | :--- |
+| **Shinjuku / 新宿** | Apa Hotel Shinjuku / アパホテル新宿 | Located in Kabukicho one of most famous nightlife and entertainment district. Behind iconic life-sized Godzilla | Open-air bath, Wi-Fi |
 
 ### 🗺️ Sightseeing & Activity Plan
 | Area | Spot | Category | Description |
@@ -42,7 +44,9 @@ description: "2026年の東京旅行計画（第1回・第2回）の基本日程
 ## 🗓️ 2nd Trip: Nov 11 - Nov 14
 
 ### 🏨 Accommodation
-* **Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京**
+|Area | Hotel | Description | Facilities |
+| :--- | :--- | :--- | :--- |
+| **Tokyo / 東京** | Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京 | Located near Tokyo station. | Function Room, Coin Laundry |
 
 ### 🍽️ Restaurant Plan
 * [ ] Teppanyaki 10 / 鉄板焼き10
