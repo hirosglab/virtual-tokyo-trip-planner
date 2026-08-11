@@ -18,7 +18,7 @@ description: "2026年の東京旅行計画（第1回・第2回）の基本日程
 ### 🏨 Accommodation
 |Area | Hotel | Description | Facilities |
 | :--- | :--- | :--- | :--- |
-| **Shinjuku / 新宿** | Apa Hotel Shinjuku / アパホテル新宿 | Located in Kabukicho one of most famous nightlife and entertainment district. Behind iconic life-sized Godzilla | Open-air bath, Wi-Fi |
+| **Shinjuku / 新宿** | Apa Hotel Shinjuku / アパホテル新宿 | Located in Kabukicho one of most famous nightlife and entertainment district. Behind iconic life-sized Godzilla | Open-air hotspring bath, Wi-Fi |
 
 ### 🗺️ Sightseeing & Activity Plan
 | Area | Spot | Category | Description |
