@@ -50,7 +50,6 @@ description: "2026年の東京旅行計画（第1回・第2回）の基本日程
 
 ### 🍽️ Restaurant Plan
 * [ ] Teppanyaki 10 / 鉄板焼き10
-* [ ] Tokyo Yakiniku Heijoen / 東京焼肉平城苑
 
 ### 🗺️ Sightseeing & Activity Plan
 | Area | Spot | Category | Description |
