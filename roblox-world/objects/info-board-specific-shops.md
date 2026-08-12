@@ -51,7 +51,7 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │   ├── 🧱 Inner_Status_Cylinder (Status Frame) --> Size: 0.3, 6.8, 6.8 (Shape: Cylinder)
     │   │
     │   ├── 🖼️ Display_Surface_Front (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
-    │   │   └── 📄 SurfaceGui_Front (Face: Front / CanvasSize: 1024 x 1024)
+    │   │   └── 📄 SurfaceGui_Front (Face: Right / CanvasSize: 1024 x 1024)
     │   │       ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │   │       └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
     │   │           ├── 🔤 Spot_Name (TextLabel)
@@ -123,10 +123,11 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 
 ### ① 🖼️ Center_Image_Label (Front & Back Face)
 * **Purpose**: Displays the shop highlight image or logo on both sides of the center cylinder.
-* **Size**: `{0.5, 0}, {0.5, 0}` (512 x 512 px)
-* **Position**: `{0.25, 0}, {0.2, 0}` (Centered horizontally in top half)
+* **Rotation**: 180
+* **Size**: `{1.0, 0}, {1.0, 0}` (512 x 512 px)
+* **Position**: `{0, 0}, {0, 0}` (Centered horizontally in top half)
 * **BackgroundTransparency**: `1`
-* **ScaleType**: `Crop`
+* **ScaleType**: `Stretch`
 * **Child Components**:
   * `UICorner`: `CornerRadius = {1, 0}` (Creates a perfect circle mask)
   * `UIStroke`: `Thickness = 4`, `Color = Status Dynamic (Yellow/Green)`
