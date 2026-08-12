@@ -12,7 +12,7 @@ links:
   - "../object-deployment-plan.md"
   - "./info-board-featured-spots.md"
   - "../assets/specific-spot-shop-boards-design.svg"
-description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウ[...]
+description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウト仕様を定義します。"
 ---
 
 # Roblox Information Board Hardware & UI Spec (Specific Spot & Shop Boards)
@@ -26,7 +26,7 @@ This document defines the 3D Parts hierarchy, double-sided UI configuration, dyn
 
 ## 🏗️ 3D Part Hierarchy & Spatial Depth Logic
 
-To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outw[...]
+To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outw[...[...]
 
 ### Depth & Thickness Distribution (Center-Thick Structure)
 1. **Core / Display Layer (Center):** Thickness = `1.0` studs (Thickest)
@@ -72,7 +72,7 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
 
 ## 🎨 Color & Material Setup
 
-The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic [...]
+The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic [...][...]
 
 ### Hardware Parts & Materials
 
@@ -154,3 +154,5 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
    * Any change to `Status` attribute (`"Proposed"` or `"Confirmed"`) updates both `SurfaceGui_Front` and `SurfaceGui_Back` simultaneously.
 2. **Double-Sided Image Binding**:
    * The script assigns the image decal URL to both `SurfaceGui_Front.Center_Image_Label` and `SurfaceGui_Back.Center_Image_Label` to ensure identical visuals from all viewing angles.
+
+```
