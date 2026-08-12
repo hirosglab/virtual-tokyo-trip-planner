@@ -11,22 +11,22 @@ tags:
 links:
   - "../object-deployment-plan.md"
   - "./info-board-featured-spots.md"
-  - "./assets/specific-spot-shop-boards-design.svg"
-description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウト設計書"
+  - "../assets/specific-spot-shop-boards-design.svg"
+description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウ[...]
 ---
 
 # Roblox Information Board Hardware & UI Spec (Specific Spot & Shop Boards)
 
-This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-spot-shop-boards-design.svg).
+This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-s[...]
 
 ---
 ## 📐 Information Board Layout Diagram
-![Roblox Informationboard Layout Diagram](./assets/specific-spot-shop-boards-design.svg)
+![Roblox Informationboard Layout Diagram](../assets/specific-spot-shop-boards-design.svg)
 *※ 設計図の元データ・編集は Google Draw 参照*
 
 ## 🏗️ 3D Part Hierarchy & Spatial Depth Logic
 
-To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outward along the Z-axis from a central thick core.
+To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outw[...]
 
 ### Depth & Thickness Distribution (Center-Thick Structure)
 1. **Core / Display Layer (Center):** Thickness = `1.0` studs (Thickest)
@@ -68,12 +68,11 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
         └── 📄 Category_SurfaceGui_Back (Face: Back / CanvasSize: 256 x 256)
             └── 🖼️ Icon_ImageLabel (Category Pictogram)
 
-> 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
-> `SizingMode` のプロパティを `PixelsPerStud` から `FixedSize` に変更することで、`CanvasSize` プロパティの入力が可能になり、任意の解像度（例: 1024 x 768）を正確に指定
-## 🎨 Color & Material Setup
 ---
 
-The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic color logic.
+## 🎨 Color & Material Setup
+
+The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic [...]
 
 ### Hardware Parts & Materials
 
