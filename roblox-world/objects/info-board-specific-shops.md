@@ -29,7 +29,7 @@ This document defines the 3D Parts hierarchy, double-sided UI configuration, dyn
 To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outward along the Z-axis from a central thick core.
 
 ### Depth & Thickness Distribution (Center-Thick Structure)
-1. **Core / Display Layer (Center):** Thickness = `0.5` studs (Thickest)
+1. **Core / Display Layer (Center):** Thickness = `1.0` studs (Thickest)
 2. **Inner Status Frame Layer:** Thickness = `0.3` studs
 3. **Outer Border Base Layer:** Thickness = `0.1` studs (Thinnest)
 
@@ -37,7 +37,7 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
 [Side Profile Depth Concept]
        Outer Base (0.1)  ──┐
  Inner Status Frame (0.3)  ──┼─┐
- Center Display Surface (0.5)──┼─┼─ [ THICK CENTER CORE ]
+ Center Display Surface (1.0)──┼─┼─ [ THICK CENTER CORE ]
  Inner Status Frame (0.3)  ──┼─┘
        Outer Base (0.1)  ──┘
 ```
@@ -50,7 +50,7 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │   │
     │   ├── 🧱 Inner_Status_Cylinder (Status Frame) --> Size: 0.3, 6.8, 6.8 (Shape: Cylinder)
     │   │
-    │   ├── 🖼️ Display_Surface_Front (Thick Core Face) --> Size: 0.5, 6.0, 6.0 (Shape: Cylinder)
+    │   ├── 🖼️ Display_Surface_Front (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
     │   │   └── 📄 SurfaceGui_Front (Face: Front / CanvasSize: 1024 x 1024)
     │   │       ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │   │       └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
