@@ -14,6 +14,7 @@ links:
   - "./roblox-world/object-deployment-plan.md"
   - "./roblox-world/room-layout-design.md"
   - "./roblox-world/objects/info-board-featured-spots.md"
+  - "./roblox-world/objects/info-board-specific-shops.md"
   - "./roblox-world/objects/workspace-hierarchy.md"
 description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメント構造・相対パス・各ファイルの役割を網羅したメインインデックス"
 ---
@@ -31,14 +32,15 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     ├─ index.md (本ファイル)
     ├─ planning/
     │  ├─ presentation-schedule.md
-    │  └─ tokyo-trip-plan-2026.md
+    │  ├─ tokyo-trip-plan-2026.md
     │  └─ milestone-1-progress.md
     └─ roblox-world/
        ├─ assets/
        │  ├─ .gitkeep
        │  └─ room-layout-diagram.svg
        ├─ objects/
-       │  └─ info-board-featured-spots.md
+       │  ├─ info-board-featured-spots.md
+       │  ├─ info-board-specific-shops.md
        │  └─ workspace-hierarchy.md
        ├─ object-deployment-plan.md
        └─ room-layout-design.md
@@ -58,7 +60,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 
 ### 2. 旅行計画 (`planning/`)
 
-* **presentation-schedule.md** (`./planning/schedule.md`)
+* **presentation-schedule.md** (`./planning/presentation-schedule.md`)
   * **役割**: プレゼンテーションのマイルストーン（8月末、9月末、10月中頃）に応じたRobloxオブジェクトおよび機能の開発スケジュール。
 * **milestone-1-progress.md** (`./planning/milestone-1-progress.md`)
   * **役割**: Milestone 1（8月末の第一回プレゼンテーション）に向けた進捗管理票。
@@ -74,7 +76,8 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
   * **主要関連リンク**:
     * 旅行マスタープラン: `../planning/tokyo-trip-plan-2026.md`
     * 空間レイアウト設計: `./room-layout-design.md`
-    * 案内板仕様 (Featured Spots): `./objects/info-board-featured-spots.md`
+    * 主要観光スポット案内板: `./objects/info-board-featured-spots.md`
+    * 飲食店・ショップ案内板: `./objects/info-board-specific-shops.md`
 
 * **room-layout-design.md** (`./roblox-world/room-layout-design.md`)
   * **役割**: Robloxワールド空間全体（円形ルーム構造、スポーン地点、放射状ゾーン配置）の空間デザイン仕様書。
@@ -86,6 +89,18 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
   * **役割**: 主要観光スポット（Featured Sightseeing Spots）専用案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui (1024x768) レイアウト仕様書。
   * **主要関連リンク**:
     * オブジェクト配置計画: `../object-deployment-plan.md`
+
+* **objects/info-board-specific-shops.md** (`./roblox-world/objects/info-board-specific-shops.md`)
+  * **役割**: 東京の飲食店・ショップ・レストラン等を紹介する案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui レイアウト仕様書。情報カード、動的なコンテンツレンダリング、ハイパーリンク機能を含む。
+  * **主要関連リンク**:
+    * オブジェクト配置計画: `../object-deployment-plan.md`
+    * 旅行マスタープラン: `../../planning/tokyo-trip-plan-2026.md`
+
+* **objects/workspace-hierarchy.md** (`./roblox-world/objects/workspace-hierarchy.md`)
+  * **役割**: Robloxワールド内の全オブジェクトのワークスペース階層構造、命名規約、パーツの親子関係（フォルダ分類）を定義したリファレンス。
+  * **主要関連リンク**:
+    * 主要観光スポット案内板: `./info-board-featured-spots.md`
+    * 飲食店・ショップ案内板: `./info-board-specific-shops.md`
 
 ---
 
