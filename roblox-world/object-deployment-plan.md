@@ -22,7 +22,7 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 * **Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京**
 
 ### Featured Sightseeing Spots
-| No | Area / エリア | Spot / スポット | Category / カテゴリー | Description / 説明文 |
+| No | Area | Spot | Category | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Shinjuku / 新宿** | Kabuki-cho / 歌舞伎町 | **NIGHTLIFE DISTRICT** | Explore Tokyo's most famous nightlife and entertainment district. |
 | 2 | **Shinjuku / 新宿** | Omoide-Yokocho Memory Lane / 思い出横丁 | **RETRO IZAKAYA ALLEY** | A nostalgic alley packed with cozy yakitori and izakaya stalls. |
@@ -45,20 +45,20 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 
 
 ### 🛍️ Specific Spot & Shop Boards
-| Status | Location Area | Shop & Facility / 施設・店舗名 (Pop Up) | Category / カテゴリー | Description / 説明文 (Pop Up) |
-| :---: | :--- | :--- | :--- | :--- |
-| **Confirmed** | **Ginza / 銀座** |  Teppanyaki 10 / 鉄板焼き10 | Restaurant | **GRILLED WAGYU & SEA FOODS** |
-| **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | Art | **DIGITAL ART MUSEUM** |
-| **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **SELECT FOOD STORE** |
-| **Proposed** | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | Shopping | **BIGGEST ANIME & MANGA SHOP** |
-| **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | Cafe | **ANIMAL CAFE** |
-| **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | Shopping | **POP CULTURE STREET** |
-| **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME Figures & TRADING CARDS** |
+| No | Status | Area | Shop & Facility (Pop Up) | Category | Description (Pop Up) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | **Confirmed** | **Ginza / 銀座** |  Teppanyaki 10 / 鉄板焼き10 | Restaurant | **GRILLED WAGYU & SEA FOODS** |
+| 2 | **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | Art | **DIGITAL ART MUSEUM** |
+| 3 | **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **SELECT FOOD STORE** |
+| 4 | **Proposed** | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | Shopping | **BIGGEST ANIME & MANGA SHOP** |
+| 5 | **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | Cafe | **ANIMAL CAFE** |
+| 6 | **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | Shopping | **POP CULTURE STREET** |
+| 7 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
 
 ## 3D Environment Objects
 
 ### Iconic Major Landmarks
-| Area / エリア | Spot / スポット | Notes / 補足 |
+| Area | Spot | Notes |
 | :--- | :--- | :--- |
 | **Shinjuku / 新宿** | Kabuki-cho / 歌舞伎町 | Neon arch or gateway structure |
 | **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | Signboard entrance arch |
