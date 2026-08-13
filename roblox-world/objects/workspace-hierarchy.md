@@ -39,12 +39,13 @@ Workspace
 │   └── 📄 InfoBoard_18_SumidaRiver
 │
 ├── 📁 Specific_Shop_Boards
-│   ├── 📄 ShopBoard_01_AnimateIkebukuro
+│   ├── 📄 ShopBoard_01_Teppanyaki10
 │   ├── 📄 ShopBoard_02_TeamLabBorderless
 │   ├── 📄 ShopBoard_03_DashiOkume
-│   ├── 📄 ShopBoard_04_MyPigCafe
-│   ├── 📄 ShopBoard_05_TokyoCharacterStreet
-│   └── 📄 ShopBoard_06_AkihabaraRadioKaikan
+│   ├── 📄 ShopBoard_04_AnimateIkebukuro
+│   ├── 📄 ShopBoard_05_MyPigCafe
+│   ├── 📄 ShopBoard_06_TokyoCharacterStreet
+│   └── 📄 ShopBoard_07_AkihabaraRadioKaikan
 │
 ├── 📁 Iconic_Major_Landmarks_Objects
 │   ├── 📄 Landmark_01_KabukichoArch
