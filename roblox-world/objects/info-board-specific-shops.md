@@ -58,14 +58,14 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │   │           └── 🔤 Description (TextLabel)
     │   │
     │   └── 🖼️ Display_Surface_Back (Rear Core Face) --> Rendered via SurfaceGui Face: Back
-    │       └── 📄 SurfaceGui_Back (Face: Back / CanvasSize: 1024 x 1024)
+    │       └── 📄 SurfaceGui_Back (Face: Left / CanvasSize: 1024 x 1024)
     │           ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │           └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
     │
     └── 🏷️ Category_Icon_Cylinder (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
-        ├── 📄 Category_SurfaceGui_Front (Face: Front / CanvasSize: 256 x 256)
+        ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize: 256 x 256)
         │   └── 🖼️ Icon_ImageLabel (Category Pictogram)
-        └── 📄 Category_SurfaceGui_Back (Face: Back / CanvasSize: 256 x 256)
+        └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize: 256 x 256)
             └── 🖼️ Icon_ImageLabel (Category Pictogram)
 
 > 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
@@ -134,8 +134,19 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
   * `UIStroke`: `Thickness = 4`, `Color = Status Dynamic (Yellow/Green)`
 
 ### ② 🏷️ Category_Icon_Cylinder Badge (Front & Back)
-* **Purpose**: Displays a 2D pictogram icon on both sides of the badge.
-* **SurfaceGui setup**: `Category_SurfaceGui_Front` (`Face = Front`) and `Category_SurfaceGui_Back` (`Face = Back`).
+* **Purpose**: Displays a 2D pictogram icon on both sides of the badge to indicate the spot category (e.g., Dining, Shopping).
+* **SurfaceGui Setup**: 
+  * Front: `Category_SurfaceGui_Front` (`Face = Right`, `CanvasSize = 256 x 256`)
+  * Back: `Category_SurfaceGui_Back` (`Face = Left`, `CanvasSize = 256 x 256`)
+* **Child Components (`Icon_ImageLabel`)**:
+  * **Size**: `{0.8, 0}, {0.8, 0}` (204 x 204 px)
+  * **Position**: `{0.1, 0}, {0.1, 0}` (Centered inside badge)
+  * **BackgroundTransparency**: `1`
+  * **ImageColor3**: `[255, 255, 255]`
+  * **ScaleType**: `Fit`
+  * **Sub-Components**:
+    * `UICorner`: `CornerRadius = {1, 0}` (Circular mask fitting badge boundary)
+    * `UIStroke`: `Thickness = 2`, `Color = [200, 205, 215]`, `ApplyStrokeMode = Border`
 
 ### ③ 📁 PopUp_Info_Frame (Bottom Half Overlay)
 * **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs.
