@@ -155,4 +155,34 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 2. **Double-Sided Image Binding**:
    * The script assigns the image decal URL to both `SurfaceGui_Front.Center_Image_Label` and `SurfaceGui_Back.Center_Image_Label` to ensure identical visuals from all viewing angles.
 
+---
+
+## 🖼️ Center Image Generation Spec (DALL·E 3 Prompt Template)
+
+`Center_Image_Label`（正円マスク領域）に挿入する店舗・施設用イメージを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロンプトテンプレートです。
+
+### 📐 生成スペック要件
+* **Image Engine**: DALL·E 3 (または同等クオリティの画像生成AI)
+* **Aspect Ratio**: `1:1` (正方形)
+* **Resolution**: `1024 x 1024 px` 以上（推奨: `2048 x 2048 px`）
+* **Composition & Lighting Rules**:
+  * **正円切り抜き（UICorner）対策**: メイン被写体は**画面中央の 50% 以内**に配置する。四隅は半径50%の円形マスクで切除されるため、重要な要素は外周に配置しない。
+  * **ライティング仕様**: 暗い円形フレーム（Obsidian Black）内での視認性を高めるため、**明るく洗練された背景（Bright, well-lit background / ambient light）** を基本条件とする。
+
+### 📝 プロンプト構造テンプレート
+
+```text
+[Main Subject Description], served/located in [Store Style / Reference Name]. Gourmet photography / Architectural shot, bright and well-lit background, warm soft lighting, vibrant ambient atmosphere, perfectly centered composition with abundant outer margins on all four sides, 8k resolution, photorealistic, cinematic shot.
 ```
+
+### 💡 生成用プロンプト実例（鉄板焼き店舗のケース）
+
+* **対象料理 / 店舗**: 鉄板焼き10（和牛ステーキ・海鮮鉄板焼き）
+* **英語プロンプト文**:
+  > A high-end Teppanyaki dish featuring thick Japanese Wagyu steak and fresh grilled seafood (seared lobster and scallops) served on a hot iron griddle. Gourmet food photography, luxury restaurant ambiance like Teppanyaki 10, **bright and well-lit background with warm glowing ambient light**, perfectly centered composition with abundant margins on all four sides, dramatic steam rising, 8k resolution, photorealistic, cinematic shot.
+
+* **要素ブレイクダウン**:
+  * **料理内容**: 分厚い和牛ステーキ、伊勢海老・ホタテ等の新鮮な海鮮鉄板焼き
+  * **雰囲気・背景**: 「鉄板焼き10」風の高級感ある店内、**明るく光の回った空間背景（Bright & well-lit）**、温かみのあるライティング、立ち上る湯気
+  * **構図（重要）**: 中央配置（Centered composition） ＋ 四隅に十分な余白（Abundant margins）
+  * **画質・スタイル**: 8K・実写風（Photorealistic）・正方形（1:1）
