@@ -46,23 +46,23 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
 
     SpecificShopBoard (Model)
     │
-    ├── 🔲 Outer_Border_Cylinder (Base Ring)   --> Size: 0.1, 8.0, 8.0 (Shape: Cylinder)
+    ├── 🔲 Outer_Border (Base Ring)   --> Size: 0.1, 8.0, 8.0 (Shape: Cylinder)
     │   │
-    │   ├── 🧱 Inner_Status_Cylinder (Status Frame) --> Size: 0.3, 6.8, 6.8 (Shape: Cylinder)
+    │   ├── 🧱 Inner_Frame (Status Frame) --> Size: 0.3, 6.8, 6.8 (Shape: Cylinder)
     │   │
-    │   ├── 🖼️ Display_Surface_Front (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
+    │   ├── 🖼️ Center_Display_Surface_Front (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
     │   │   └── 📄 SurfaceGui_Front (Face: Right / CanvasSize: 1024 x 1024)
     │   │       ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │   │       └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
     │   │           ├── 🔤 Spot_Name (TextLabel)
     │   │           └── 🔤 Description (TextLabel)
     │   │
-    │   └── 🖼️ Display_Surface_Back (Rear Core Face) --> Rendered via SurfaceGui Face: Back
+    │   └── 🖼️ Center_Display_Surface_Back (Rear Core Face) --> Rendered via SurfaceGui Face: Back
     │       └── 📄 SurfaceGui_Back (Face: Left / CanvasSize: 1024 x 1024)
     │           ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │           └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
     │
-    └── 🏷️ Category_Icon_Cylinder (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
+    └── 🏷️ Category_Icon (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
         ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize: 256 x 256)
         │   └── 🖼️ Icon_ImageLabel (Category Pictogram)
         └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize: 256 x 256)
@@ -80,11 +80,11 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 
 | Object | Material | Color (RGB) | Visual Effect & State |
 | :--- | :--- | :--- | :--- |
-| **Outer_Border_Cylinder (外枠)** | `SmoothPlastic` | `[40, 42, 54]` | Dark Slate Gray (Base ring background) |
-| **Inner_Status_Cylinder (内枠 - Proposed)** | `Neon` | `[255, 204, 0]` | Vivid Yellow Neon Glow |
-| **Inner_Status_Cylinder (内枠 - Confirmed)** | `Neon` | `[0, 230, 118]` | Emerald Green Neon Glow |
-| **Display_Surface_Front/Back (中心表示面)** | `SmoothPlastic` | `[18, 18, 24]` | Deep Obsidian Black (Thickest center) |
-| **Category_Icon_Cylinder (カテゴリ枠)** | `SmoothPlastic` | `[60, 64, 72]` | Metallic Gray Badge Ring |
+| **Outer_Border (外枠)** | `SmoothPlastic` | `[40, 42, 54]` | Dark Slate Gray (Base ring background) |
+| **Inner_Frame (内枠 - Proposed)** | `Neon` | `[255, 204, 0]` | Vivid Yellow Neon Glow |
+| **Inner_Frame (内枠 - Confirmed)** | `Neon` | `[0, 230, 118]` | Emerald Green Neon Glow |
+| **Center_Display_Surface_Front/Back (中心表示面)** | `SmoothPlastic` | `[18, 18, 24]` | Deep Obsidian Black (Thickest center) |
+| **Category_Icon (カテゴリ枠)** | `SmoothPlastic` | `[60, 64, 72]` | Metallic Gray Badge Ring |
 
 ### Dynamic UI & Popup Colors (Front & Back Shared)
 
@@ -133,17 +133,18 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
   * `UICorner`: `CornerRadius = {1, 0}` (Creates a perfect circle mask)
   * `UIStroke`: `Thickness = 4`, `Color = Status Dynamic (Yellow/Green)`
 
-### ② 🏷️ Category_Icon_Cylinder Badge (Front & Back)
+### ② 🏷️ Icon__Image_Label (Front & Back)
 * **Purpose**: Displays a 2D pictogram icon on both sides of the badge to indicate the spot category (e.g., Dining, Shopping).
 * **SurfaceGui Setup**: 
   * Front: `Category_SurfaceGui_Front` (`Face = Right`, `CanvasSize = 256 x 256`)
   * Back: `Category_SurfaceGui_Back` (`Face = Left`, `CanvasSize = 256 x 256`)
 * **Child Components (`Icon_ImageLabel`)**:
-  * **Size**: `{0.8, 0}, {0.8, 0}` (204 x 204 px)
-  * **Position**: `{0.1, 0}, {0.1, 0}` (Centered inside badge)
+  * * **Rotation**: 180
+  * **Size**: `{1.0, 0}, {1.0, 0}` (204 x 204 px)
+  * **Position**: `{0, 0}, {0, 0}` (Centered inside badge)
   * **BackgroundTransparency**: `1`
   * **ImageColor3**: `[255, 255, 255]`
-  * **ScaleType**: `Fit`
+  * **ScaleType**: `Stretch`
   * **Sub-Components**:
     * `UICorner`: `CornerRadius = {1, 0}` (Circular mask fitting badge boundary)
     * `UIStroke`: `Thickness = 2`, `Color = [200, 205, 215]`, `ApplyStrokeMode = Border`
@@ -199,3 +200,32 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
   * **雰囲気・背景**: 「鉄板焼き10」風の高級感ある店内、**明るく光の回った空間背景（Bright & well-lit）**、温かみのあるライティング、立ち上る湯気
   * **構図（重要）**: 中央配置（Centered composition） ＋ 四隅に十分な余白（Abundant margins）
   * **画質・スタイル**: 8K・実写風（Photorealistic）・正方形（1:1）
+
+## 🏷️ Icon Image Generation Spec (DALL·E 3 Prompt Template)
+
+`Category_Icon_Cylinder Badge`（右上バッジ領域）に表示するカテゴリピクトグラムロゴを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロンプトテンプレートです。
+
+### 📐 生成スペック要件
+* **Image Engine**: DALL·E 3 (または同等クオリティの画像生成AI)
+* **Aspect Ratio**: `1:1` (正方形)
+* **Resolution**: `1024 x 1024 px`
+* **Design Style & Rules**:
+  * **正円切り抜き（UICorner）対策**: メインアイコンは画面中央の 60% 以内に配置し、余白を広めに残す。
+  * **配色構成**: **ソリッドな赤色背景（Solid Red Background）** + **純白の線画ピクトグラム（Flat White Silhouette / Pictogram）**。
+  * **グラフィック要素**: 影（Drop Shadow）、グラデーション、立体感（3D Effect）を一切排除した極めてシンプルな2Dフラットデザイン。
+
+### 📝 プロンプト構造テンプレート
+
+A minimal 2D vector pictogram logo for [Category Name]. Solid red background (#E53935), a clean flat white symbol of [Main Icon Objects] placed perfectly in the center. Minimalist graphic design, flat color scheme, crisp edges, vector art style, perfectly symmetrical, no shadows, no gradients, no text.
+
+### 💡 生成用プロンプト実例（レストラン / 和食カテゴリのケース）
+
+* **対象カテゴリ**: レストラン（Restaurant / Dining）
+* **英語プロンプト文**:
+  > A minimal 2D vector pictogram logo for a restaurant. Solid red background, a clean flat white silhouette icon of a rice bowl and chopsticks placed perfectly in the center. Minimalist graphic design, flat white icon on solid red, crisp edges, vector art style, perfectly centered with generous outer margins, no shadows, no gradients, no 3D effects, no text.
+
+* **要素ブレイクダウン**:
+  * **メインモチーフ**: 白抜きのお椀とお箸（White silhouette of a rice bowl and chopsticks）
+  * **背景・配色**: 鮮やかな赤の単色背景（Solid red background）
+  * **スタイル**: フラットな2Dベクターアイコン（2D vector pictogram）、影・グラデーションなし（No shadows, no gradients）
+  * **構図**: 中央配置 ＋ 充分な外周余白（Centered with generous outer margins）
