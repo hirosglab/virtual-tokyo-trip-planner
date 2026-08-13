@@ -68,6 +68,8 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
         └── 📄 Category_SurfaceGui_Back (Face: Back / CanvasSize: 256 x 256)
             └── 🖼️ Icon_ImageLabel (Category Pictogram)
 
+> 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
+> `SizingMode` のプロパティを `PixelsPerStud` から `FixedSize` に変更することで、`CanvasSize` プロパティの入力が可能になり、任意の解像度（例: 1024 x 768）を正確に指定
 ---
 
 ## 🎨 Color & Material Setup
