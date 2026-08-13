@@ -28,8 +28,8 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | カテゴリー | タスク総数 | 完了 | 未着手 | 進捗率 |
 | :--- | :---: | :---: | :---: | :---: |
 | **Information Boards (Featured Sightseeing)** | 18 | 18 | 0 | 100% |
-| **Information Boards (Specific Shops)** | 6 | 0 | 6 | 0% |
-| **Information Boards (Accommodations & Restaurants)** | 3 | 0 | 3 | 0% |
+| **Information Boards (Specific Shops)** | 7 | 0 | 7 | 0% |
+| **Information Boards (Accommodations )** | 2 | 0 | 2 | 0% |
 | **World Environment** | 2 | 0 | 2 | 0% |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
 | **合計** | **33** | **18** | **15** | **55%** |
@@ -69,20 +69,20 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 | Status | Object Name | Location / Area | Shop & Facility Name |
 | :---: | :--- | :--- | :--- |
-| [ ] | `ShopBoard_01_AnimateIkebukuro` | Ikebukuro / 池袋 | Animate Ikebukuro Main Store / アニメイト池袋本店 |
+| [ ] | `ShopBoard_01_Teppanyaki10` | Ginza / 銀座 | Teppanyaki 10 / 鉄板焼き10 |
 | [ ] | `ShopBoard_02_TeamLabBorderless` | Azabu / 麻布 | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス |
 | [ ] | `ShopBoard_03_DashiOkume` | Azabu / 麻布 | Dashi Okume / だし尾粂 |
-| [ ] | `ShopBoard_04_MyPigCafe` | Harajuku / 原宿 | My Pig Cafe / 豚カフェ |
-| [ ] | `ShopBoard_05_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
-| [ ] | `ShopBoard_06_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
+| [ ] | `ShopBoard_04_AnimateIkebukuro` | Ikebukuro / 池袋 | Animate Ikebukuro Main Store / アニメイト池袋本店 |
+| [ ] | `ShopBoard_05_MyPigCafe` | Harajuku / 原宿 | My Pig Cafe / 豚カフェ |
+| [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
+| [ ] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
 
-#### 1.3 Accommodations & Restaurants Boards 📌 0% 進捗
+#### 1.3 Accommodations Boards 📌 0% 進捗
 
 | Status | Board Type | Target Name | Notes |
 | :---: | :--- | :--- | :--- |
 | [ ] | Accommodations | Apa Hotel Shinjuku / アパホテル新宿 | 宿泊先案内ボード |
-| [ ] | Restaurants | Teppanyaki 10 / 鉄板焼き10 | 飲食スポット案内ボード |
-| [ ] | Restaurants | Tokyo Yakiniku Heijoen / 東京焼肉平城苑 | 飲食スポット案内ボード |
+| [ ] | Accommodations | Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京 | 宿泊先案内ボード |
 
 ---
 
