@@ -91,30 +91,30 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 | UI Element | Color (RGB) | Font / Style | Usage |
 | :--- | :--- | :--- | :--- |
 | **PopUp Frame Background** | `[15, 17, 23]` (Transparency: 0.15) | Dark Frosted Glass | Contrast backdrop on Outer Border |
-| **PopUp Spot Name** | `[255, 255, 255]` | `Montserrat` (Bold, Size 36) | Clear white header text |
-| **PopUp Description** | `[220, 225, 230]` | `Source Sans Pro` (Size 28) | Soft white body text |
+| **PopUp Spot Name** | `[255, 255, 255]` | `Montserrat` (Bold, Size 80) | Clear white header text |
+| **PopUp Description** | `[220, 225, 230]` | `Source Sans Pro` (Size 80) | Soft white body text |
 
 ---
 
 ## 📐 UI Layout Architecture (Both Front & Back SurfaceGui)
 
     ==================================================================
-    |             SurfaceGui_Front / Back (1024 x 1024)              |
+    |              SurfaceGui_Front / Back (1024 x 1024)             |
     |                                                                |
-    |                   ┌────────────────────────┐                   |
-    |                   │                        │                   |
-    |                   │ 🖼️ Center_Image_Label  │                   |
-    |                   │    (512 x 512 Circular)│   ┌────────────┐  |
-    |                   │                        │   │ Category   │  |
-    |                   │   ・Featured Image     │   │ Icon Badge │  |
-    |                   │   ・UICorner = 1.0     │   │ (Top-Right)│  |
-    |                   └────────────────────────┘   └────────────┘  |
+    |                    ┌────────────────────────┐                  |
+    |                    │                        │                  |
+    |                    │ 🖼️ Center_Image_Label  │                  |
+    |                    │    (512 x 512 Circular)│   ┌────────────┐  |
+    |                    │                        │   │ Category   │  |
+    |                    │   ・Featured Image     │   │ Icon Badge │  |
+    |                    │   ・UICorner = 1.0     │   │ (Top-Right)│  |
+    |                    └────────────────────────┘   └────────────┘  |
     |                                                                |
     |   ==========================================================   |
     |   | 📁 PopUp_Info_Frame (Triggered via Proximity/Hover)    |   |
     |   |                                                        |   |
-    |   |  🔤 Spot_Name (TextSize: 36)                          |   |
-    |   |  🔤 Description Text (TextSize: 28 / TextWrapped)      |   |
+    |   |  🔤 Spot_Name (TextSize: 90)                           |   |
+    |   |  🔤 Description Text (TextSize: 80 / TextWrapped)      |   |
     |   ==========================================================   |
     ==================================================================
 
@@ -153,12 +153,33 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 * **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs.
 * **Size**: `{0.86, 0}, {0.28, 0}`
 * **Position**: `{0.07, 0}, {0.68, 0}`
+* **Rotation**: `180`
 * **BackgroundColor3**: `[15, 17, 23]`
 * **BackgroundTransparency**: `0.15`
+* **BorderSizePixel**: `0`
 * **Child Components**:
   * `UICorner`: `CornerRadius = {0.08, 0}`
-  * `Spot_Name (TextLabel)`: TextSize `36`, Font `Montserrat Bold`, Position `{0.05, 0}, {0.1, 0}`
-  * `Description (TextLabel)`: TextSize `28`, Font `Source Sans Pro`, Position `{0.05, 0}, {0.45, 0}`, `TextWrapped = true`
+  * `Spot_Name (TextLabel)`:
+    * **Size**: `{0.9, 0}, {0.3, 0}`
+    * **Position**: `{0.05, 0}, {0.1, 0}`
+    * **BackgroundTransparency**: `1`
+    * **Text**: `Spot Name`
+    * **TextColor3**: `[255, 255, 255]`
+    * **TextSize**: `80`
+    * **FontFace**: `Montserrat Bold`
+    * **TextXAlignment**: `Center`
+    * **TextYAlignment**: `Center`
+  * `Description (TextLabel)`:
+    * **Size**: `{0.9, 0}, {0.5, 0}`
+    * **Position**: `{0.05, 0}, {0.45, 0}`
+    * **BackgroundTransparency**: `1`
+    * **Text**: Description
+    * **TextColor3**: `[220, 225, 230]`
+    * **TextSize**: `80`
+    * **FontFace**: `Source Sans Pro`
+    * **TextWrapped**: `true`
+    * **TextXAlignment**: `Center`
+    * **TextYAlignment**: `Center`
 
 ---
 
