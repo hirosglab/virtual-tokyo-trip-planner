@@ -50,17 +50,18 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │   │
     │   ├── 🧱 Inner_Frame (Status Frame) --> Size: 0.3, 6.8, 6.8 (Shape: Cylinder)
     │   │
-    │   ├── 🖼️ Center_Display_Surface_Front (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
-    │   │   └── 📄 SurfaceGui_Front (Face: Right / CanvasSize: 1024 x 1024)
-    │   │       ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
-    │   │       └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
-    │   │           ├── 🔤 Spot_Name (TextLabel)
-    │   │           └── 🔤 Description (TextLabel)
-    │   │
-    │   └── 🖼️ Center_Display_Surface_Back (Rear Core Face) --> Rendered via SurfaceGui Face: Back
+    │   └── 🖼️ Center_Display_Surface (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
+    │       ├── 📄 SurfaceGui_Front (Face: Right / CanvasSize: 1024 x 1024)
+    │       │   ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
+    │       │   └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
+    │       │       ├── 🔤 Spot_Name (TextLabel)
+    │       │       └── 🔤 Description (TextLabel)
+    │       │
     │       └── 📄 SurfaceGui_Back (Face: Left / CanvasSize: 1024 x 1024)
     │           ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
     │           └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
+    │               ├── 🔤 Spot_Name (TextLabel)
+    │               └── 🔤 Description (TextLabel)
     │
     └── 🏷️ Category_Icon (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
         ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize: 256 x 256)
