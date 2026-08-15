@@ -36,14 +36,10 @@ local TWEEN_TIME = 0.3     -- アニメーション時間（秒）
 -- ==========================================
 local isVisible = false
 
-print("★ 1. スクリプトが起動し、初期化を開始しました")
-
 frame.BackgroundTransparency = 1
 spotName.TextTransparency = 1
 description.TextTransparency = 1
 frame.Visible = false
-
-print("★ 2. 初期化（非表示処理）が完了しました")
 
 -- ==========================================
 -- 5. フェードイン・フェードアウト処理関数
