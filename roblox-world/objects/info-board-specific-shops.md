@@ -12,12 +12,13 @@ links:
   - "../object-deployment-plan.md"
   - "./info-board-featured-spots.md"
   - "../assets/specific-spot-shop-boards-design.svg"
-description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウト仕様を定義します。"
+  - "../scripts/client/info-board/ShopBoard_PopUpController.lua"
+description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内板の両面（Double-Sided）対応、中心部が最も分厚い凸型階層3D構造、およびSurfaceGuiレイアウトと近接トリガーによるポップアップ表示の仕様"
 ---
 
 # Roblox Information Board Hardware & UI Spec (Specific Spot & Shop Boards)
 
-This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-spot-shop-boards-design.svg).
+This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-s[...]
 
 ---
 ## 📐 Information Board Layout Diagram
@@ -26,7 +27,7 @@ This document defines the 3D Parts hierarchy, double-sided UI configuration, dyn
 
 ## 🏗️ 3D Part Hierarchy & Spatial Depth Logic
 
-To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outward.
+To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered out w[...]
 
 ### Depth & Thickness Distribution (Center-Thick Structure)
 1. **Core / Display Layer (Center):** Thickness = `1.0` studs (Thickest)
@@ -63,18 +64,18 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │               └── 🔤 Description (TextLabel)
     │
     └── 🏷️ Category_Icon (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
-        ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize: 256 x 256)
+        ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize = 256 x 256)
         │   └── 🖼️ Icon_ImageLabel (Category Pictogram)
-        └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize: 256 x 256 - Future Development)
+        └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize = 256 x 256 - Future Development)
             └── 🖼️ Icon_ImageLabel (Category Pictogram)
 
 > 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
-> `SizingMode` のプロパティを `PixelsPerStud` から `FixedSize` に変更することで、`CanvasSize` プロパティの入力が可能になり、任意の解像度（例: 1024 x 768）を正確に指定
+> `SizingMode` のプロパティを `PixelsPerStud` から `FixedSize` に変更することで、`CanvasSize` プロパティの入力が可能になり、任意の解像度（例: 1024 x 768）[...]
 ---
 
 ## 🎨 Color & Material Setup
 
-The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic parameters.
+The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic [...]
 
 ### Hardware Parts & Materials
 
@@ -151,7 +152,7 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 
 ### ③ 📁 PopUp_Info_Frame (Bottom Half Overlay)
 * **Type**: `Frame`
-* **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs. Controlled locally via `ShopBoard_PopUpController.lua` placed in `StarterPlayerScripts` (uploaded to GitHub separately).
+* **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs. Controlled locally via `ShopBoard_PopUpController.lua` placed in `StarterPlayerScript[...]
 * **Size**: `{0.86, 0}, {0.28, 0}`
 * **Position**: `{0.07, 0}, {0.68, 0}`
 * **Rotation**: `180`
@@ -197,37 +198,36 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 
 ## 🖼️ Center Image Generation Spec (DALL·E 3 Prompt Template)
 
-`Center_Image_Label`（正円マスク領域）に挿入する店舗・施設用イメージを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロンプトテンプレートです。
+`Center_Image_Label`（正円マスク領域）に挿入する店舗・施設用イメージを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロンプトテンプレ[...]
 
 ### 📐 生成スペック要件
 * **Image Engine**: DALL·E 3 (または同等クオリティの画像生成AI)
 * **Aspect Ratio**: `1:1` (正方形)
 * **Resolution**: `1024 x 1024 px` 以上（推奨: `2048 x 2048 px`）
 * **Composition & Lighting Rules**:
-  * **正円切り抜き（UICorner）対策**: メイン被写体は**画面中央の 50% 以内**に配置する。四隅は半径50%の円形マスクで切除されるため、重要な要素は外周に配置しない。
-  * **ライティング仕様**: 暗い円形フレーム（Obsidian Black）内での視認性を高めるため、**明るく洗練された背景（Bright, well-lit background / ambient light）** を基本条件とする。
+  * **正円切り抜き（UICorner）対策**: メイン被写体は**画面中央の 50% 以内**に配置する。四隅は半径50%の円形マスクで切除されるため、重要な要素[...]
 
 ### 📝 プロンプト構造テンプレート
 
 ```text
-[Main Subject Description], served/located in [Store Style / Reference Name]. Gourmet photography / Architectural shot, bright and well-lit background, warm soft lighting, vibrant ambient atmosphere, perfectly centered composition with abundant outer margins on all four sides, 8k resolution, photorealistic, cinematic shot.
+[Main Subject Description], served/located in [Store Style / Reference Name]. Gourmet photography / Architectural shot, bright and well-lit background, warm soft lighting, vibrant ambient atmosph[...]
 ```
 
 ### 💡 生成用プロンプト実例（鉄板焼き店舗のケース）
 
 * **対象料理 / 店舗**: 鉄板焼き10（和牛ステーキ・海鮮鉄板焼き）
 * **英語プロンプト文**:
-  > A high-end Teppanyaki dish featuring thick Japanese Wagyu steak and fresh grilled seafood (seared lobster and scallops) served on a hot iron griddle. Gourmet food photography, luxury restaurant ambiance like Teppanyaki 10, **bright and well-lit background with warm glowing ambient light**, perfectly centered composition with abundant margins on all four sides, dramatic steam rising, 8k resolution, photorealistic, cinematic shot.
+  > A high-end Teppanyaki dish featuring thick Japanese Wagyu steak and fresh grilled seafood (seared lobster and scallops) served on a hot iron griddle. Gourmet food photography, luxury restaura[...]
 
 * **要素ブレイクダウン**:
   * **料理内容**: 分厚い和牛ステーキ、伊勢海老・ホタテ等の新鮮な海鮮鉄板焼き
-  * **雰囲気・背景**: 「鉄板焼き10」風の高級感ある店内、**明るく光の回った空間背景（Bright & well-lit）**、温かみのあるライティング、立ち上る湯気
+  * **雰囲気・背景**: 「鉄板焼き10」風の高級感ある店内、**明るく光の回った空間背景（Bright & well-lit）**、温かみのあるライティング、立ち上る[...]
   * **構図（重要）**: 中央配置（Centered composition） ＋ 四隅に十分な余白（Abundant margins）
   * **画質・スタイル**: 8K・実写風（Photorealistic）・正方形（1:1）
 
 ## 🏷️ Icon Image Generation Spec (DALL·E 3 Prompt Template)
 
-`Category_Icon_Cylinder Badge`（右上バッジ領域）に表示するカテゴリピクトグラムロゴを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロンプトテンプレートです。
+`Category_Icon_Cylinder Badge`（右上バッジ領域）に表示するカテゴリピクトグラムロゴを DALL·E 3 等の生成AIで作成する際の定型スペックおよびプロン��[...]
 
 ### 📐 生成スペック要件
 * **Image Engine**: DALL·E 3 (または同等クオリティの画像生成AI)
@@ -241,14 +241,14 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 ### 📝 プロンプト構造テンプレート
 
 ```text
-A minimal 2D vector pictogram logo for [Category Name]. Solid red background (#E53935), a clean flat white symbol of [Main Icon Objects] placed perfectly in the center. Minimalist graphic design, flat color scheme, crisp edges, vector art style, perfectly symmetrical, no shadows, no gradients, no text.
+A minimal 2D vector pictogram logo for [Category Name]. Solid red background (#E53935), a clean flat white symbol of [Main Icon Objects] placed perfectly in the center. Minimalist graphic design,[...]
 ```
 
 ### 💡 生成用プロンプト実例（レストラン / 和食カテゴリのケース）
 
 * **対象カテゴリ**: レストラン（Restaurant / Dining）
 * **英語プロンプト文**:
-  > A minimal 2D vector pictogram logo for a restaurant. Solid red background, a clean flat white silhouette icon of a rice bowl and chopsticks placed perfectly in the center. Minimalist graphic design, flat white icon on solid red, crisp edges, vector art style, perfectly centered with generous outer margins, no shadows, no gradients, no 3D effects, no text.
+  > A minimal 2D vector pictogram logo for a restaurant. Solid red background, a clean flat white silhouette icon of a rice bowl and chopsticks placed perfectly in the center. Minimalist graphic [...]
 
 * **要素ブレイクダウン**:
   * **メインモチーフ**: 白抜きのお椀とお箸（White silhouette of a rice bowl and chopsticks）
