@@ -49,7 +49,7 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Confirmed** | **Ginza / 銀座** |  Teppanyaki 10 / 鉄板焼き10 | Restaurant | **GRILLED WAGYU & SEA FOODS** |
 | 2 | **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | Art | **DIGITAL ART MUSEUM** |
-| 3 | **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **SELECT FOOD STORE** |
+| 3 | **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **150 YEAR OLD BROTH SHOP** |
 | 4 | **Proposed** | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | Shopping | **BIGGEST ANIME & MANGA SHOP** |
 | 5 | **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | Cafe | **ANIMAL CAFE** |
 | 6 | **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | Shopping | **POP CULTURE STREET** |
