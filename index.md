@@ -16,6 +16,7 @@ links:
   - "./roblox-world/objects/info-board-featured-spots.md"
   - "./roblox-world/objects/info-board-specific-shops.md"
   - "./roblox-world/objects/workspace-hierarchy.md"
+  - "./roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua"
 description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメント構造・相対パス・各ファイルの役割を網羅したメインインデックス"
 ---
 
@@ -36,8 +37,12 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     │  └─ milestone-1-progress.md
     └─ roblox-world/
        ├─ assets/
-       │  ├─ .gitkeep
-       │  └─ room-layout-diagram.svg
+       │  ├─ room-layout-diagram.svg
+       │  └─ specific-spot-shop-boards-design.svg
+       ├─ scripts/
+       │  └─ client/
+       │     └─ info-board/
+       │        └─ ShopBoard_PopUpController.lua
        ├─ objects/
        │  ├─ info-board-featured-spots.md
        │  ├─ info-board-specific-shops.md
@@ -71,6 +76,17 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 
 ### 3. Roblox ワールド設計 (`roblox-world/`)
 
+* **assets/** (`./roblox-world/assets/`)
+  * **役割**: ワールド設計に使用する図面・SVG 等の静的アセットを格納します。
+  * **現在のアセット**:
+    * `room-layout-diagram.svg` (`./roblox-world/assets/room-layout-diagram.svg`)
+    * `specific-spot-shop-boards-design.svg` (`./roblox-world/assets/specific-spot-shop-boards-design.svg`)
+
+* **scripts/** (`./roblox-world/scripts/`)
+  * **役割**: Roblox 用の Lua スクリプトを格納するディレクトリ（クライアント/サーバ/モジュール別に整理）。
+  * **追加されたスクリプト**:
+    * `client/info-board/ShopBoard_PopUpController.lua` — StarterPlayerScripts に配置する LocalScript。ShopBoard の Center_Display_Surface に近づいたときに Popup を表示、離れたら非表示にするクライアント制御スクリプト（ファイル: `./roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。
+
 * **object-deployment-plan.md** (`./roblox-world/object-deployment-plan.md`)
   * **役割**: `tokyo-trip-plan-2026.md` の旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置する展開プラン。
   * **主要関連リンク**:
@@ -91,7 +107,8 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     * オブジェクト配置計画: `../object-deployment-plan.md`
 
 * **objects/info-board-specific-shops.md** (`./roblox-world/objects/info-board-specific-shops.md`)
-  * **役割**: 東京の飲食店・ショップ・レストラン等を紹介する案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui レイアウト仕様書。情報カード、動的なコンテンツレンダリング、ハイパーリンク機能を含む。
+  * **役割**: 東京の飲食店・ショップ・レストラン等を紹介する案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui レイアウト仕様書。
+  * **スクリプト連携**: `./roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua` により、プレイヤー接近時のポップアップ表示がクライアント側で制御されます。
   * **主要関連リンク**:
     * オブジェクト配置計画: `../object-deployment-plan.md`
     * 旅行マスタープラン: `../../planning/tokyo-trip-plan-2026.md`
