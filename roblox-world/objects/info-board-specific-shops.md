@@ -17,7 +17,7 @@ description: "特定店舗・施設（Specific Spot & Shop Boards）専用案内
 
 # Roblox Information Board Hardware & UI Spec (Specific Spot & Shop Boards)
 
-This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-s[...]
+This document defines the 3D Parts hierarchy, double-sided UI configuration, dynamic materials/colors, and spatial depth logic for the cylindrical Specific Spot & Shop Boards (../assets/specific-spot-shop-boards-design.svg).
 
 ---
 ## 📐 Information Board Layout Diagram
@@ -26,7 +26,7 @@ This document defines the 3D Parts hierarchy, double-sided UI configuration, dyn
 
 ## 🏗️ 3D Part Hierarchy & Spatial Depth Logic
 
-To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outw[...[...]
+To support 360-degree viewing (both Front and Back sides) and to create a **convex museum-grade volumetric depth** where the board is thickest at the center, the Cylindrical Parts are layered outward.
 
 ### Depth & Thickness Distribution (Center-Thick Structure)
 1. **Core / Display Layer (Center):** Thickness = `1.0` studs (Thickest)
@@ -35,13 +35,12 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
 
 ```
 [Side Profile Depth Concept]
-       Outer Base (0.1)  ──┐
+       Outer Base (0.1)   ──┐
  Inner Status Frame (0.3)  ──┼─┐
  Center Display Surface (1.0)──┼─┼─ [ THICK CENTER CORE ]
  Inner Status Frame (0.3)  ──┼─┘
-       Outer Base (0.1)  ──┘
+       Outer Base (0.1)   ──┘
 ```
-
 ### Complete Model Hierarchy
 
     SpecificShopBoard (Model)
@@ -53,20 +52,20 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
     │   └── 🖼️ Center_Display_Surface (Thick Core Face) --> Size: 1.0, 6.0, 6.0 (Shape: Cylinder)
     │       ├── 📄 SurfaceGui_Front (Face: Right / CanvasSize: 1024 x 1024)
     │       │   ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
-    │       │   └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
+    │       │   └── 🖼️ PopUp_Info_Frame (Frame / Canvas Overlay - Proximity Activated)
     │       │       ├── 🔤 Spot_Name (TextLabel)
     │       │       └── 🔤 Description (TextLabel)
     │       │
-    │       └── 📄 SurfaceGui_Back (Face: Left / CanvasSize: 1024 x 1024)
+    │       └── 📄 SurfaceGui_Back (Face: Left / CanvasSize: 1024 x 1024 - Future Development)
     │           ├── 🖼️ Center_Image_Label (512 x 512, Circle Mask via UICorner)
-    │           └── 📁 PopUp_Info_Frame (Canvas Overlay - Proximity Activated)
+    │           └── 🖼️ PopUp_Info_Frame (Frame / Canvas Overlay - Proximity Activated)
     │               ├── 🔤 Spot_Name (TextLabel)
     │               └── 🔤 Description (TextLabel)
     │
     └── 🏷️ Category_Icon (Top-Right Badge) --> Size: 0.2, 2.2, 2.2 (Double-Sided GUI)
         ├── 📄 Category_SurfaceGui_Front (Face: Right / CanvasSize: 256 x 256)
         │   └── 🖼️ Icon_ImageLabel (Category Pictogram)
-        └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize: 256 x 256)
+        └── 📄 Category_SurfaceGui_Back (Face: Left / CanvasSize: 256 x 256 - Future Development)
             └── 🖼️ Icon_ImageLabel (Category Pictogram)
 
 > 💡 **SurfaceGuiのCanvasSize設定（Tips）**:
@@ -75,7 +74,7 @@ To support 360-degree viewing (both Front and Back sides) and to create a **conv
 
 ## 🎨 Color & Material Setup
 
-The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic [...][...]
+The Outer Base uses **Slate Charcoal** for strong visual contrast, while the middle status ring utilizes **Neon Emission** to signal status. Both Front and Back SurfaceGuis share the same dynamic parameters.
 
 ### Hardware Parts & Materials
 
@@ -100,16 +99,16 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 ## 📐 UI Layout Architecture (Both Front & Back SurfaceGui)
 
     ==================================================================
-    |              SurfaceGui_Front / Back (1024 x 1024)             |
+    |               SurfaceGui_Front / Back (1024 x 1024)            |
     |                                                                |
     |                    ┌────────────────────────┐                  |
     |                    │                        │                  |
     |                    │ 🖼️ Center_Image_Label  │                  |
-    |                    │    (512 x 512 Circular)│   ┌────────────┐  |
-    |                    │                        │   │ Category   │  |
-    |                    │   ・Featured Image     │   │ Icon Badge │  |
-    |                    │   ・UICorner = 1.0     │   │ (Top-Right)│  |
-    |                    └────────────────────────┘   └────────────┘  |
+    |                    │    (512 x 512 Circular)│   ┌────────────┐ |
+    |                    │                        │   │ Category   │ |
+    |                    │   ・Featured Image     │   │ Icon Badge │ |
+    |                    │   ・UICorner = 1.0     │   │ (Top-Right)│ |
+    |                    └────────────────────────┘   └────────────┘ |
     |                                                                |
     |   ==========================================================   |
     |   | 📁 PopUp_Info_Frame (Triggered via Proximity/Hover)    |   |
@@ -138,9 +137,9 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 * **Purpose**: Displays a 2D pictogram icon on both sides of the badge to indicate the spot category (e.g., Dining, Shopping).
 * **SurfaceGui Setup**: 
   * Front: `Category_SurfaceGui_Front` (`Face = Right`, `CanvasSize = 256 x 256`)
-  * Back: `Category_SurfaceGui_Back` (`Face = Left`, `CanvasSize = 256 x 256`)
+  * Back: `Category_SurfaceGui_Back` (`Face = Left`, `CanvasSize = 256 x 256` - Future Development)
 * **Child Components (`Icon_ImageLabel`)**:
-  * * **Rotation**: 180
+  * **Rotation**: 180
   * **Size**: `{1.0, 0}, {1.0, 0}` (204 x 204 px)
   * **Position**: `{0, 0}, {0, 0}` (Centered inside badge)
   * **BackgroundTransparency**: `1`
@@ -151,7 +150,8 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
     * `UIStroke`: `Thickness = 2`, `Color = [200, 205, 215]`, `ApplyStrokeMode = Border`
 
 ### ③ 📁 PopUp_Info_Frame (Bottom Half Overlay)
-* **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs.
+* **Type**: `Frame`
+* **Purpose**: Triggers independently or synchronously on both sides when a player approaches within 8 studs. Controlled locally via `ShopBoard_PopUpController.lua` placed in `StarterPlayerScripts` (uploaded to GitHub separately).
 * **Size**: `{0.86, 0}, {0.28, 0}`
 * **Position**: `{0.07, 0}, {0.68, 0}`
 * **Rotation**: `180`
@@ -187,9 +187,11 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 ## ⚡ Dynamic Logic & Double-Sided Synchronization
 
 1. **Dual SurfaceGui Update**:
-   * Any change to `Status` attribute (`"Proposed"` or `"Confirmed"`) updates both `SurfaceGui_Front` and `SurfaceGui_Back` simultaneously.
+   * Any change to `Status` attribute (`"Proposed"` or `"Confirmed"`) updates both `SurfaceGui_Front` and `SurfaceGui_Back` simultaneously (Back side implementation planned for future iteration).
 2. **Double-Sided Image Binding**:
    * The script assigns the image decal URL to both `SurfaceGui_Front.Center_Image_Label` and `SurfaceGui_Back.Center_Image_Label` to ensure identical visuals from all viewing angles.
+3. **Local Proximity Scripting**:
+   * Controlled via `ShopBoard_PopUpController.lua` (located in `StarterPlayerScripts` to ensure proper execution scope and isolated client behavior).
 
 ---
 
@@ -238,7 +240,9 @@ The Outer Base uses **Slate Charcoal** for strong visual contrast, while the mid
 
 ### 📝 プロンプト構造テンプレート
 
+```text
 A minimal 2D vector pictogram logo for [Category Name]. Solid red background (#E53935), a clean flat white symbol of [Main Icon Objects] placed perfectly in the center. Minimalist graphic design, flat color scheme, crisp edges, vector art style, perfectly symmetrical, no shadows, no gradients, no text.
+```
 
 ### 💡 生成用プロンプト実例（レストラン / 和食カテゴリのケース）
 
