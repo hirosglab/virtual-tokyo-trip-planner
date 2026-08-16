@@ -21,32 +21,43 @@ description: "Robloxワールド空間全体（円形ルーム構造、スポー
 
 ---
 
-## 🏛️ Architecture & Layout
-* **Room Shape:** Perfect Circular Room (放射状分割の円形構造).
-* **Center Hub (中央スポーン領域):** 
-  * `SpawnLocation` は中央の五角形/台形プラットフォーム `(0, y, 0)` に配置。
-  * プレイヤーはスポーン直後に360度全方向のゾーンを見渡すことが可能。
-  * 中央部には **Base Information Core**（宿泊施設・レストラン情報）を設置。
-* **Perimeter & Zone Division (6大エリア分割):** 
-  * 円形空間を中央から放射状に6つの主要エリア（扇形セクター）へ分割。
+## 🏛️ Architecture & Room Shape
+空間全体は同心円状の3つのゾーン構造と、それを囲む12面体の外壁で構成される。
+
+* **Room Shape (12面体の外壁):** 
+  全体を包み込む外壁は12面体で構成される。
+  * **メインウォール:** モノトーンの大きな板（6枚）。
+  * **サブウォール:** 大きな板の間に配置される薄い板（6枚）。11月の旅行というテーマに合わせ「紅葉柄」を採用。
+* **Radial Division (6大エリア分割):** 
+  空間を中央から放射状に6つの主要エリア（扇形セクター）へ分割。
   * **1st Trip Hemisphere (前半ゾーン):** Shinjuku / Harajuku / Shibuya
   * **2nd Trip Hemisphere (後半ゾーン):** Tokyo / Asakusa / Ginza
 
 ---
 
-## 🗺️ Spatial Board Placement & Flow
-1. **Outer Wall Zone (最外周・外壁面):**
-   * **Information Board (太線):** 円形の外壁に沿って大型の案内板（Featured Sightseeing Spots等）を湾曲・設置。
-2. **Inner Zone (内側・セクター内部):**
-   * **Shop Board (細線):** 各エリアのセクター内部に、通路を形成するように斜め・放射状に店舗/施設ボード（Specific Spot & Shop Boards）を並列配置。
-3. **Spatial Flow (中央から外壁へ):**
-   * **Center:** スポーン・全体概要把握 $\rightarrow$ **Mid-Radius:** 各エリアのShop Board閲覧 $\rightarrow$ **Perimeter:** 壁面のメインInformation Board到達。
+## 🗺️ Spatial Zoning & Board Placement
+空間は中心から外側へ向かって、**Zone A**, **Zone B**, **Zone C** の3つの同心円状の階層に役割が分かれている。
+
+### Zone A (入場・全体把握エリア)
+空間の中心となるエントリーゾーン。
+* **Spawn Location:** 非可視化（透明化）された状態で設置されており、プレイヤーの入場エリアとなる。
+* **Future Expansion:** 将来的に余裕があれば、観光予定地の目安を感じさせるための中央オブジェクトとして「東京23区地図」の表示を検討。
+
+### Zone B (交流・宿泊・インタラクションエリア)
+プレゼン参加者がお互いに降り立ち、交流や情報共有を行う中間ゾーン。
+* **Information Boards:** 各エリアに応じたホテル情報ボード（Hotel Board）を配置。
+* **Interactive Elements:** DataStore を活用した「意見書き込みチャットボックス」および「投票ボックス」を設置予定。
+* **Boundary to Zone C:** Zone Cとの境界線上には、各エリアの雰囲気を表すゲートなどの **Iconic Major Landmarks** を設置し、視覚的な区切りを設ける。
+
+### Zone C (観光スポット・詳細情報エリア)
+外周部に位置する、観光情報が集中するメイン展示ゾーン。
+* **Outer Wall Information:** 12面体の外壁に沿って、大型の案内板（Featured Sightseeing Spots）を配置。
+* **Floating Shop Boards:** 中間部には、円形で空中に浮遊するような配置で店舗・施設ボード（Specific Spot & Shop Boards）を設置。
+* **Spatial Decoration:** 空間の空中に Small Prop & Detail Objects を飾り、エリアごとのテーマ性や賑わいを強調する。
 
 ---
 
 ## 🎨 Design & Aesthetics
-* **Theme:** Modern Virtual Meeting Room / Cyber-Travel Museum.
-* **Lighting:** エリアごとに雰囲気を際立たせるアンビエントライティングの設定。
-* **Interactive Elements:** 
-  * 各ボードおよびプロップは `Anchored = true` に設定。
-  * *Future Expansion:* 中央スポーン付近に DataStore を活用した「意見書き込みチャットボックス」および「投票ボックス」を設置予定。
+* **Theme:** Modern Virtual Meeting Room / Autumn Cyber-Travel Museum (11月の旅行を意識した紅葉テイストをブレンド).
+* **Lighting:** エリアごとの雰囲気を際立たせるアンビエントライティングの設定。紅葉柄の外壁や空中のプロップが効果的に映えるよう調整。
+* **Object Properties:** 各ボードおよびプロップは原則として 'Anchored = true' に設定し、安定した展示空間を構築する。
