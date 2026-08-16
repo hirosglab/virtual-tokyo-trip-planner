@@ -38,6 +38,9 @@ local function setupBoard(shopBoard)
 	local frame = surfaceGui:WaitForChild("PopUp_Info_Frame", 5)
 	if not frame then return end
 
+-- 初期化処理: スクリプト読み込み時にUIを非表示
+	frame.Visible = false
+	
 	-- 登録済みでなければ追加
 	table.insert(boardsData, {
 		board = shopBoard,
