@@ -2,97 +2,82 @@
 -- ShopBoardのCenter_Display_Surfaceに近づいたらPopupInfoを表示、離れたら非表示
 -- ==========================================
 
-
--- ==========================================
+-- ==================================================================
 -- 1. サービスの取得
--- ==========================================
+-- ==================================================================
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 
 local player = Players.LocalPlayer
 
--- ==========================================
--- 2. UI要素と3Dパーツの参照
--- ==========================================
--- 看板パーツを Workspace から直接取得します
-local shopBoard = workspace:WaitForChild("ShopBoard_01_Teppanyaki10")
-local surfacePart = shopBoard:WaitForChild("Center_Display_Surface")
-local surfaceGui = surfacePart:WaitForChild("SurfaceGui_Front")
+-- ==================================================================
+-- 2. 設定値の定義
+-- ==================================================================
+local TRIGGER_DISTANCE = 8 -- ポップアップを表示させる距離(Studs)
+local TARGET_NAME_PREFIX = "ShopBoard_" -- 対象オブジェクト名の接頭辞
 
--- UI要素を取得
-local frame = surfaceGui:WaitForChild("PopUp_Info_Frame")
-local spotName = frame:WaitForChild("Spot_Name")
-local description = frame:WaitForChild("Description")
+-- 各ボードの状態管理テーブル
+local boardsData = {}
 
--- ==========================================
--- 3. 設定値の定義
--- ==========================================
-local TRIGGER_DISTANCE = 8 -- ポップアップを表示させる距離（Studs）
-local TWEEN_TIME = 0.3     -- アニメーション時間（秒）
-
--- ==========================================
--- 4. 初期状態のセットアップ
--- ==========================================
-local isVisible = false
-
-frame.BackgroundTransparency = 1
-spotName.TextTransparency = 1
-description.TextTransparency = 1
-frame.Visible = false
-
--- ==========================================
--- 5. フェードイン・フェードアウト処理関数
--- ==========================================
-local function fadeUI(targetVisible)
-	if isVisible == targetVisible then return end
-	isVisible = targetVisible
-
-	local tweenInfo = TweenInfo.new(TWEEN_TIME, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-
-	if targetVisible then
-		-- ★ 表示する処理（フェードイン）
-		frame.Visible = true
-
-		TweenService:Create(frame, tweenInfo, {BackgroundTransparency = 0.15}):Play()
-		TweenService:Create(spotName, tweenInfo, {TextTransparency = 0}):Play()
-		TweenService:Create(description, tweenInfo, {TextTransparency = 0}):Play()
-	else
-		-- ★ 消す処理（フェードアウト）
-		local tFrame = TweenService:Create(frame, tweenInfo, {BackgroundTransparency = 1})
-		tFrame:Play()
-
-		TweenService:Create(spotName, tweenInfo, {TextTransparency = 1}):Play()
-		TweenService:Create(description, tweenInfo, {TextTransparency = 1}):Play()
-
-		tFrame.Completed:Connect(function()
-			if not isVisible then
-				frame.Visible = false
-			end
-		end)
-	end
-end
-
--- ==========================================
--- 6. プレイヤーの位置・向きを常に判定するループ処理
--- ==========================================
-RunService.Heartbeat:Connect(function()
-	if not surfacePart or not player.Character or not player.Character:FindFirstChild("HumanoidRootPart") then
+-- ==================================================================
+-- 3. ボードの初期化関数
+-- ==================================================================
+local function setupBoard(shopBoard)
+	-- 名前が "ShopBoard_" で始まっているか確認
+	if string.sub(shopBoard.Name, 1, #TARGET_NAME_PREFIX) ~= TARGET_NAME_PREFIX then
 		return
 	end
 
-	local hrp = player.Character.HumanoidRootPart
-	local partCFrame = surfacePart.CFrame
-	local distance = (hrp.Position - surfacePart.Position).Magnitude
+	local surfacePart = shopBoard:WaitForChild("Center_Display_Surface", 5)
+	if not surfacePart then return end
+	
+	local surfaceGui = surfacePart:WaitForChild("SurfaceGui_Front", 5)
+	if not surfaceGui then return end
+	
+	local frame = surfaceGui:WaitForChild("PopUp_Info_Frame", 5)
+	if not frame then return end
 
-	if distance <= TRIGGER_DISTANCE then
-		local localPos = partCFrame:PointToObjectSpace(hrp.Position)
+	-- 登録済みでなければ追加
+	table.insert(boardsData, {
+		board = shopBoard,
+		surfacePart = surfacePart,
+		frame = frame,
+		isOpen = false
+	})
+end
 
-		if localPos.X > 0 then
-			fadeUI(true)
-			return
+-- ==================================================================
+-- 4. Workspaceの走査・自動取得
+-- ==================================================================
+-- Workspace 内の既存オブジェクトを走査
+for _, object in ipairs(workspace:GetDescendants()) do
+	setupBoard(object)
+end
+
+-- ゲーム実行中にWorkspaceへ動的に追加されたオブジェクトにも対応
+workspace.DescendantAdded:Connect(setupBoard)
+
+-- ==================================================================
+-- 5. 距離判定・ポップアップ制御ループ
+-- ==================================================================
+RunService.Heartbeat:Connect(function()
+	local character = player.Character
+	if not character then return end
+	
+	local hrp = character:FindFirstChild("HumanoidRootPart")
+	if not hrp then return end
+
+	-- 登録されているすべてのボードに対して距離判定
+	for _, data in ipairs(boardsData) do
+		local distance = (hrp.Position - data.surfacePart.Position).Magnitude
+		
+		if distance <= TRIGGER_DISTANCE and not data.isOpen then
+			data.isOpen = true
+			data.frame.Visible = true
+		elseif distance > TRIGGER_DISTANCE and data.isOpen then
+			data.isOpen = false
+			data.frame.Visible = false
 		end
 	end
-
-	fadeUI(false)
 end)
