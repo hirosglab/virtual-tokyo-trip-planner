@@ -69,9 +69,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 | Status | Object Name | Location / Area | Shop & Facility Name |
 | :---: | :--- | :--- | :--- |
-| [ ] | `ShopBoard_01_Teppanyaki10` | Ginza / 銀座 | Teppanyaki 10 / 鉄板焼き10 |
-| [ ] | `ShopBoard_02_TeamLabBorderless` | Azabu / 麻布 | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス |
-| [ ] | `ShopBoard_03_DashiOkume` | Azabu / 麻布 | Dashi Okume / だし尾粂 |
+| [x] | `ShopBoard_01_Teppanyaki10` | Ginza / 銀座 | Teppanyaki 10 / 鉄板焼き10 |
+| [x] | `ShopBoard_02_TeamLabBorderless` | Azabu / 麻布 | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス |
+| [x] | `ShopBoard_03_DashiOkume` | Azabu / 麻布 | Dashi Okume / だし尾粂 |
 | [ ] | `ShopBoard_04_AnimateIkebukuro` | Ikebukuro / 池袋 | Animate Ikebukuro Main Store / アニメイト池袋本店 |
 | [ ] | `ShopBoard_05_MyPigCafe` | Harajuku / 原宿 | My Pig Cafe / 豚カフェ |
 | [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
