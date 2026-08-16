@@ -28,11 +28,11 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | カテゴリー | タスク総数 | 完了 | 未着手 | 進捗率 |
 | :--- | :---: | :---: | :---: | :---: |
 | **Information Boards (Featured Sightseeing)** | 18 | 18 | 0 | 100% |
-| **Information Boards (Specific Shops)** | 7 | 1 | 6 | 14% |
+| **Information Boards (Specific Shops)** | 7 | 3 | 4 | 43% |
 | **Information Boards (Accommodations )** | 2 | 0 | 2 | 0% |
 | **World Environment** | 2 | 0 | 2 | 0% |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
-| **合計** | **33** | **19** | **14** | **58%** |
+| **合計** | **33** | **21** | **12** | **64%** |
 
 ---
 
@@ -64,20 +64,21 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_17_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
 | [x] | `InfoBoard_18_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
 
-#### 1.2 Specific Spot & Shop Boards (全7箇所) 📌 14% 進捗
+#### 1.2 Specific Spot & Shop Boards (全7箇所) 📌 43% 進捗
 * **フォルダ**: `Workspace.Specific_Shop_Boards`
 
 | Status | Object Name | Location / Area | Shop & Facility Name |
 | :---: | :--- | :--- | :--- |
 | [x] | `ShopBoard_01_Teppanyaki10` | Ginza / 銀座 | Teppanyaki 10 / 鉄板焼き10 |
-| [ ] | `ShopBoard_02_TeamLabBorderless` | Azabu / 麻布 | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス |
-| [ ] | `ShopBoard_03_DashiOkume` | Azabu / 麻布 | Dashi Okume / だし尾粂 |
+| [x] | `ShopBoard_02_TeamLabBorderless` | Azabu / 麻布 | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス |
+| [x] | `ShopBoard_03_DashiOkume` | Azabu / 麻布 | Dashi Okume / だし尾粂 |
 | [ ] | `ShopBoard_04_AnimateIkebukuro` | Ikebukuro / 池袋 | Animate Ikebukuro Main Store / アニメイト池袋本店 |
 | [ ] | `ShopBoard_05_MyPigCafe` | Harajuku / 原宿 | My Pig Cafe / 豚カフェ |
 | [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
 | [ ] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
 
 > 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・非表示アニメーションが動作することを確認しました。
+> `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` は配置・表示コンテンツの最終確認まで完了しています（表示やテクスチャ、リンク配置の検証済み）。
 
 #### 1.3 Accommodations Boards 📌 0% 進捗
 
@@ -125,8 +126,10 @@ Milestone 1 ではプレゼン用の試作モデル（数点）を優先して�
 
 ✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。
 
+✅ `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` を作成・配置し、表示コンテンツの確認を完了しました。
+
 📌 **次のタスク優先順位**:
-1. Specific Spot & Shop Boards の実装（ShopBoard_02〜07）
+1. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜07）
 2. World Environment の基礎構築
 3. 3D Objects & Props のプロトタイプ開発
 
