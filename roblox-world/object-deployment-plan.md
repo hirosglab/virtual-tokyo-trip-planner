@@ -10,23 +10,24 @@ links:
   - "../planning/tokyo-trip-plan-2026.md"
   - "./objects/info-board-featured-spots.md"
   - "./room-layout-design.md"
+  - "./room-floor-design-spec.md"
 description: "旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置するプラン"
 ---
-
+ 
 # Roblox Object Deployment Plan
-
+ 
 ## Custom Information Boards
-
+ 
 ### Accommodations
 * **Apa Hotel Shinjuku / アパホテル新宿**
 * **Hotel Monte Hermana Tokyo / ホテル モンテ エルマーナ東京**
-
+ 
 ### Featured Sightseeing Spots
 | No | Area | Spot | Category | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | **Shinjuku / 新宿** | Kabuki-cho / 歌舞伎町 | **NIGHTLIFE DISTRICT** | Explore Tokyo's most famous nightlife and entertainment district. |
 | 2 | **Shinjuku / 新宿** | Omoide-Yokocho Memory Lane / 思い出横丁 | **RETRO IZAKAYA ALLEY** | A nostalgic alley packed with cozy yakitori and izakaya stalls. |
-| 3 | **Shinjuku / 新宿** | Shinjuku Station East Exit Area / 新宿駅東口エリア | **VIBRANT RETAIL HUB** | A bustling shopping and entertainment district packed with endless shops and department stores. |
+| 3 | **Shinjuku / 新宿** | Shinjuku Station East Exit Area / 新宿駅東口エリア | **VIBRANT RETAIL HUB** | A bustling shopping and entertainment district packed with endless shops and dep[...] |
 | 4 | **Harajuku / 原宿** | Takeshita Street / 竹下通り | **KAWAII STREET** | The epicenter of Japanese street fashion and trendy sweets. |
 | 5 | **Harajuku / 原宿** | Meiji Jingu / 明治神宮 | **TRADITIONAL SHRINE** | A serene Shinto shrine dedicated to Emperor Meiji, surrounded by forest. |
 | 6 | **Harajuku / 原宿** | Omotesando Avenue / 表参道 | **FASHION & ARCHITECTURE** | A sophisticated tree-lined avenue lined with flagship luxury stores and stunning modern architecture. |
@@ -42,8 +43,8 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | 16 | **Azabu / 麻布** | Azabu / 麻布 | **INTERNATIONAL & LUXURY ZONE** | An exclusive, sophisticated neighborhood blending historic charm, global embassies, and modern architecture. |
 | 17 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 浅草寺雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
 | 18 | **Asakusa / 浅草** | Sumida River / 隅田川 | **SCENIC RIVERSIDE VIEW** | A beautiful waterfront area perfect for river cruises and skyline views. |
-
-
+ 
+ 
 ### 🛍️ Specific Spot & Shop Boards
 | No | Status | Area | Shop & Facility (Pop Up) | Category | Description (Pop Up) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -54,9 +55,9 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | 5 | **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | Cafe | **ANIMAL CAFE** |
 | 6 | **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | Shopping | **POP CULTURE STREET** |
 | 7 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
-
+ 
 ## 3D Environment Objects
-
+ 
 ### Iconic Major Landmarks
 | Area | Spot | Notes |
 | :--- | :--- | :--- |
@@ -66,7 +67,7 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 | **Ginza / 銀座** | Ginza Mitsukoshi / 銀座三越 | Historic facade or lion statue |
 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 雷門 | Big red lantern and traditional gate |
 | **Minato / 港区** | Tokyo Tower / 東京タワー | Miniaturized iconic red tower |
-
+ 
 ### Small Prop & Detail Objects
 * **Fatty Tuna Sushi / 寿司（トロ）** (Food prop for tables or decorations)
 * **Salmon Sushi / 寿司（サーモン）** (Food prop for tables or decorations)
@@ -79,3 +80,27 @@ description: "旅行計画をRoblox空間上のオブジェクト（案内板、
 * **Kabuki-cho Godzilla Head / ゴジラヘッド** *(Bonus/Optional feature if time permits)*
 * **Cross Shinjuku Vision 3D Cat / クロス新宿ビジョン 3D巨大猫** *(Bonus/Optional feature if time permits)*
 * **Hachiko Statue / ハチ公像** *(Bonus/Optional feature if time permits)*
+ 
+## Floor Zones (Workspace/Floors)
+Workspace/Floors に作成されたゾーン（プロジェクト内の床モデル管理）:
+- Workspace/Floors/ZoneA_Center_Floor
+- Workspace/Floors/ZoneB_Middle_Floor
+- Workspace/Floors/ZoneC_Base_Floor
+
+ZoneC_Base_Floor（参照: ./room-floor-design-spec.md）
+- Workspace path: `Workspace/Floors/ZoneC_Base_Floor`
+- 目的: シーンの基礎床（ベースプレーン）。広域の歩行領域と周辺オブジェクトの基盤を提供する。
+- 簡易仕様:
+  - 推奨セルサイズ: 4m x 4m
+  - 想定範囲: 約 40m x 30m（調整可）
+  - モデル構成例:
+    - Zone_ZoneC_Floor_Model (Model)
+      - Base_Mesh（Part / MeshPart）
+      - Tiles (Folder) — FloorTile_[Material]_[NN]
+      - Edge (Folder)
+      - CollisionPlane (Part)
+- テンプレート保管: ReplicatedStorage/Env_Templates/Floor_Templates（詳細は room-floor-design-spec.md を参照）
+- 管理・命名規則: workspace-hierarchy.md の命名規約（PascalCase + アンダースコア、2桁インデックス等）に従う
+
+(補足)
+- ZoneC の詳細、テンプレート名、配置手順は ./room-floor-design-spec.md に記載済みです。テンプレートを編集→Clone→Workspace 配置というワークフローを採用してください。
