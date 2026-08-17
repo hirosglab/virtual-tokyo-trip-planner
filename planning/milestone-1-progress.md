@@ -77,7 +77,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [ ] | `ShopBoard_04_AnimateIkebukuro` | Ikebukuro / 池袋 | Animate Ikebukuro Main Store / アニメイト池袋本店 |
 | [ ] | `ShopBoard_05_MyPigCafe` | Harajuku / 原宿 | My Pig Cafe / 豚カフェ |
 | [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
-| [ ] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
+| [x] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
 
 > 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・非表示アニメーションが動作することを確認しました。
 > `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` は配置・表示コンテンツの最終確認まで完了しています（表示やテクスチャ、リンク配置の検証済み）。
