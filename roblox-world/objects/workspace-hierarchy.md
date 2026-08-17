@@ -9,6 +9,7 @@ tags:
 links:
   - "../object-deployment-plan.md"
   - "./info-board-featured-spots.md"
+  -  "./room-floor-design-spec.md"
 description: "Roblox Studio の Workspace 内におけるフォルダ階層構造およびオブジェクトの命名規則定義書"
 ---
 
@@ -17,6 +18,11 @@ description: "Roblox Studio の Workspace 内におけるフォルダ階層構�
 ## 📁 Workspace Folder Tree
 ~~~
 Workspace
+│
+├── 📁 Floors
+│   ├── 🧱 ZoneA_Center_Floor
+│   ├── 🧱 ZoneB_Middle_Floor
+│   └── 🧱 ZoneC_Base_Floor
 │
 ├── 📁 Featured_Sightseeing_Spots_Boards
 │   ├── 📄 InfoBoard_01_Kabukicho
@@ -76,10 +82,15 @@ Workspace
 ## 🏷️ Naming Conventions
 
 ### 1. フォルダ命名規則
-* **ケーススタディ**: アッパーキャメルケース（PascalCase）＋ アンダースコア区切り
-* **例**: `Featured_Sightseeing_Spots_Boards`, `Iconic_Major_Landmarks_Objects`, `Small_Prop_Detail_Objects`
+* **ケーススタディ**: アッパーキャメルケース（PascalCase）または アンダースコア区切り
+* **例**: `Floors`, `Featured_Sightseeing_Spots_Boards`, `Iconic_Major_Landmarks_Objects`, `Small_Prop_Detail_Objects`
 
-### 2. オブジェクト（案内板）命名規則
+### 2. 床材（Floors）命名規則
+* **プレフィックス**: `Zone[Letter]_`
+* **フォーマット**: `Zone[Letter]_[Role]_Floor`
+* **例**: `ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`
+
+### 3. オブジェクト（案内板）命名規則
 * **プレフィックス**:
   * 広域エリア案内板: `InfoBoard_`
   * 店舗・特定施設案内板: `ShopBoard_`
@@ -88,13 +99,13 @@ Workspace
 * **フォーマット**: `[Prefix]_[No]_[SpotName]`
 * **例**: `InfoBoard_01_Kabukicho`, `ShopBoard_02_TeamLabBorderless`
 
-### 3. 主要ランドマーク（Iconic Major Landmarks）命名規則
+### 4. 主要ランドマーク（Iconic Major Landmarks）命名規則
 * **プレフィックス**: `Landmark_`
 * **インデックス**: 2桁のゼロ埋め数字 (`01`, `02`, ... `06`)
 * **フォーマット**: `Landmark_[No]_[LandmarkName]`
 * **例**: `Landmark_01_KabukichoArch`, `Landmark_05_KaminarimonGate`
 
-### 4. スモールプロップ（Small Prop & Detail Objects）命名規則
+### 5. スモールプロップ（Small Prop & Detail Objects）命名規則
 * **サブフォルダ分類**:
   * `Foods_And_Drinks`: 食べ物・飲み物関連モデル (`Prop_Food_`, `Prop_Drink_`)
   * `Street_And_Shop_Props`: ショップ・街並み小物モデル (`Prop_Detail_`)
