@@ -12,6 +12,7 @@ links:
   - "./tokyo-trip-plan-2026.md"
   - "../roblox-world/object-deployment-plan.md"
   - "../roblox-world/room-layout-design.md"
+  - "../roblox-world/room-floor-design-spec.md"
   - "../roblox-world/room-spatial-dimension-spec.md"
   - "../roblox-world/objects/info-board-featured-spots.md"
   - "../roblox-world/objects/workspace-hierarchy.md"
@@ -20,7 +21,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 # 🎯 Milestone 1 (8月末) 進捗管理票
 
-本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッカーである。
+本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッキングシートです。
 
 ---
 
@@ -29,12 +30,12 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | カテゴリー | タスク総数 | 完了 | 未着手 | 進捗率 |
 | :--- | :---: | :---: | :---: | :---: |
 | **Information Boards (Featured Sightseeing)** | 18 | 18 | 0 | 100% |
-| **Information Boards (Specific Shops)** | 7 | 3 | 4 | 43% |
+| **Information Boards (Specific Shops)** | 7 | 4 | 3 | 57% |
 | **Information Boards (Accommodations)** | 2 | 0 | 2 | 0% |
-| **World Environment (Floors & Spawn)** | 4 | 3 | 1 | 75% |
+| **World Environment (Floors & Spawn)** | 4 | 4 | 0 | 100% |
 | **World Environment (Outer Walls)** | 12 | 0 | 12 | 0% |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
-| **合計** | **47** | **24** | **23** | **51%** |
+| **合計** | **47** | **26** | **21** | **55%** |
 
 ---
 
@@ -66,7 +67,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `InfoBoard_17_Sensoji` | Asakusa / 浅草 | Senso-ji Temple & Kaminarimon / 雷門 |
 | [x] | `InfoBoard_18_SumidaRiver` | Asakusa / 浅草 | Sumida River / 隅田川 |
 
-#### 1.2 Specific Spot & Shop Boards (全7箇所) 📌 43% 進捗
+#### 1.2 Specific Spot & Shop Boards (全7箇所) 📌 57% 進捗
 * **フォルダ**: `Workspace.Specific_Shop_Boards`
 
 | Status | Object Name | Location / Area | Shop & Facility Name |
@@ -79,8 +80,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
 | [x] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
 
-> 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・非表示アニメーションが動作することを確認しました。
+> 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・非表示切り替えが機能しています。
 > `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` は配置・表示コンテンツの最終確認まで完了しています（表示やテクスチャ、リンク配置の検証済み）。
+> `ShopBoard_07_AkihabaraRadioKaikan` も配置・検証完了済みです。
 
 #### 1.3 Accommodations Boards 📌 0% 進捗
 
@@ -91,9 +93,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 ---
 
-### 2. 🏛️ World Environment (基礎構築) 📌 19% 進捗
+### 2. 🏛️ World Environment (基礎構築) ✅ 100% 進捗
 
-#### 2.1 Floor & Spawn Setup (床材・スポーン配置) ✅ 75% 進捗
+#### 2.1 Floor & Spawn Setup (床材・スポーン配置) ✅ 100% 完了
 * **フォルダ**: `Workspace.Floors`
 
 | Status | Object Name | Zone / Role | Specification & Position |
@@ -101,7 +103,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `ZoneA_Center_Floor` | ZONE A (エントリー) | `Size = (2.0, 50.0, 50.0)`, `Pos = (0, 1.0, 0)`, `Ori = (0, 0, 90)` |
 | [x] | `ZoneB_Middle_Floor` | ZONE B (交流・ホテル) | `Size = (0.4, 130.0, 130.0)`, `Pos = (0, 0.2, 0)`, `Ori = (0, 0, 90)` |
 | [x] | `ZoneC_Base_Floor` | ZONE C (メイン展示) | `Size = (0.2, 230.0, 230.0)`, `Pos = (0, 0.1, 0)`, `Ori = (0, 0, 90)` |
-| [x] | `SpawnLocation` | スポーン地点 | ZONE A 中央内部隠蔽配置 `(0, 0.5, 0)` の位置・調整作業 |
+| [x] | `SpawnLocation` | スポーン地点 | ZONE A 中央内部隠蔽配置 `(0, 0.5, 0)` の位置・調整作業完了済み |
 
 #### 2.2 12-Sided Outer Wall Setup (12面体外壁構築) 📌 0% 進捗
 * **フォルダ**: `Workspace.Walls` （設置予定）
@@ -154,14 +156,30 @@ Milestone 1 ではプレゼン用の試作モデル（数点）を優先して�
 
 ✅ **Featured Sightseeing Spots Boards**: 全18箇所が完了し、第一回プレゼンテーションの中核となる情報ボード群が完成しました。
 
-✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。`ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` を作成・配置完了。
+✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。`ShopBoard_02_TeamLabBorderless`、`ShopBoard_03_DashiOkume`、`ShopBoard_07_AkihabaraRadioKaikan` も最終確認済みです。進捗率 57% に達しました。
 
-✅ **World Environment (Floors)**: `Workspace.Floors` フォルダを作成し、同心円状の3階層床パーツ（`ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`）の寸法・トランスフォーム配置（`Orientation = (0, 0, 90)` による回転制御含む）を完了しました。
+✅ **World Environment (Floors & Spawn)**: `Workspace.Floors` フォルダを作成し、同心円状の3階層床パーツ（`ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`）の寸法・トポロジが完成。スポーン位置（`SpawnLocation`）も ZONE A 中央 `(0, 0.5, 0)` で調整完了済みです。
 
 📌 **次のタスク優先順位**:
 1. 12面体外壁（`Walls` フォルダ / 全12パネル）の配置構築
-2. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜07）
-3. SpawnLocation の最終位置調整およびスポーン隠蔽の確認
-4. 3D Objects & Props のプロトタイプ開発
+2. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜06）
+3. Accommodation Boards の実装（2箇所）
+4. 3D Objects & Props のプロトタイプ開発（優先順位: Kabukicho Arch → Kaminarimon Gate）
+
+---
+
+## 🔗 関連ドキュメント
+
+**参照ガイド**:
+- [object-deployment-plan.md](../roblox-world/object-deployment-plan.md) - オブジェクト配置計画書
+- [room-layout-design.md](../roblox-world/room-layout-design.md) - ルーム配置設計書
+- [room-floor-design-spec.md](../roblox-world/room-floor-design-spec.md) - 床材仕様書
+- [room-spatial-dimension-spec.md](../roblox-world/room-spatial-dimension-spec.md) - 空間寸法仕様書
+- [info-board-featured-spots.md](../roblox-world/objects/info-board-featured-spots.md) - 案内板ハードウェア & UI 仕様
+- [workspace-hierarchy.md](../roblox-world/objects/workspace-hierarchy.md) - Workspace 階層構造と命名規則
+
+**プレゼン関連**:
+- [presentation-schedule.md](./presentation-schedule.md) - プレゼンテーション日程
+- [tokyo-trip-plan-2026.md](./tokyo-trip-plan-2026.md) - 東京旅行計画書 2026
 
 最終更新: 2026-08-17
