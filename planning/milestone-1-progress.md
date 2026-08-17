@@ -12,6 +12,7 @@ links:
   - "./tokyo-trip-plan-2026.md"
   - "../roblox-world/object-deployment-plan.md"
   - "../roblox-world/room-layout-design.md"
+  - "../roblox-world/room-spatial-dimension-spec.md"
   - "../roblox-world/objects/info-board-featured-spots.md"
   - "../roblox-world/objects/workspace-hierarchy.md"
 description: "8月末の第一回プレゼンテーション（シンガポール参加者向け）に向けたRobloxオブジェクト構築およびワールド基盤の進捗管理票"
@@ -19,7 +20,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 # 🎯 Milestone 1 (8月末) 進捗管理票
 
-本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッ[...] 
+本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッカーである。
 
 ---
 
@@ -29,10 +30,11 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | :--- | :---: | :---: | :---: | :---: |
 | **Information Boards (Featured Sightseeing)** | 18 | 18 | 0 | 100% |
 | **Information Boards (Specific Shops)** | 7 | 3 | 4 | 43% |
-| **Information Boards (Accommodations )** | 2 | 0 | 2 | 0% |
-| **World Environment** | 2 | 0 | 2 | 0% |
+| **Information Boards (Accommodations)** | 2 | 0 | 2 | 0% |
+| **World Environment (Floors & Spawn)** | 4 | 3 | 1 | 75% |
+| **World Environment (Outer Walls)** | 12 | 0 | 12 | 0% |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
-| **合計** | **33** | **21** | **12** | **64%** |
+| **合計** | **47** | **24** | **23** | **51%** |
 
 ---
 
@@ -89,12 +91,40 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 ---
 
-### 2. 🏛️ World Environment (基礎構築) 📌 0% 進捗
+### 2. 🏛️ World Environment (基礎構築) 📌 19% 進捗
 
-| Status | Task Item | Details / Specifications |
-| :---: | :--- | :--- |
-| [ ] | **部屋全体の外壁・床の設定** | `room-layout-design.md` に基づく円形ルーム・床パーツおよび外壁の配置 |
-| [ ] | **スポーン地点の設定** | プレイヤー生成位置（SpawnLocation）の配置と調整 |
+#### 2.1 Floor & Spawn Setup (床材・スポーン配置) ✅ 75% 進捗
+* **フォルダ**: `Workspace.Floors`
+
+| Status | Object Name | Zone / Role | Specification & Position |
+| :---: | :--- | :--- | :--- |
+| [x] | `ZoneA_Center_Floor` | ZONE A (エントリー) | `Size = (2.0, 50.0, 50.0)`, `Pos = (0, 1.0, 0)`, `Ori = (0, 0, 90)` |
+| [x] | `ZoneB_Middle_Floor` | ZONE B (交流・ホテル) | `Size = (0.4, 130.0, 130.0)`, `Pos = (0, 0.2, 0)`, `Ori = (0, 0, 90)` |
+| [x] | `ZoneC_Base_Floor` | ZONE C (メイン展示) | `Size = (0.2, 230.0, 230.0)`, `Pos = (0, 0.1, 0)`, `Ori = (0, 0, 90)` |
+| [x] | `SpawnLocation` | スポーン地点 | ZONE A 中央内部隠蔽配置 `(0, 0.5, 0)` の位置・調整作業 |
+
+#### 2.2 12-Sided Outer Wall Setup (12面体外壁構築) 📌 0% 進捗
+* **フォルダ**: `Workspace.Walls` （設置予定）
+
+##### 🔹 Main Walls (モノトーン大板 6枚)
+| Status | Panel Name | Target Angle | Center Position $(X, Y, Z)$ | Rotation $(R_x, R_y, R_z)$ |
+| :---: | :--- | :---: | :--- | :--- |
+| [ ] | `MainWall_01` | `0°` (北) | `(0.00, 15.00, -120.00)` | `(0, 0, 0)` |
+| [ ] | `MainWall_02` | `60°` | `(103.92, 15.00, -60.00)` | `(0, -60, 0)` |
+| [ ] | `MainWall_03` | `120°` | `(103.92, 15.00, 60.00)` | `(0, -120, 0)` |
+| [ ] | `MainWall_04` | `180°` (南) | `(0.00, 15.00, 120.00)` | `(0, 180, 0)` |
+| [ ] | `MainWall_05` | `240°` | `(-103.92, 15.00, 60.00)` | `(0, 120, 0)` |
+| [ ] | `MainWall_06` | `300°` | `(-103.92, 15.00, -60.00)` | `(0, 60, 0)` |
+
+##### 🔸 Sub Walls (紅葉柄薄板 6枚)
+| Status | Panel Name | Target Angle | Center Position $(X, Y, Z)$ | Rotation $(R_x, R_y, R_z)$ |
+| :---: | :--- | :---: | :--- | :--- |
+| [ ] | `SubWall_01` | `30°` | `(60.00, 15.00, -103.92)` | `(0, -30, 0)` |
+| [ ] | `SubWall_02` | `90°` (東) | `(120.00, 15.00, 0.00)` | `(0, -90, 0)` |
+| [ ] | `SubWall_03` | `150°` | `(60.00, 15.00, 103.92)` | `(0, -150, 0)` |
+| [ ] | `SubWall_04` | `210°` | `(-60.00, 15.00, 103.92)` | `(0, 150, 0)` |
+| [ ] | `SubWall_05` | `270°` (西) | `(-120.00, 15.00, 0.00)` | `(0, 90, 0)` |
+| [ ] | `SubWall_06` | `330°` | `(-60.00, 15.00, -103.92)` | `(0, 30, 0)` |
 
 ---
 
@@ -124,13 +154,14 @@ Milestone 1 ではプレゼン用の試作モデル（数点）を優先して�
 
 ✅ **Featured Sightseeing Spots Boards**: 全18箇所が完了し、第一回プレゼンテーションの中核となる情報ボード群が完成しました。
 
-✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。
+✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。`ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` を作成・配置完了。
 
-✅ `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` を作成・配置し、表示コンテンツの確認を完了しました。
+✅ **World Environment (Floors)**: `Workspace.Floors` フォルダを作成し、同心円状の3階層床パーツ（`ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`）の寸法・トランスフォーム配置（`Orientation = (0, 0, 90)` による回転制御含む）を完了しました。
 
 📌 **次のタスク優先順位**:
-1. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜07）
-2. World Environment の基礎構築
-3. 3D Objects & Props のプロトタイプ開発
+1. 12面体外壁（`Walls` フォルダ / 全12パネル）の配置構築
+2. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜07）
+3. SpawnLocation の最終位置調整およびスポーン隠蔽の確認
+4. 3D Objects & Props のプロトタイプ開発
 
-最終更新: 2026-08-16
+最終更新: 2026-08-17
