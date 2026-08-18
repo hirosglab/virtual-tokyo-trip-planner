@@ -18,6 +18,7 @@ links:
   - "./roblox-world/objects/info-board-specific-shops.md"
   - "./roblox-world/objects/workspace-hierarchy.md"
   - "./roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua"
+  - "./roblox-world/docs/learning/2026-08-16-lua-learning-log.md"
 description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメント構造・相対パス・各ファイルの役割を網羅したメインインデックス"
 ---
 
@@ -44,6 +45,9 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
        │  └─ client/
        │     └─ info-board/
        │        └─ ShopBoard_PopUpController.lua
+       ├─ docs/
+       │  └─ learning/
+       │     └─ 2026-08-16-lua-learning-log.md
        ├─ objects/
        │  ├─ info-board-featured-spots.md
        │  ├─ info-board-specific-shops.md
@@ -87,7 +91,12 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 * **scripts/** (`./roblox-world/scripts/`)
   * **役割**: Roblox 用の Lua スクリプトを格納するディレクトリ（クライアント/サーバ/モジュール別に整理）。
   * **追加されたスクリプト**:
-    * `client/info-board/ShopBoard_PopUpController.lua` — StarterPlayerScripts に配置する LocalScript。ShopBoard の Center_Display_Surface に近づいたときに Popup を表示、離れた時に消す。
+    * `client/info-board/ShopBoard_PopUpController.lua` — StarterPlayerScripts に配置する LocalScript。ShopBoard の Center_Display_Surface に近づいたときに Popup を表示、離れたときに非表示にするクライアント側の処理を実装。
+
+* **docs/** (`./roblox-world/docs/`)
+  * **役割**: Roblox開発に関する学習ログ、知見、技術ノート、トラブルシューティング等を格納するドキュメントリポジトリ。
+  * **learning/** (`./roblox-world/docs/learning/`)
+    * **2026-08-16-lua-learning-log.md** — Lua 基本文法の学習ログ。汎用 for 文、`ipairs`、`GetDescendants`、文字列操作、`WaitForChild`、ガード節、距離計算、毎フレーム処理（`RunService.Heartbeat`）など、ShopBoard_PopUpController で使用されている技術の詳細解説を記載。
 
 * **object-deployment-plan.md** (`./roblox-world/object-deployment-plan.md`)
   * **役割**: `tokyo-trip-plan-2026.md` の旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置する展開プラン。
@@ -105,7 +114,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     * 詳細な空間座標・寸法計算: `./objects/room-spatial-dimension-spec.md`
 
 * **objects/room-spatial-dimension-spec.md** (`./roblox-world/objects/room-spatial-dimension-spec.md`)
-  * **役割**: Robloxワールドの3次元空間設計書。同心円シリンダーゾーン（ZONE A/B/C）の寸法、12面体外壁の位置・回転角度計算、および Featured Spots・Shop Boards のトランスフォーム（座標・回転）を詳細に定義。
+  * **役割**: Robloxワールドの3次元空間設計書。同心円シリンダーゾーン（ZONE A/B/C）の寸法、12面体外壁の位置・回転角度計算、および Featured Spots・Specific Shops の配置座標の詳細計算式。
   * **主要関連リンク**:
     * ハイレベル空間レイアウト: `../room-layout-design.md`
     * 主要観光スポット案内板配置根拠: `./info-board-featured-spots.md`
@@ -119,7 +128,7 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 
 * **objects/info-board-specific-shops.md** (`./roblox-world/objects/info-board-specific-shops.md`)
   * **役割**: 東京の飲食店・ショップ・レストラン等を紹介する案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui レイアウト仕様書。
-  * **スクリプト連携**: `./roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua` により、プレイヤー接近時のポップアップ表示がクライアント側で制御される。
+  * **スクリプト連携**: `../scripts/client/info-board/ShopBoard_PopUpController.lua` により、プレイヤー接近時のポップアップ表示がクライアント側で制御されます。
   * **主要関連リンク**:
     * オブジェクト配置計画: `../object-deployment-plan.md`
     * 旅行マスタープラン: `../../planning/tokyo-trip-plan-2026.md`
