@@ -14,6 +14,7 @@ links:
   - "./roblox-world/object-deployment-plan.md"
   - "./roblox-world/room-layout-design.md"
   - "./roblox-world/objects/room-spatial-dimension-spec.md"
+  - "./roblox-world/objects/room-wall-design-spec.md"
   - "./roblox-world/objects/info-board-featured-spots.md"
   - "./roblox-world/objects/info-board-specific-shops.md"
   - "./roblox-world/objects/workspace-hierarchy.md"
@@ -52,8 +53,10 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
        │  ├─ info-board-featured-spots.md
        │  ├─ info-board-specific-shops.md
        │  ├─ room-spatial-dimension-spec.md
+       │  ├─ room-wall-design-spec.md
        │  └─ workspace-hierarchy.md
        ├─ object-deployment-plan.md
+       ├─ room-floor-design-spec.md
        └─ room-layout-design.md
 
 ---
@@ -91,12 +94,12 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
 * **scripts/** (`./roblox-world/scripts/`)
   * **役割**: Roblox 用の Lua スクリプトを格納するディレクトリ（クライアント/サーバ/モジュール別に整理）。
   * **追加されたスクリプト**:
-    * `client/info-board/ShopBoard_PopUpController.lua` — StarterPlayerScripts に配置する LocalScript。ShopBoard の Center_Display_Surface に近づいたときに Popup を表示、離れたときに非表示にするクライアント側の処理を実装。
+    * `client/info-board/ShopBoard_PopUpController.lua` — StarterPlayerScripts に配置する LocalScript。ShopBoard の Center_Display_Surface に近づいたときに Popup を表示、離れたときに非表示にするクライアント側ロジック。
 
 * **docs/** (`./roblox-world/docs/`)
   * **役割**: Roblox開発に関する学習ログ、知見、技術ノート、トラブルシューティング等を格納するドキュメントリポジトリ。
   * **learning/** (`./roblox-world/docs/learning/`)
-    * **2026-08-16-lua-learning-log.md** — Lua 基本文法の学習ログ。汎用 for 文、`ipairs`、`GetDescendants`、文字列操作、`WaitForChild`、ガード節、距離計算、毎フレーム処理（`RunService.Heartbeat`）など、ShopBoard_PopUpController で使用されている技術の詳細解説を記載。
+    * **2026-08-16-lua-learning-log.md** — Lua 基本文法の学習ログ。汎用 for 文、`ipairs`、`GetDescendants`、文字列操作、`WaitForChild`、ガード節、距離計算、毎フレーム処理の実装パターンなど。
 
 * **object-deployment-plan.md** (`./roblox-world/object-deployment-plan.md`)
   * **役割**: `tokyo-trip-plan-2026.md` の旅行計画をRoblox空間上のオブジェクト（案内板、3Dモデル、プロップ）へマッピング・配置する展開プラン。
@@ -113,18 +116,34 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     * オブジェクト配置計画: `./object-deployment-plan.md`
     * 詳細な空間座標・寸法計算: `./objects/room-spatial-dimension-spec.md`
 
+* **room-floor-design-spec.md** (`./roblox-world/room-floor-design-spec.md`)
+  * **役割**: Robloxワールド空間における3つの階層シリンダー床パーツの立体構造、寸法、材質、および色設定の仕様書。
+  * **主要関連リンク**:
+    * 空間レイアウト設計: `./room-layout-design.md`
+    * 詳細な空間座標・寸法計算: `./objects/room-spatial-dimension-spec.md`
+
 * **objects/room-spatial-dimension-spec.md** (`./roblox-world/objects/room-spatial-dimension-spec.md`)
-  * **役割**: Robloxワールドの3次元空間設計書。同心円シリンダーゾーン（ZONE A/B/C）の寸法、12面体外壁の位置・回転角度計算、および Featured Spots・Specific Shops の配置座標の詳細計算式。
+  * **役割**: Robloxワールドの3次元空間設計書。同心円シリンダーゾーン（ZONE A/B/C）の寸法、12面体外壁の位置・回転角度計算、および Featured Spots 案内板の配置計算式を定義。
   * **主要関連リンク**:
     * ハイレベル空間レイアウト: `../room-layout-design.md`
     * 主要観光スポット案内板配置根拠: `./info-board-featured-spots.md`
     * 飲食店・ショップ案内板配置参照: `./info-board-specific-shops.md`
+    * 外壁設計詳細: `./room-wall-design-spec.md`
+
+* **objects/room-wall-design-spec.md** (`./roblox-world/objects/room-wall-design-spec.md`)
+  * **役割**: メインウォール拡幅（76 studs）およびサブウォール幅狭アクセント化（36 studs）に伴う寸法・トランスフォーム再計算、材質・カラー定義の詳細仕様書。
+  * **主要関連リンク**:
+    * ハイレベル空間レイアウト: `../room-layout-design.md`
+    * 空間座標・寸法計算の基準: `./room-spatial-dimension-spec.md`
+    * 主要観光スポット案内板配置: `./info-board-featured-spots.md`
+    * ワークスペース階層: `./workspace-hierarchy.md`
 
 * **objects/info-board-featured-spots.md** (`./roblox-world/objects/info-board-featured-spots.md`)
   * **役割**: 主要観光スポット（Featured Sightseeing Spots）専用案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui (1024x768) レイアウト仕様書。
   * **主要関連リンク**:
     * オブジェクト配置計画: `../object-deployment-plan.md`
     * 空間座標・配置計算の根拠: `./room-spatial-dimension-spec.md`
+    * 外壁配置の詳細: `./room-wall-design-spec.md`
 
 * **objects/info-board-specific-shops.md** (`./roblox-world/objects/info-board-specific-shops.md`)
   * **役割**: 東京の飲食店・ショップ・レストラン等を紹介する案内板の3Dパーツ構造、材質・カラー定義、および SurfaceGui レイアウト仕様書。
@@ -133,12 +152,14 @@ description: "Virtual Tokyo Trip Planner プロジェクト全体のドキュメ
     * オブジェクト配置計画: `../object-deployment-plan.md`
     * 旅行マスタープラン: `../../planning/tokyo-trip-plan-2026.md`
     * 空間座標・配置計算の根拠: `./room-spatial-dimension-spec.md`
+    * ポップアップ制御スクリプト: `../scripts/client/info-board/ShopBoard_PopUpController.lua`
 
 * **objects/workspace-hierarchy.md** (`./roblox-world/objects/workspace-hierarchy.md`)
   * **役割**: Robloxワールド内の全オブジェクトのワークスペース階層構造、命名規約、パーツの親子関係（フォルダ分類）を定義したリファレンス。
   * **主要関連リンク**:
     * 主要観光スポット案内板: `./info-board-featured-spots.md`
     * 飲食店・ショップ案内板: `./info-board-specific-shops.md`
+    * 外壁設計詳細: `./room-wall-design-spec.md`
 
 ---
 
