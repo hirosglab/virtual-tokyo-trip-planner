@@ -19,6 +19,20 @@ description: "Roblox Studio の Workspace 内におけるフォルダ階層構�
 ~~~
 Workspace
 │
+├── 🏛️ Walls
+│   ├── 🪵 MainWall_01
+│   ├── 🪵 MainWall_02
+│   ├── 🪵 MainWall_03
+│   ├── 🪵 MainWall_04
+│   ├── 🪵 MainWall_05
+│   ├── 🪵 MainWall_06
+│   ├── 🍁 SubWall_01
+│   ├── 🍁 SubWall_02
+│   ├── 🍁 SubWall_03
+│   ├── 🍁 SubWall_04
+│   ├── 🍁 SubWall_05
+│   └── 🍁 SubWall_06
+│
 ├── 📁 Floors
 │   ├── 🧱 ZoneA_Center_Floor
 │   ├── 🧱 ZoneB_Middle_Floor
