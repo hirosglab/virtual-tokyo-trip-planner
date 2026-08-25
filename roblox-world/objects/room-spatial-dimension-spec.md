@@ -73,25 +73,37 @@ ZONE A・B・C は円盤状シリンダーパーツを垂直方向に重ねて�
 
 ## 🖼️ Featured Sightseeing Spots Boards Placement
 
-6枚の広幅 MainWall の内面（壁面厚みを考慮した半径 $R_{board} = 105.0\text{ studs}$）に配置する `info-board-featured-spots.md` 案内板の正確な配置計算結果。
-プレイヤーの目線の高さ（地上 $Y = 0.2$ から目線 $Y \approx 5.5$）に合わせて中心高さを設定する。
+6枚の広幅 MainWall（幅 `76.0 studs`）の内面（壁面厚みを考慮した半径 $R_{board} = 105.0\text{ studs}$）に対して、各壁面に3枚ずつ均等に配置（ボード中心オフセット: `-22.0 studs`, `0.0 studs`, `+22.0 studs`）する `info-board-featured-spots.md` 案内板の正確な配置計算結果。
 
 ### Board Specifications & Placement Standard
 * **Board Size:** `12.0, 9.0, 0.4 studs`
 * **Placement Height (Y):** `Y = 7.00 studs` （ボード中心高さ。プレイヤー目線から見上げる位置）
 * **Placement Radius:** `R = 105.00 studs` （MainWall中心 $R=107.0$ の内側 `2.0 studs` 手前）
-* **Orientation:** 内側（中心 `(0, 0, 0)`）を向くように配置設定。
+* **Horizontal Spacing:** 各 MainWall 面上において左右対称に `22.0 studs` ピッチで3枚並列配置（左右マージン `10.0 studs`, ボード間ギャップ `10.0 studs`）。
+* **Orientation:** ワールド中心 `(0, 0, 0)` を向くように配置設定。
 
-### 6 Area Featured Boards Position Table
+### 18 Featured Sightseeing Boards Placement Table
 
-| Area Name | 対象壁面 | 角度 ($\theta$) | Board Position $(X, Y, Z)$ | Board Rotation $(R_x, R_y, R_z)$ |
+| Board Name | 対象壁面 | 角度 ($\theta$) | Center Position $(X, Y, Z)$ | Rotation $(R_x, R_y, R_z)$ |
 | :--- | :--- | :---: | :--- | :--- |
-| **Shinjuku** | MainWall_01 (北) | `0°` | `(0.00, 7.00, -105.00)` | `(0, 180, 0)` |
-| **Shibuya** | MainWall_02 (北東) | `60°` | `(90.93, 7.00, -52.50)` | `(0, -120, 0)` |
-| **Tokyo** | MainWall_03 (南東) | `120°` | `(90.93, 7.00, 52.50)` | `(0, -60, 0)` |
-| **Ginza** | MainWall_04 (南) | `180°` | `(0.00, 7.00, 105.00)` | `(0, 0, 0)` |
-| **Asakusa** | MainWall_05 (南西) | `240°` | `(-90.93, 7.00, 52.50)` | `(0, 60, 0)` |
-| **Harajuku** | MainWall_06 (北西) | `300°` | `(-90.93, 7.00, -52.50)` | `(0, 120, 0)` |
+| **InfoBoard_04_TakeshitaStreet** | MainWall_01 (北) | `0°` | `(-22.00, 7.00, -105.00)` | `(0, -180, 0)` |
+| **InfoBoard_05_MeijiJingu** | MainWall_01 (北) | `0°` | `(0.00, 7.00, -105.00)` | `(0, 0, 0)` |
+| **InfoBoard_06_OmotesandoAvenue** | MainWall_01 (北) | `0°` | `(22.00, 7.00, -105.00)` | `(0, -180, 0)` |
+| **InfoBoard_07_ShibuyaSky** | MainWall_02 (北東) | `60°` | `(79.93, 7.00, -71.55)` | `(0, -180, 0)` |
+| **InfoBoard_08_ShibuyaCrossing** | MainWall_02 (北東) | `60°` | `(90.93, 7.00, -52.50)` | `(0, -180, 0)` |
+| **InfoBoard_09_ShibuyaCenterGai** | MainWall_02 (北東) | `60°` | `(101.93, 7.00, -33.45)` | `(0, -180, 0)` |
+| **InfoBoard_10_TokyoStation** | MainWall_03 (南東) | `120°` | `(101.93, 7.00, 33.45)` | `(0, 180, 0)` |
+| **InfoBoard_11_ImperialPalace** | MainWall_03 (南東) | `120°` | `(90.93, 7.00, 52.50)` | `(0, 180, 0)` |
+| **InfoBoard_12_ShinbashiUnderpass** | MainWall_03 (南東) | `120°` | `(79.93, 7.00, 71.55)` | `(0, 180, 0)` |
+| **InfoBoard_13_TsukijiOuterMarket** | MainWall_04 (南) | `180°` | `(22.00, 7.00, 105.00)` | `(0, -180, 0)` |
+| **InfoBoard_14_GinzaStreet** | MainWall_04 (南) | `180°` | `(0.00, 7.00, 105.00)` | `(0, -180, 0)` |
+| **InfoBoard_15_AkihabaraElectricTown** | MainWall_04 (南) | `180°` | `(-22.00, 7.00, 105.00)` | `(0, -180, 0)` |
+| **InfoBoard_16_AzabuArea** | MainWall_05 (南西) | `240°` | `(-79.93, 7.00, 71.55)` | `(0, -180, 0)` |
+| **InfoBoard_17_Sensoji** | MainWall_05 (南西) | `240°` | `(-90.93, 7.00, 52.50)` | `(0, -180, 0)` |
+| **InfoBoard_18_SumidaRiver** | MainWall_05 (南西) | `240°` | `(-101.93, 7.00, 33.45)` | `(0, 180, 0)` |
+| **InfoBoard_01_Kabukicho** | MainWall_06 (北西) | `300°` | `(-101.93, 7.00, -33.45)` | `(0, 60, 0)` |
+| **InfoBoard_02_OmoideYokocho** | MainWall_06 (北西) | `300°` | `(-90.93, 7.00, -52.50)` | `(0, 60, 0)` |
+| **InfoBoard_03_ShinjukuEastExit** | MainWall_06 (北西) | `300°` | `(-79.93, 7.00, -71.55)` | `(0, 60, 0)` |
 
 ---
 
