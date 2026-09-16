@@ -21,7 +21,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 # 🎯 Milestone 1 (8月末) 進捗管理票
 
-本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッキングシートです。
+本ドキュメントは、8月末に予定されている**「第一回プレゼンテーション（シンガポール参加者向け）」**に向けた開発進捗を管理するためのトラッキング票です。
 
 ---
 
@@ -33,9 +33,9 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | **Information Boards (Specific Shops)** | 7 | 4 | 3 | 57% |
 | **Information Boards (Accommodations)** | 2 | 0 | 2 | 0% |
 | **World Environment (Floors & Spawn)** | 4 | 4 | 0 | 100% |
-| **World Environment (Outer Walls)** | 12 | 0 | 12 | 0% |
+| **World Environment (Outer Walls)** | 12 | 12 | 0 | 100% ✅ |
 | **3D Objects & Props (Prototypes)** | 4 | 0 | 4 | 0% |
-| **合計** | **47** | **26** | **21** | **55%** |
+| **合計** | **47** | **38** | **9** | **81% 📈** |
 
 ---
 
@@ -80,7 +80,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [ ] | `ShopBoard_06_TokyoCharacterStreet` | Tokyo / 東京 | Tokyo Character Street / 東京キャラクターストリート |
 | [x] | `ShopBoard_07_AkihabaraRadioKaikan` | Akihabara / 秋葉原 | Akihabara Radio Kaikan / 秋葉原ラジオ会館 |
 
-> 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・非表示切り替えが機能しています。
+> 備考: `ShopBoard_01_Teppanyaki10` はローカルのポップアップ制御（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）が実装済みで、案内板の表示・動作が確認されました。
 > `ShopBoard_02_TeamLabBorderless` と `ShopBoard_03_DashiOkume` は配置・表示コンテンツの最終確認まで完了しています（表示やテクスチャ、リンク配置の検証済み）。
 > `ShopBoard_07_AkihabaraRadioKaikan` も配置・検証完了済みです。
 
@@ -93,7 +93,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 
 ---
 
-### 2. 🏛️ World Environment (基礎構築) ✅ 100% 進捗
+### 2. 🏛️ World Environment (基礎構築) ✅ 100% 進捗完了
 
 #### 2.1 Floor & Spawn Setup (床材・スポーン配置) ✅ 100% 完了
 * **フォルダ**: `Workspace.Floors`
@@ -105,10 +105,10 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `ZoneC_Base_Floor` | ZONE C (メイン展示) | `Size = (0.2, 230.0, 230.0)`, `Pos = (0, 0.1, 0)`, `Ori = (0, 0, 90)` |
 | [x] | `SpawnLocation` | スポーン地点 | ZONE A 中央内部隠蔽配置 `(0, 0.5, 0)` の位置・調整作業完了済み |
 
-#### 2.2 12-Sided Outer Wall Setup (12面体外壁構築) 📌 0% 進捗
-* **フォルダ**: `Workspace.Walls` （設置予定）
+#### 2.2 12-Sided Outer Wall Setup (12面体外壁構築) ✅ 100% 完了
+* **フォルダ**: `Workspace.Walls`
 
-##### 🔹 Main Walls (モノトーン大板 6枚)
+##### 🔹 Main Walls (モノトーン大板 6枚) ✅
 | Status | Panel Name | Target Angle | Center Position $(X, Y, Z)$ | Rotation $(R_x, R_y, R_z)$ |
 | :---: | :--- | :---: | :--- | :--- |
 | [x] | `MainWall_01` | `0°` (北) | `(0.00, 15.00, -120.00)` | `(0, 0, 0)` |
@@ -118,7 +118,7 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `MainWall_05` | `240°` | `(-103.92, 15.00, 60.00)` | `(0, 120, 0)` |
 | [x] | `MainWall_06` | `300°` | `(-103.92, 15.00, -60.00)` | `(0, 60, 0)` |
 
-##### 🔸 Sub Walls (紅葉柄薄板 6枚)
+##### 🔸 Sub Walls (紅葉柄薄板 6枚) ✅
 | Status | Panel Name | Target Angle | Center Position $(X, Y, Z)$ | Rotation $(R_x, R_y, R_z)$ |
 | :---: | :--- | :---: | :--- | :--- |
 | [x] | `SubWall_01` | `30°` | `(60.00, 15.00, -103.92)` | `(0, -30, 0)` |
@@ -127,6 +127,8 @@ description: "8月末の第一回プレゼンテーション（シンガポー�
 | [x] | `SubWall_04` | `210°` | `(-60.00, 15.00, 103.92)` | `(0, 150, 0)` |
 | [x] | `SubWall_05` | `270°` (西) | `(-120.00, 15.00, 0.00)` | `(0, 90, 0)` |
 | [x] | `SubWall_06` | `330°` | `(-60.00, 15.00, -103.92)` | `(0, 30, 0)` |
+
+> ✅ **12面体外壁が全て配置完了しました！** モノトーン大板 6枚と紅葉柄薄板 6枚の計12パネルが設計通りの位置・回転で配置されました。
 
 ---
 
@@ -156,15 +158,16 @@ Milestone 1 ではプレゼン用の試作モデル（数点）を優先して�
 
 ✅ **Featured Sightseeing Spots Boards**: 全18箇所が完了し、第一回プレゼンテーションの中核となる情報ボード群が完成しました。
 
-✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。`ShopBoard_02_TeamLabBorderless`、`ShopBoard_03_DashiOkume`、`ShopBoard_07_AkihabaraRadioKaikan` も最終確認済みです。進捗率 57% に達しました。
+✅ **Specific Spot & Shop Boards**: `ShopBoard_01_Teppanyaki10` のポップアップ制御を実装・確認（`roblox-world/scripts/client/info-board/ShopBoard_PopUpController.lua`）。`ShopBoard_02_TeamLabBorderless`、`ShopBoard_03_DashiOkume`、`ShopBoard_07_AkihabaraRadioKaikan` は配置・検証完了済み。
 
-✅ **World Environment (Floors & Spawn)**: `Workspace.Floors` フォルダを作成し、同心円状の3階層床パーツ（`ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`）の寸法・トポロジが完成。スポーン位置（`SpawnLocation`）も ZONE A 中央 `(0, 0.5, 0)` で調整完了済みです。
+✅ **World Environment (Floors & Spawn)**: `Workspace.Floors` フォルダを作成し、同心円状の3階層床パーツ（`ZoneA_Center_Floor`, `ZoneB_Middle_Floor`, `ZoneC_Base_Floor`）の寸法・位置確定・スポーン配置が完了しました。
+
+✅ **World Environment (Outer Walls) - 新規完了！**: 12面体外壁（Walls フォルダ / 全12パネル）の配置構築が完了しました。モノトーン大板 6枚と紅葉柄薄板 6枚が設計通りの位置・回転で配置され、ワールドの基礎構造が完成。
 
 📌 **次のタスク優先順位**:
-1. 12面体外壁（`Walls` フォルダ / 全12パネル）の配置構築
-2. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜06）
-3. Accommodation Boards の実装（2箇所）
-4. 3D Objects & Props のプロトタイプ開発（優先順位: Kabukicho Arch → Kaminarimon Gate）
+1. Specific Spot & Shop Boards の残り実装（ShopBoard_04〜06）
+2. Accommodation Boards の実装（2箇所）
+3. 3D Objects & Props のプロトタイプ開発（優先順位: Kabukicho Arch → Kaminarimon Gate）
 
 ---
 
@@ -182,4 +185,4 @@ Milestone 1 ではプレゼン用の試作モデル（数点）を優先して�
 - [presentation-schedule.md](./presentation-schedule.md) - プレゼンテーション日程
 - [tokyo-trip-plan-2026.md](./tokyo-trip-plan-2026.md) - 東京旅行計画書 2026
 
-最終更新: 2026-08-17
+最終更新: 2026-09-16
