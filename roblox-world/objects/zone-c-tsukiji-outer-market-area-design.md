@@ -37,6 +37,7 @@ InfoBoard_13_TsukijiOuterMarket 前地区は、築地場外市場の活気ある
 
 ### 1. 立面仕様 (Elevation Spec)
 * **参照アセット**: `tsukiji-outer-market-elevation-spec.svg` (`./roblox-world/assets/tsukiji-outer-market-elevation-spec.svg`)
+  ![Roblox Tsukiji Outer Market Elevation Diagram](../assets/tsukiji-outer-market-elevation-spec.svg)
 * **主要構造**:
   * **MainWall_04**: 高さ 30.0 studs / 厚み 2.0 studs / 木目調仕上げ
   * **InfoBoard_13_TsukijiOuterMarket**: 
@@ -47,6 +48,7 @@ InfoBoard_13_TsukijiOuterMarket 前地区は、築地場外市場の活気ある
 
 ### 2. 平面仕様 (Plan Spec)
 * **参照アセット**: `tsukiji-outer-market-plan-spec.svg` (`./roblox-world/assets/tsukiji-outer-market-plan-spec.svg`)
+![Roblox Tsukiji Outer Market Plan Diagram](../assets/tsukiji-outer-market-plan-spec.svg)
 * **レイアウト軸**:
   * MainWall_04 壁面位置: `Z = 107.00 studs`
   * InfoBoard_13 配置位置: `X = 22.00 studs`, `Z = 105.00 studs`
