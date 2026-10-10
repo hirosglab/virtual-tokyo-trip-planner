@@ -75,23 +75,28 @@ Zone B 側（Z = 68.50）から InfoBoard 側（Z = 93.50）、および案内�
 
 ## ⚡ Dynamic Appearance & Audio System Architecture
 
-本エリアのプロップ出現ギミックは、`InfoBoard_13_TsukijiOuterMarket` 内に配置された Lua スクリプト `Tsukiji_PropController` によって制御される。
+本エリアのプロップ出現ギミックは、モバイル環境を含むマルチプレイ時のパフォーマンス最適化およびネットワーク負荷低減のため、クライアント制御（LocalScript）によって構築・実行される。
 
-### 1. 検出およびトリガー制御
-* **感知距離**: プレイヤーのアバター（HumanoidRootPart）が `InfoBoard_13_TsukijiOuterMarket` から **40 studs** 以内に接近したことを `RunService.Heartbeat` で検知。
-* **トリガー条件**: 最短距離にあるプレイヤーが 40 studs 以内に入った際に出現シーケンスを開始し、40 studs 外に全員が離れた場合は全プロップを非表示状態にリセットする。
+### 1. 検出およびトリガー制御 (クライアント個別判定)
+* **スクリプト配置**: `StarterPlayer.StarterPlayerScripts` 配下に `LocalScript` として配置。
+* **対象オブジェクト参照**: `Workspace.Featured_Sightseeing_Spots_Boards.InfoBoard_13_TsukijiOuterMarket` を動的に参照。
+* **感知距離**: ログインしている各プレイヤー自身のキャラクター（HumanoidRootPart）と `InfoBoard_13_TsukijiOuterMarket` の距離を `RunService.Heartbeat` で監視し、**40 studs** 以内に接近したことを検知。
+* **トリガー条件**: プレイヤー自身が 40 studs 以内に入った際に出現シーケンスを開始し、40 studs 外へ離れた場合は全プロップを非表示状態にリセットする。
 
 ### 2. ポップアップアニメーション & SE再生メカニズム
+* **初期状態管理**:
+  * 通信ラグによるゲーム開始時のチラつき（瞬間表示）を防ぐため、Roblox Studio 上で全プロップのプロパティを事前に `Transparency = 1`（透明）かつ `CanCollide = false` に設定。
+  * スクリプト起動時の初期化関数 `hideAllSushi()` により、元サイズ・CFrame データの保持および安全網としての非表示化を実行。
 * **サウンド一括管理**: 
   * `Workspace.AudioAssets` フォルダ配下にポップサウンドアセット **`SE_Pop_Common`** (`SoundId: rbxassetid://100517105966579`) を配置して一括管理する。
 * **浮き出るアニメーション演出 (TweenService)**:
-  * スクリプト初期化時に全寿司プロップの `CanCollide` を `false` に設定し、プレイヤーの移動・通り抜けを妨げない構造とする。
-  * 各プロップの出現時、下方向（-5 studs オフセット）および縮小状態（スケール 0.2）から元の位置・サイズへ `Enum.EasingStyle.Back` および `Enum.EasingDirection.Out` を用いて約 0.35 秒間で飛び出すポップアップ補間を行う。
+  * アニメーション実行中も `CanCollide = false` を維持し、プレイヤー移動の引っかかりを防止。
+  * 各プロップの出現時、下方向（-1.5〜-5 studs オフセット）および縮小状態（スケール 0.2）から元の位置・サイズへ `Enum.EasingStyle.Back` および `Enum.EasingDirection.Out` を用いて約 0.35 秒間で飛び出すポップアップ補間を行う。
   * ポップアップ演出の開始と同時に `SE_Pop_Common` の再生位置をリセット (`TimePosition = 0`) して「ポンッ」という効果音を連続再生する。
 
 ### 3. 時間差出現シーケンス (Zone B 側から進行方向へ)
-Zone B 側から看板方向へ進むプレイヤーの動線に合わせて、以下の 7 ステップ（各ステップ間隔: DELAY_TIME = 0.25〜0.3 秒）で時間差出現を行う。
-
+Zone B 側から看板方向へ進むプレイヤーの動線に合わせて、以下の 7 ステップ（各ステップ間隔: DELAY_TIME = 0.25 秒）で時間差出現を行う。
+```
   Step 1: 【列1 (Zone B側)】 Prop_Sushi_Toro_03 & Prop_Sushi_Tamago_03 が SE とともにポップアップ出現
   Step 2: 【列1 (Zone B側)】 Prop_Sushi_Salmon_03 が SE とともにポップアップ出現
   Step 3: 【列2 (中央)】 Prop_Sushi_Toro_02 & Prop_Sushi_Tamago_02 が SE とともにポップアップ出現
@@ -99,16 +104,14 @@ Zone B 側から看板方向へ進むプレイヤーの動線に合わせて、�
   Step 5: 【列3 (看板前)】 Prop_Sushi_Toro_01 & Prop_Sushi_Tamago_01 が SE とともにポップアップ出現
   Step 6: 【列3 (看板前)】 Prop_Sushi_Salmon_01 が SE とともにポップアップ出現
   Step 7: 【上方 (看板上)】 Prop_Sushi_Toro_04 & Prop_Sushi_Tamago_04 & Prop_Sushi_Salmon_04 が SE とともに同時ポップアップ出現
+```
+## 📂 Service & Workspace Hierarchy Integration
 
-## 📂 Workspace Hierarchy & Integration
-
-築地エリアの全オブジェクト、スクリプト、およびサウンドアセットは、以下の階層構造に従って `Workspace` 内に整理・格納する。
+築地エリアの全オブジェクト、クライアントスクリプト、およびサウンドアセットは、以下の階層構造に従って整理・格納する。
 
     Workspace
-    ├── 🏛️ Walls
-    │    └── MainWall_04
-    │         └── 🖼️ InfoBoard_13_TsukijiOuterMarket
-    │              └── 📜 Tsukiji_PropController (Script)
+    ├── 🏛️ Featured_Sightseeing_Spots_Boards
+    │    └── 🖼️ InfoBoard_13_TsukijiOuterMarket
     ├── 📦 Props
     │    └── 📁 TsukijiArea
     │         ├── Prop_Sushi_Toro_01
@@ -125,6 +128,10 @@ Zone B 側から看板方向へ進むプレイヤーの動線に合わせて、�
     │         └── Prop_Sushi_Salmon_04
     └── 🔊 AudioAssets
          └── 🎵 SE_Pop_Common (Sound)
+
+    StarterPlayer
+    └── 📁 StarterPlayerScripts
+         └── 📜 Tsukiji_PropController (LocalScript)
 
 ## 🔗 Related Documentation & Links
 
