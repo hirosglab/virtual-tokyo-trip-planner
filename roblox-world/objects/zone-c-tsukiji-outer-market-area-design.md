@@ -60,15 +60,15 @@ Zone B 側（Z = 68.50）から InfoBoard 側（Z = 93.50）、および案内�
 
 | Prop Name / Object ID | Item Type / Description | Position (X, Y, Z) | Orientation (Rx, Ry, Rz) | Parent Folder / Workspace Hierarchy | Sequential Step |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Prop_Sushi_Toro_03 | Fatty Tuna / トロ (列1: Zone B側) | (34.20, 4.00, 68.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_03 | Step 1 (同時) |
-| Prop_Sushi_Tamago_03 | Egg / タマゴ (列1: Zone B側) | (30.96, 4.00, 68.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_03 | Step 1 (同時) |
-| Prop_Sushi_Salmon_03 | Salmon / サーモン (列1: Zone B側) | (16.50, 4.00, 68.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_03 | Step 2 |
-| Prop_Sushi_Toro_02 | Fatty Tuna / トロ (列2: 中央) | (15.80, 4.00, 81.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_02 | Step 3 (同時) |
-| Prop_Sushi_Tamago_02 | Egg / タマゴ (列2: 中央) | (19.40, 4.00, 81.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_02 | Step 3 (同時) |
-| Prop_Sushi_Salmon_02 | Salmon / サーモン (列2: 中央) | (34.50, 4.00, 81.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_02 | Step 4 |
-| Prop_Sushi_Toro_01 | Fatty Tuna / トロ (列3: 看板前) | (36.20, 4.00, 93.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_01 | Step 5 (同時) |
-| Prop_Sushi_Tamago_01 | Egg / タマゴ (列3: 看板前) | (31.80, 4.00, 93.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_01 | Step 5 (同時) |
-| Prop_Sushi_Salmon_01 | Salmon / サーモン (列3: 看板前) | (18.50, 4.00, 93.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_01 | Step 6 |
+| Prop_Sushi_Toro_03 | Fatty Tuna / トロ (列1: Zone B側) | (34.20, 4.00, 82.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_03 | Step 1 (同時) |
+| Prop_Sushi_Tamago_03 | Egg / タマゴ (列1: Zone B側) | (30.962, 4.00, 82.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_03 | Step 1 (同時) |
+| Prop_Sushi_Salmon_03 | Salmon / サーモン (列1: Zone B側) | (16.50, 4.00, 82.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_03 | Step 2 |
+| Prop_Sushi_Toro_02 | Fatty Tuna / トロ (列2: 中央) | (15.80, 4.00, 91.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_02 | Step 3 (同時) |
+| Prop_Sushi_Tamago_02 | Egg / タマゴ (列2: 中央) | (119.40, 4.00, 91.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_02 | Step 3 (同時) |
+| Prop_Sushi_Salmon_02 | Salmon / サーモン (列2: 中央) | (34.50, 4.00, 91.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_02 | Step 4 |
+| Prop_Sushi_Toro_01 | Fatty Tuna / トロ (列3: 看板前) | (36.20, 4.00, 98.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_01 | Step 5 (同時) |
+| Prop_Sushi_Tamago_01 | Egg / タマゴ (列3: 看板前) | (31.80, 4.00, 98.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_01 | Step 5 (同時) |
+| Prop_Sushi_Salmon_01 | Salmon / サーモン (列3: 看板前) | (18.50, 4.00, 98.50) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_01 | Step 6 |
 | Prop_Sushi_Toro_04 | Fatty Tuna / トロ (上方) | (30.04, 15.00, 101.79) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Toro_04 | Step 7 (同時) |
 | Prop_Sushi_Tamago_04 | Egg / タマゴ (上方) | (26.62, 15.00, 102.59) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Tamago_04 | Step 7 (同時) |
 | Prop_Sushi_Salmon_04 | Salmon / サーモン (上方) | (20.00, 15.00, 102.00) | (0, 0, 0) | Workspace.Props.TsukijiArea / Prop_Sushi_Salmon_04 | Step 7 (同時) |
