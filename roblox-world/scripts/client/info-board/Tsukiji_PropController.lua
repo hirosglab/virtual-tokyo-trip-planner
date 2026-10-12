@@ -263,33 +263,68 @@ local function showSushiSequence()
 	isAnimating = false
 end
 
--- ------------------------------------------------------------
--- ★ 自分自身（LocalPlayer）との距離計算関数
--- ------------------------------------------------------------
-local function getDistanceToLocalPlayer()
+-- ============================================================
+-- ★ 自分自身（LocalPlayer）との距離と「前方」の判定関数
+-- ============================================================
+local function checkPlayerInFront()
 	local char = LocalPlayer.Character
 	if char and char:FindFirstChild("HumanoidRootPart") then
 		local hrp = char.HumanoidRootPart
-		local boardPosition = board:GetPivot().Position
-		return (hrp.Position - boardPosition).Magnitude
+		local boardPivot = board:GetPivot()
+		local boardPos = boardPivot.Position
+
+		-- 1. まず距離のチェック（40 studs以内か）
+		local dist = (hrp.Position - boardPos).Magnitude
+		if dist > TRIGGER_DISTANCE then
+			return false
+		end
+
+		-- 【追加】近づきすぎたとき（15 studs以内）は、角度に関わらず正面にいるとみなして消えないようにする
+		if dist <= 15 then
+			return true
+		end
+
+		-- 2. 看板の正面方向ベクトル
+		-- ※ Tsukijiエリアの看板も向きが逆であれば -boardPivot.LookVector にしてください
+		local boardForward = -boardPivot.LookVector
+
+		-- 3. 看板からプレイヤーへのベクトル
+		local toPlayer = (hrp.Position - boardPos)
+
+		-- 高低差（Y軸）の影響を無視して、水平方向（XZ平面）だけで判定
+		toPlayer = Vector3.new(toPlayer.X, 0, toPlayer.Z)
+		boardForward = Vector3.new(boardForward.X, 0, boardForward.Z)
+
+		if toPlayer.Magnitude == 0 or boardForward.Magnitude == 0 then
+			return false
+		end
+
+		toPlayer = toPlayer.Unit
+		boardForward = boardForward.Unit
+
+		-- 4. 内積を計算
+		local dot = boardForward:Dot(toPlayer)
+
+		-- 離れている時は厳めの視野角で隣の看板への誤反応を防ぐ
+		return dot > 0.9
 	end
-	return math.huge
+	return false
 end
 
 -- ------------------------------------------------------------
--- 距離判定ループ（Heartbeat）
+-- 判定ループ（Heartbeat）
 -- ------------------------------------------------------------
 RunService.Heartbeat:Connect(function()
-	local dist = getDistanceToLocalPlayer()
+	local isInFront = checkPlayerInFront()
 
-	if dist <= TRIGGER_DISTANCE and not isNear then
+	if isInFront and not isNear then
 		isNear = true
 		if not isAnimating then
-			showSushiSequence()
+			showSushiSequence() -- ※築地エリア用の出現関数
 		end
 
-	elseif dist > TRIGGER_DISTANCE and isNear then
+	elseif not isInFront and isNear then
 		isNear = false
-		hideAllSushi()
+		hideAllSushi() -- ※築地エリア用の非表示関数
 	end
 end)
