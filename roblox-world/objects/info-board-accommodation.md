@@ -129,7 +129,7 @@ SurfaceGui（解像度: 1024 x 768）の内部を左右50%ずつに分割し、�
 * **Purpose**: Display Stay Schedule
 * **Text**: 1st - 2nd Nov
 * **Font**: Roboto Condensed (Bold)
-* **TextSize**: 40
+* **TextSize**: 60
 * **Size**: {0.9, 0}, {0.12, 0}
 * **Position**: {0.05, 0}, {0.06, 0}
 
@@ -137,7 +137,7 @@ SurfaceGui（解像度: 1024 x 768）の内部を左右50%ずつに分割し、�
 * **Purpose**: Display Hotel Location Area
 * **Text**: Shinjuku / 新宿
 * **Font**: Montserrat (Bold)
-* **TextSize**: 48
+* **TextSize**: 60
 * **Size**: {0.9, 0}, {0.18, 0}
 * **Position**: {0.05, 0}, {0.22, 0}
 
@@ -145,7 +145,7 @@ SurfaceGui（解像度: 1024 x 768）の内部を左右50%ずつに分割し、�
 * **Purpose**: Display Hotel Features and Nearby Information
 * **Text**: Nightlife & Entertainment District / Godzilla Head / Shopping Malls
 * **Font**: Source Sans Pro (Bold)
-* **TextSize**: 40
+* **TextSize**: 55
 * **TextWrapped**: true
 * **TextYAlignment**: Top
 * **Size**: {0.9, 0}, {0.50, 0}
