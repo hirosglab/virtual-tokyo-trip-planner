@@ -17,6 +17,9 @@ description: "宿泊施設（Accommodations Board）専用案内板の3Dパー�
 
 This document defines the 3D Parts hierarchy, materials, colors, and UI layout for the custom Accommodations Boards used across the virtual tour zones.
 
+## 📐 Information Board Layout Diagram
+![Roblox Informationboard Layout Diagram](../assets/accommodations-boards-design.svg)
+*※ 設計図の元データ・編集は Google Draw 参照*
 ## 3D Part Hierarchy & Spatial Layers
 
 The board is constructed using layered thin Block Parts and includes a ground base part for placement. To prevent texture flickering (Z-fighting), each forward layer is slightly offset along the Z-axis by 0.01 studs.
