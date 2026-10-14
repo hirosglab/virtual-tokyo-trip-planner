@@ -98,19 +98,26 @@ SurfaceGui（解像度: 1024 x 768）の内部を左右50%ずつに分割し、�
 ### ② Facility Icon 1 (ImageLabel)
 * **Purpose**: ホテル内の特記できる施設アイコン（例: 温泉浴場）
 * **Properties**:
-  * **Size**: {0.38, 0}, {0.28, 0}
-  * **Position**: {0.075, 0}, {0.66, 0}
+  * **Size**: {0.26, 0}, {0.25, 0}
+  * **Position**: {0.075, 0}, {0.68, 0}
   * **BackgroundTransparency**: 1
   * **ScaleType**: Fit
 
 ### ③ Facility Icon 2 (ImageLabel)
 * **Purpose**: ホテル内の特記できる施設アイコン（例: コインランドリーなど）
 * **Properties**:
-  * **Size**: {0.38, 0}, {0.28, 0}
-  * **Position**: {0.545, 0}, {0.66, 0}
+  * **Size**: {0.26, 0}, {0.25, 0}
+  * **Position**: {0.37, 0}, {0.68, 0}
   * **BackgroundTransparency**: 1
   * **ScaleType**: Fit
 
+### ③ Facility Icon 3 (ImageLabel)
+* **Purpose**: ホテル内の特記できる施設アイコン（例: コインランドリーなど）
+* **Properties**:
+  * **Size**: {0.26, 0}, {0.25, 0}
+  * **Position**: {0.665, 0}, {0.68, 0}
+  * **BackgroundTransparency**: 1
+  * **ScaleType**: Fit
 ---
 
 ## Right_Zone (右側50%領域：テキスト情報)
