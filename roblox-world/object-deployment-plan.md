@@ -65,10 +65,11 @@ RobloxのWorkspace内には床材専用フォルダFloorsを配置し、同心�
 | 1 | **Confirmed** | **Ginza / 銀座** | Teppanyaki 10 / 鉄板焼き10 | Restaurant | **GRILLED WAGYU & SEA FOODS** |
 | 2 | **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | Art | **DIGITAL ART MUSEUM** |
 | 3 | **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **150 YEAR OLD BROTH SHOP** |
-| 4 | **Proposed** | **Ikebukuro / 池袋** | Animate Ikebukuro Main Store / アニメイト池袋本店 | Shopping | **BIGGEST ANIME & MANGA SHOP** |
-| 5 | **Proposed** | **Harajuku / 原宿** | My Pig Cafe / 豚カフェ | Cafe | **ANIMAL CAFE** |
-| 6 | **Proposed** | **Tokyo / 東京** | Tokyo Character Street / 東京キャラクターストリート | Shopping | **POP CULTURE STREET** |
-| 7 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
+| 4 | **Proposed** | **Shinjyuku / 新宿** | IPPUDO / 一風堂 | Restaurant | **JAPANESE TONKOTSU RAMEN** |
+| 5 | **Confirmed** | **Harajuku / 原宿** | ADERERROR Tokyo Space / アーダーエラー | Shopping | **SEOUL-BASED FASHION & ART** |
+| 6 | **Proposed** | **Tokyo / 東京** | NADA MAN / なだ万 | Restaurant | **HISTORIC KAISEKI DINING** |
+| 7 | **Proposed** | **Tokyo / 東京** | Unagi Nosuke Yaechika / うなぎ乃助 | Restaurant | **JAPANESE GRILLED EEL** |
+| 8 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
 
 ---
 
