@@ -62,10 +62,11 @@ Workspace
 │   ├── 📄 ShopBoard_01_Teppanyaki10
 │   ├── 📄 ShopBoard_02_TeamLabBorderless
 │   ├── 📄 ShopBoard_03_DashiOkume
-│   ├── 📄 ShopBoard_04_AnimateIkebukuro
-│   ├── 📄 ShopBoard_05_MyPigCafe
-│   ├── 📄 ShopBoard_06_TokyoCharacterStreet
-│   └── 📄 ShopBoard_07_AkihabaraRadioKaikan
+│   ├── 📄 ShopBoard_04_Ippudo
+│   ├── 📄 ShopBoard_05_Adererror
+│   ├── 📄 ShopBoard_06_Nadaman
+│   └── 📄 ShopBoard_07_Unaginosuke
+│   └── 📄 ShopBoard_08_AkihabaraRadioKaikan
 │
 ├── 📁 Iconic_Major_Landmarks_Objects
 │   ├── 📄 Landmark_01_KabukichoArch
