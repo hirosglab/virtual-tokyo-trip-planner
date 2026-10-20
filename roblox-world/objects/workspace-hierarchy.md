@@ -64,9 +64,10 @@ Workspace
 │   ├── 📄 ShopBoard_03_DashiOkume
 │   ├── 📄 ShopBoard_04_Ippudo
 │   ├── 📄 ShopBoard_05_Adererror
-│   ├── 📄 ShopBoard_06_Nadaman
-│   └── 📄 ShopBoard_07_Unaginosuke
-│   └── 📄 ShopBoard_08_AkihabaraRadioKaikan
+│   ├── 📄 ShopBoard_06_IyoshiCola
+│   ├── 📄 ShopBoard_07_Nadaman
+│   └── 📄 ShopBoard_08_Unaginosuke
+│   └── 📄 ShopBoard_09_AkihabaraRadioKaikan
 │
 ├── 📁 Iconic_Major_Landmarks_Objects
 │   ├── 📄 Landmark_01_KabukichoArch
