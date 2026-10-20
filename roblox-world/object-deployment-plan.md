@@ -66,10 +66,11 @@ RobloxのWorkspace内には床材専用フォルダFloorsを配置し、同心�
 | 2 | **Confirmed** | **Azabu / 麻布** | Mori Building Digital Art Museum (teamLab Borderless) / チームラボボーダレス | Art | **DIGITAL ART MUSEUM** |
 | 3 | **Confirmed** | **Azabu / 麻布** | Dashi Okume / だし尾粂 | Shopping | **150 YEAR OLD BROTH SHOP** |
 | 4 | **Proposed** | **Shinjyuku / 新宿** | ICHIRAN / 一蘭 | Restaurant | **JAPANESE TONKOTSU RAMEN** |
-| 5 | **Confirmed** | **Harajuku / 原宿** | ADERERROR Tokyo Space / アーダーエラー | Shopping | **SEOUL-BASED FASHION & ART** |
-| 6 | **Proposed** | **Tokyo / 東京** | NADA MAN / なだ万 | Restaurant | **HISTORIC KAISEKI DINING** |
-| 7 | **Proposed** | **Tokyo / 東京** | Unagi Nosuke Yaechika / うなぎ乃助 | Restaurant | **JAPANESE GRILLED EEL** |
-| 8 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
+| 5 | **Confirmed** | **Harajuku / 原宿** | ADERERROR Tokyo Space / 伊良コーラ | Cafe | **The World’s First Craft Cola** |
+| 6 | **Confirmed** | **Harajuku / 原宿** | Iyoshi Cola / アーダーエラー | Shopping | **SEOUL-BASED FASHION & ART** |
+| 7 | **Proposed** | **Tokyo / 東京** | NADA MAN / なだ万 | Restaurant | **HISTORIC KAISEKI DINING** |
+| 8 | **Proposed** | **Tokyo / 東京** | Unagi Nosuke Yaechika / うなぎ乃助 | Restaurant | **JAPANESE GRILLED EEL** |
+| 9 | **Proposed** | **Akihabara / 秋葉原** | Akihabara Radio Kaikan / 秋葉原ラジオ会館 | Shopping | **GAME ANIME FIGURES & TRADING CARDS** |
 
 ---
 
