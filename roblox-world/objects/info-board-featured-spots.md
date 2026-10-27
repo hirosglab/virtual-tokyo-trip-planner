@@ -58,15 +58,15 @@ The board is constructed using three layered thin Block Parts to create a museum
     |======================================= layout =================|
     |        📁 Left_Frame (512 x 768)      |   📁 Right_Frame (512x768)  |
     |                                       |                            |
-    |  [🔤 Area Badge (TextSize: 40)]      |   ┌────────────────────┐   |
+    |  [🔤 Area Badge (TextSize: 80)]      |   ┌────────────────────┐   |
     |                                       |   │                    │   |
     |  🔤 Spot Name                         |   │ 🖼️ Image           │   |
-    |    (TextSize: 48)                     |   │   (Full Fill / Fit)│   |
+    |    (TextSize: 45 - 55)                |   │   (Full Fill / Fit)│   |
     |                                       |   │                    │   |
-    |  [🔤 Category (TextSize: 40)]        |   │ ・フレーム全体配置  │   |
+    |  [🔤 Category (TextSize: 48 - 55)]    |   │ ・フレーム全体配置  │   |
     |                                       |   │ ・Fit表示          │   |
     |  🔤 Description                       |   │                    │   |
-    |    (TextSize: 40 / Wrapped)           |   └────────────────────┘   |
+    |    (TextSize: 55 - 60 / Wrapped)        |   └────────────────────┘   |
     |                                       |                            |
     ==================================================================
 
@@ -90,7 +90,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Purpose**: Display Area Name
 *   **Text**: `Shinjuku / 新宿`
 *   **Font**: `Roboto Condensed` (Bold)
-*   **TextSize**: `40`
+*   **TextSize**: `80`
 *   **Size**: `{0.9, 0}, {0.1, 0}`
 *   **Position**: `{0.05, 0}, {0.05, 0}` （少し内側に余白を持たせて配置）
 
@@ -98,7 +98,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Purpose**: Prominently Display Location Name
 *   **Text**: `Kabuki-cho / 歌舞伎町`
 *   **Font**: `Montserrat` (Bold)
-*   **TextSize**: `48`
+*   **TextSize**: `45` - `55`
 *   **Size**: `{0.9, 0}, {0.15, 0}`
 *   **Position**: `{0.05, 0}, {0.18, 0}`
 
@@ -107,7 +107,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Text**: `NIGHTLIFE DISTRICT`
 *   **Font**: `Highway Gothic` (Bold)
 *   **TextColor3**: `[0, 170, 255]` （青・シアン系のアクセントカラー）
-*   **TextSize**: `40`
+*   **TextSize**: `48` - `55`
 *   **Size**: `{0.9, 0}, {0.1, 0}`
 *   **Position**: `{0.05, 0}, {0.35, 0}`
 
@@ -115,7 +115,7 @@ The board is constructed using three layered thin Block Parts to create a museum
 *   **Purpose**: Display Readable Description Text
 *   **Text**: `Explore Tokyo's most famous nightlife and entertainment district.`
 *   **Font**: `Source Sans Pro` (Bold)
-*   **TextSize**: `40`
+*   **TextSize**: `50` - `60`
 *   **TextWrapped**: `true` （⚠️ ここを true にしないと、枠外に文字がはみ出して見えなくなってしまう）
 *   **TextYAlignment**: `Top` （上揃え。解説が長くなっても上から綺麗に読める）
 *   **Size**: `{0.9, 0}, {0.45, 0}`
