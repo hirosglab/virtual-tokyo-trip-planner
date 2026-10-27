@@ -50,12 +50,12 @@ RobloxのWorkspace内には床材専用フォルダFloorsを配置し、同心�
 | 8 | **Shibuya / 渋谷** | Shibuya Crossing / 渋谷スクランブル交差点 | **WORLD'S CROSSING** | The world's busiest intersection and a symbol of modern Tokyo. |
 | 9 | **Shibuya / 渋谷** | Shibuya Center-Gai / 渋谷センター街 | **YOUTH CULTURE HUB** | A bustling pedestrian street filled with shops, music, and youth fashion. |
 | 10 | **Tokyo / 東京** | Tokyo Central Station / 東京駅 | **HISTORIC BRICK HUB** | A stunning red-brick station building blending history and modern transport. |
-| 11 | **Tokyo / 東京** | Tokyo / お台場 | **WATER FRONT DISTRICT** | Iconic futuristic waterfront district and the legendary real-world setting for Digimon Adventure. |
+| 11 | **Tokyo / 東京** | Odaiba / お台場 | **WATER FRONT DISTRICT** | Iconic futuristic waterfront district and the legendary real-world setting for Digimon Adventure. |
 | 12 | **Tokyo / 新橋** | Shinbashi Guard Underpass Alley / 新橋ガード下 | **SALARYMAN NIGHTLIFE** | A lively retro alley where local workers gather for food and drinks. |
 | 13 | **Tsukiji / 築地** | Tsukiji Outer Market / 築地場外市場 | **SEAFOOD STREET FOOD** | A bustling historic market filled with fresh seafood, sushi, and local street food snacks. |
 | 14 | **Ginza / 銀座** | Ginza Street / 銀座通り | **HIGH-CLASS FASHION STREET** | A sophisticated avenue famous for luxury shopping and weekend pedestrian hours. |
 | 15 | **Akihabara / 秋葉原** | Akihabara Electric Town / 秋葉原電気街 | **OTAKU & TECH CAPITAL** | The global hub for anime, manga, retro video games, and electronics. |
-| 16 | **Azabu / 麻布** | Azabu / 麻布 | **INTERNATIONAL & LUXURY ZONE** | An exclusive, sophisticated neighborhood blending historic charm, global embassies, and modern architecture. |
+| 16 | **Azabu / 麻布** | Azabu / 麻布 | **INTERNATIONAL LUXURY ZONE** | An exclusive, sophisticated neighborhood blending historic charm, global embassies, and modern architecture. |
 | 17 | **Asakusa / 浅草** | Senso-ji Temple & Kaminarimon / 浅草寺雷門 | **HISTORIC TEMPLE GATE** | Tokyo's oldest temple, guarded by the iconic red lantern gate. |
 | 18 | **Asakusa / 浅草** | Sumida River / 隅田川 | **SCENIC RIVERSIDE VIEW** | A beautiful waterfront area perfect for river cruises and skyline views. |
 
